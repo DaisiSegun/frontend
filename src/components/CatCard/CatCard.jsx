@@ -50,7 +50,7 @@ function CatCard({ categoryId }) {
   }
 
   return (
-    <Link to={`/findsp/${catData.cat.category}`}>
+    <Link className='link8' to={`/findsp/${catData.cat.category}`}>
       <div className='cat-card'>
         <img src={catData.cat.image} className='cat-img' alt={catData.title} />
         <h1 className='title-text'>{catData.cat.title}</h1>
