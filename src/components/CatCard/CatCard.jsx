@@ -43,7 +43,7 @@ function CatCard({ categoryId }) {
   }
 
   if (!catData) {
-    return <p>Err loading img, refresh page</p>;
+    return <p>Error loading image</p>;
   }
 
   return (
