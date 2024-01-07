@@ -19,7 +19,7 @@ import AdminUpload from "./pages/adminUpload/AdminUpload"
 import MoreService from "./pages/moreService/MoreService"
 import SearchResult from "./pages/searchResult/SearchResult"
 import ThankYou from "./pages/thankYou/ThankYou"
-import Slider from "./components/slider/Slider"
+
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage/TermsAndConditionsPage"
 
 
@@ -47,7 +47,7 @@ function App() {
             <Route path="/create-admin" element={<AdminUpload />} title="Create Admin" />
             <Route path="/more-service" element={<MoreService />} title="More Service" />
             <Route path="/welcome" element={<ThankYou />} title="Welcome" />
-            <Route path="/slide" element={<Slider />} title="Slider" />
+          
             <Route path="/terms&conditions" element={<TermsAndConditionsPage />} title="Terms and Conditions" />
           </Routes>
         </Router>

@@ -2,24 +2,17 @@ import React, { useState, useEffect } from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import Header from '../../components/header/Header';
-import Footer from '../../components/footer/Footer';
 import './SpProfile.scss';
-import profileImg from '../../images/tec-samuel.jpg';
 import ratingIcon from '../../images/rating.svg';
-import serviceImage from '../../images/service-img.png';
-import right from '../../images/right.svg';
-import left from '../../images/left.svg';
 import Reviews from '../../components/reviews/Reviews';
 import golf from '../../images/golf.svg';
 import { useQuery } from '@tanstack/react-query';
 import newRequest from '../../utils/newRequest';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser.js';
-import SwipeIcon from '@mui/icons-material/Swipe';
-import swipeImg from '../../images/swipe.svg'
-import { ClipLoader } from "react-spinners";
-import { css } from "@emotion/react";
-
+import swipeImg from '../../images/swipe.svg';
+import { ClipLoader } from 'react-spinners';
+import { css } from '@emotion/react';
 
 const override = css`
   display: flex;
@@ -28,11 +21,11 @@ const override = css`
   height: 100vh; /* Use 100vh to make it full height */
 `;
 
-
 function SpProfile() {
   useEffect(() => {
     document.title = 'View Profile';
   }, []);
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const { id } = useParams();
@@ -57,16 +50,16 @@ function SpProfile() {
       enabled: !!userId,
     });
 
-    const { isLoading: isLoadingReviews, error: errorReviews, data: reviewsData } = useQuery({
-      queryKey: ["reviews"],
-      queryFn: () =>
-        newRequest.get(`/reviews/${id}`).then((res) => {
-          return res.data;
-        }),
-    });
+  const { isLoading: isLoadingReviews, error: errorReviews, data: reviewsData } = useQuery({
+    queryKey: ['reviews'],
+    queryFn: () =>
+      newRequest.get(`/reviews/${id}`).then((res) => {
+        return res.data;
+      }),
+  });
 
   if (isLoading || isLoadingUser) {
-    return <ClipLoader color={"#36D7B7"} css={override} size={150} />;
+    return <ClipLoader color={'#36D7B7'} css={override} size={150} />;
   }
 
   if (error || errorUser) {
@@ -91,23 +84,16 @@ function SpProfile() {
     } else {
       const message = `I want to hire ${dataUser.username} (${data.title})`;
       const phoneNumber = '+2349019971557'; // Replace with the actual phone number
-    const openWhatsApp = () => {
-      // Your openWhatsApp function
-    };
-  
       // Construct the WhatsApp link
       const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    const currentUser = getCurrentUser();
-  
+
       // Open the link in a new tab
       window.open(whatsappLink, '_blank');
     }
   };
-  
 
   const currentUser = getCurrentUser();
 
-  console.log(data.images)
   return (
     <div className='sp-profile'>
       <Header showSearch={true} />
@@ -116,15 +102,14 @@ function SpProfile() {
 
       <div className='profile-name-avatar-rating'>
         <div className='avatar-name'>
-          <img src={dataUser.profilePicture} className='profile-img' />
+          <img src={dataUser.profilePicture} alt={`${dataUser.username}'s Profile`} className='profile-img' />
           <p className='profile-name'> {dataUser.username}</p>
         </div>
 
         <div className='rating-review'>
-          <img src={ratingIcon} className='rating-icon' />
+          <img src={ratingIcon} alt='Rating Icon' className='rating-icon' />
           <p className='rating-num'>
-            {!isNaN(data.totalStars / data.starNumber) &&
-              Math.round(data.totalStars / data.starNumber)}
+            {!isNaN(data.totalStars / data.starNumber) && Math.round(data.totalStars / data.starNumber)}
           </p>
           <p className='num-job-done'>({reviewsData.length})</p>
         </div>
@@ -133,36 +118,33 @@ function SpProfile() {
       <div className='main-section'>
         <div className='section-1'>
           <div className='img-container5'>
-         
-            <AwesomeSlider   organicArrows={true}  bullets={true} className='carousel' selected={currentIndex} onChange={setCurrentIndex}>
+            <AwesomeSlider
+              organicArrows={true}
+              bullets={true}
+              className='carousel'
+              selected={currentIndex}
+              onChange={setCurrentIndex}
+            >
               {data.images.map((image, index) => (
                 <div key={index} data-src={image} />
-                
               ))}
-             
             </AwesomeSlider>
 
             <div className='swipe'>
-
-            <p className='swipe-text'>Swipe image</p>
-            <img className='swipe-img' src={swipeImg}/>
-            
+              <p className='swipe-text'>Swipe image</p>
+              <img className='swipe-img' src={swipeImg} alt='Swipe Icon' />
             </div>
-
-           
-          
           </div>
-                
+
           <div onClick={openWhatsApp} className='button1'>
             Request a Quote
-            <img src={golf} className='golf' />
+            <img src={golf} alt='Golf Icon' className='golf' />
           </div>
           <h2 className='a-service'>About my service</h2>
           <p className='service-des'> {data.desc}</p>
-         
         </div>
 
-     <div className='section-2'>
+        <div className='section-2'>
              
              <div className='sp-info'>
              <div className='sp-des'>
@@ -190,24 +172,20 @@ function SpProfile() {
                  <p className='dark-des'>{formattedJoinedDate}</p>
                </div>
              </div>
- 
-             <div className='sp-profile'>
-                <img className='sp-profile-img' src={dataUser.profilePicture}/>
-                <p className='profile-name'>{dataUser.username}</p>
-                <button  onClick={openWhatsApp} className='button2'>Contact me</button>
-            </div>
 
-
+          <div className='sp-profile'>
+            <img className='sp-profile-img' src={dataUser.profilePicture} alt={`${dataUser.username}'s Profile`} />
+            <p className='profile-name'>{dataUser.username}</p>
+            <button onClick={openWhatsApp} className='button2'>
+              Contact me
+            </button>
           </div>
-          
+        </div>
       </div>
-
-
 
       <Reviews serviceId={id} />
 
       <div className='space1'></div>
-      {/* <Footer/> */}
     </div>
   );
 }

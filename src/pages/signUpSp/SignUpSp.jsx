@@ -3,11 +3,11 @@ import './SignUpSp.scss';
 import upload from "../../utils/upload";
 import logo from '../../images/logo.svg';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+
 import { useNavigate } from 'react-router-dom';
 import newRequest from "../../utils/newRequest.js";
 import { CircleLoader } from "react-spinners";
-import { css } from "@emotion/react";
+
 
 
 function SignUpSp() {

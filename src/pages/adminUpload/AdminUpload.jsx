@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import './AdminUpload.scss';
 import upload from '../../utils/upload.js';
 import logo from '../../images/rootlogo.png';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+
+
 import newRequest from '../../utils/newRequest.js';
 import { CircleLoader } from 'react-spinners';
 
@@ -21,7 +20,6 @@ function AdminUpload() {
   const [successMessage, setSuccessMessage] = useState('');
   const [error, setError] = useState('');
 
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;

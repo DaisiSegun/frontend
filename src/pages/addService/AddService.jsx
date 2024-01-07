@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+
 import './AddService.scss';
 import Header from '../../components/header/Header';
 import golf from '../../images/golf.svg';
-import serviceImg from '../../images/avatar-test.jpg';
+
 import deleteService from '../../images/delete.svg';
 import getCurrentUser from '../../utils/getCurrentUser';
 import { Link } from 'react-router-dom';

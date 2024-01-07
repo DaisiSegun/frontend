@@ -5,16 +5,15 @@ import Header from '../../components/header/Header';
 import homeImg from '../../images/home.svg';
 import Search from '../../components/search/Search';
 import CatCard from '../../components/CatCard/CatCard';
-import loadMore from '../../images/load-more.svg';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 import Testimonial from '../../components/testimonial/Testimonial';
 import Footer from '../../components/footer/Footer';
-import axios from 'axios';
+
 import { css } from "@emotion/react";
 import { CircleLoader } from "react-spinners";
 import newRequest from '../../utils/newRequest';
 import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
-import Slider from '../../components/slider/Slider';
+
 
 const override = css`
   display: block;

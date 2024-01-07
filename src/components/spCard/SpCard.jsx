@@ -15,7 +15,7 @@ function SpCard({ item }) {
       }),
   });
 
-  const { isLoading: isLoadingReviews, error: errorReviews, data: reviewsData } = useQuery({
+  const { data: reviewsData } = useQuery({
     queryKey: ['reviews', item._id],
     queryFn: () =>
       newRequest.get(`/reviews/${item._id}`).then((res) => {
@@ -33,7 +33,8 @@ function SpCard({ item }) {
         <>
           <div className='sec1'>
             <Link className='link' to={`/view-profile/${item._id}`}>
-              <img src={data?.profilePicture || spProfile} className='sp-profile-img' />
+            <img src={data?.profilePicture || spProfile} className='sp-profile-img' alt={`Profile of ${data.username}`} />
+
             </Link>
           </div>
 
@@ -46,7 +47,7 @@ function SpCard({ item }) {
                 </div>
               </Link>
               <div className='rating-container'>
-                <img src={rating} className='rating-icon' />
+              <img src={rating} className='rating-icon' alt='Rating' />
                 <p className='rating'>
                   {!isNaN(item.totalStars / item.starNumber) &&
                     Math.round(item.totalStars / item.starNumber)}

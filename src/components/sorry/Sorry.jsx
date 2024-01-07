@@ -1,6 +1,6 @@
-import React from 'react'
-import './Sorry.scss'
-import sorrtImg from '../../images/sryImg.svg'
+import React from 'react';
+import './Sorry.scss';
+import sorrtImg from '../../images/sryImg.svg';
 
 function Sorry() {
 
@@ -16,15 +16,13 @@ function Sorry() {
   };
 
   return (
-
     <div className='sorry-container1'>
-        <h1 className='sorry-header'>We are sorry this service is not available yet</h1>
-        <p className='sorry-text'>Regardless, please feel free to contact us, and we'll go the extra mile to find this service provider from out network for you</p>
-        <button onClick={openWhatsApp} className='sorry-button'>Contact us</button>
-        <img className='sryyImg' src={sorrtImg} />
-
+      <h1 className='sorry-header'>We are sorry this service is not available yet</h1>
+      <p className='sorry-text'>Regardless, please feel free to contact us, and we'll go the extra mile to find this service provider from our network for you</p>
+      <button onClick={openWhatsApp} className='sorry-button'>Contact us</button>
+      <img className='sryyImg' src={sorrtImg} alt='Sorry Image' />
     </div>
-  )
+  );
 }
 
-export default Sorry
+export default Sorry;

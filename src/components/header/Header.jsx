@@ -47,7 +47,8 @@ function Header({ showSearch }) {
           {currentUser ? (
             <div className='drop-cont'>
               <div className='log-out' onClick={toggleDropdownContent}>
-                <img className='pro-img' src={currentUser?.user?.profilePicture || profileImg} />
+              <img className='pro-img' src={currentUser?.user?.profilePicture || profileImg} alt={currentUser?.user?.username || 'User Profile'} />
+
                 <p className='pro-name'>{currentUser?.user?.username}</p>
                 <ArrowDropDownIcon className='pro-icon' />
               </div>
