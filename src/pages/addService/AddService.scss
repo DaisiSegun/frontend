@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 1rem;
+  background-color: #333333; /* Dark gray color */
+  border: 1px solid #1a1a1a; /* Darker border color */
+  color: #ffffff; /* White text color */
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10rem;
+  margin-top: 1rem;
+  width: 50%;
+  margin-left: 2rem;
+}
+
+  .add-service {
+
+
+    .container {
+
+      padding: 1rem 0rem;
+      .first-section{
+        display: flex;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 1rem;
+  
+        .add-service-header{
+          color: #000;
+          font-family: Open Sans;
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 1.5rem; /* 100% */
+        }
+  
+        .button1 {
+          display: flex;
+         padding: 1rem 1.5rem;
+         justify-content: center;
+         align-items: center;
+         gap: 0.625rem;
+         border-radius: 0.625rem;
+         background: var(--dark-blue, #0F253B);
+         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+         
+         color: white;
+         cursor: pointer;
+         width: 100%;
+         margin-right: 1rem;
+         transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+         &:hover {
+           background-color: #0C1E30; /* Change the background color on hover */
+           transform: scale(1.05); /* Add a subtle scale effect on hover */
+           box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); 
+         }
+  
+         .golf {
+           width: 0.875rem;
+           height: 1.5625rem;
+         }
+  
+       }
+  
+      }
+
+      table {
+        width: 90%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+
+        
+
+        tr {
+          height: 50px;
+          margin-bottom: 1rem;
+          
+
+          th {
+            text-align: left;
+            font-size: 0.625rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1rem;
+           
+          }
+          
+          td {
+            
+           
+            border-radius: 0.625rem;
+            font-size: 0.625rem;
+            font-style: normal;
+            font-weight: 400;
+            border-radius: 0.625rem;
+           
+            background: var(--light-dark-blue, #F2F2F2);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+           
+          
+              .img {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 1rem;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                object-fit: cover;
+
+              }
+              .delete  {
+                width: 1.5625rem;
+                height: 1.8125rem;
+               
+                cursor: pointer;
+              }
+          }
+          &:nth-child(even) {
+            background-color: #1dbf730f;
+        }
+
+        }
+      }
+    }
+   
+  }
+
+  @media screen and (max-width: 850px) {  
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans';
+    }
+    
+    .error-message {
+      margin-top: 20px;
+      padding: 1rem;
+      background-color: #333333; /* Dark gray color */
+      border: 1px solid #1a1a1a; /* Darker border color */
+      color: #ffffff; /* White text color */
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10rem;
+      margin-top: 1rem;
+      width: 50%;
+      margin-left: 2rem;
+    }
+    
+      .add-service {
+    
+    
+        .container {
+    
+          padding: 1rem 0rem;
+          .first-section{
+            display: flex;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 1rem;
+      
+            .add-service-header{
+              color: #000;
+              font-family: Open Sans;
+              font-size: 1rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.5rem; /* 100% */
+            }
+      
+            .button1 {
+              display: flex;
+             padding: 1rem;
+             justify-content: center;
+             align-items: center;
+             gap: 0.625rem;
+             border-radius: 0.625rem;
+             background: var(--dark-blue, #0F253B);
+             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+             
+             color: white;
+             cursor: pointer;
+             width: 100%;
+             margin-right: 1rem;
+             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+             &:hover {
+               background-color: #0C1E30; /* Change the background color on hover */
+               transform: scale(1.05); /* Add a subtle scale effect on hover */
+               box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); 
+             }
+      
+             .golf {
+               width: 0.875rem;
+               height: 1.5625rem;
+             }
+      
+           }
+      
+          }
+    
+          table {
+            width: 90%;
+            margin-left: 1rem;
+            margin-right: 2rem;
+            margin-top: 1rem;
+            
+    
+            tr {
+              height: 50px;
+              
+    
+              th {
+                text-align: left;
+               
+              }
+              
+              td {
+                height: 50px;
+                padding: 1rem;
+                border-radius: 0.625rem;
+              
+                  .img {
+                    width: 1.3125rem;
+                    height: 1.3125rem;
+                    border-radius: 1rem;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    object-fit: cover;
+    
+                  }
+                  .delete  {
+                    width: 1.375rem;
+                    height: 1.5625rem;
+                    cursor: pointer;
+                  }
+              }
+              &:nth-child(even) {
+                background-color: #1dbf730f;
+            }
+    
+            }
+          }
+        }
+       
+      }
+
+  }

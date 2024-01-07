@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.link {
+  text-decoration: none;
+}
+
+.sorry-name {
+  color: black;
+  font-weight: 600;
+}
+
+
+.thank-you {
+  display: flex;
+  flex-direction: column;
+
+}
+.sorry-container {
+
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-self: center;
+  padding: 1rem;
+  align-items: center;
+  margin-top: 3rem;
+
+  border-radius: 0.625rem;
+border: 1px solid rgba(0, 0, 0, 0.30);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+.sorry-con {
+
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+
+    .sorry-header{
+      color: var(--dark-gray, #343434);
+      font-family: Open Sans;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1rem; /* 120% */
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      width: 100%;
+    
+      
+    }
+
+    .sorry-name {
+      color: black;
+      font-weight: 600;
+      font-size: 1rem;
+      display: flex;
+      gap: 0.1rem;
+    }
+
+    
+    
+
+  }
+
+    .sryImg {
+     
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+      width: 60%;
+      height: 100%;
+  
+     }
+
+
+    .sorry-button {
+      display: flex;
+      border-style: none;
+     padding: 1rem 1.5rem;
+     justify-content: center;
+     align-items: center;
+     gap: 0.625rem;
+     border-radius: 0.625rem;
+     background: var(--dark-blue, #F2F2F2);
+     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+     margin-top: 1.5rem;
+     color: #0F253B;
+     border: 1px solid #0F253B;
+     font-size: 1rem;
+     cursor: pointer;
+     width: max-content;
+     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+     &:hover {
+      background-color: #0F253B;
+      color: white; /* Change the background color on hover */
+       transform: scale(1.05); /* Add a subtle scale effect on hover */
+       box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); 
+     }
+
+    
+
+   }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {  
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+
+ 
+  
+  .link {
+    text-decoration: none;
+  }
+  
+
+  
+  .thank-you {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .sorry-container {
+  
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-self: center;
+    padding: 1rem;
+    align-items: center;
+    margin-top: 3rem;
+  
+    border-radius: 0.625rem;
+  border: 1px solid rgba(0, 0, 0, 0.30);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  .sorry-con {
+
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  
+      .sorry-header{
+        color: var(--dark-gray, #343434);
+        font-family: Open Sans;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1rem; /* 120% */
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+      
+        
+      }
+
+      .sorry-name {
+        color: black;
+        font-weight: 600;
+        font-size: 1rem;
+        display: flex;
+        gap: 0.1rem;
+      }
+
+      
+      
+  
+    }
+  
+      .sryImg {
+       
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+        width: 60%;
+        height: 100%;
+    
+       }
+  
+   
+  
+      .sorry-button {
+        display: flex;
+        border-style: none;
+       padding: 1rem 1.5rem;
+       justify-content: center;
+       align-items: center;
+       gap: 0.625rem;
+       border-radius: 0.625rem;
+       background: var(--dark-blue, #F2F2F2);
+       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+       margin-top: 1.5rem;
+       color: #0F253B;
+       border: 1px solid #0F253B;
+       font-size: 1rem;
+       cursor: pointer;
+       width: max-content;
+       transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+       &:hover {
+        background-color: #0F253B;
+        color: white; /* Change the background color on hover */
+         transform: scale(1.05); /* Add a subtle scale effect on hover */
+         box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); 
+       }
+  
+      
+  
+     }
+  
+  
+  
+  }
+
+}

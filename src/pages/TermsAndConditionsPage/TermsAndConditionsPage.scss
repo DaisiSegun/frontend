@@ -1,0 +1,63 @@
+// styles.scss
+
+$primaryColor: #0F253B;
+$secondaryColor: #395E23;
+$fontFamily: 'Open Sans', sans-serif;
+
+body {
+  font-family: $fontFamily;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.terms-page {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+ 
+  h1 {
+    color: $primaryColor;
+    font-size: 1em;
+    margin-bottom: 0.5rem; // Adjusted font size
+  }
+
+  h2 {
+    color: $secondaryColor;
+    font-size: 1em; // Adjusted font size
+  }
+
+  section {
+    margin-bottom: 20px;
+
+    p {
+      line-height: 1.6;
+      font-size: 0.9em; // Adjusted font size
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .terms-page {
+    padding: 10px;
+
+    h1 {
+      font-size: 1.3em; // Adjusted font size
+    }
+
+    h2 {
+      font-size: 1.1em; // Adjusted font size
+    }
+
+    section {
+      margin-bottom: 10px;
+
+      p {
+        font-size: 0.8em; // Adjusted font size
+      }
+    }
+  }
+}

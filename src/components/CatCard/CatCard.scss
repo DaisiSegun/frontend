@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.cat-card {
+  display: inline-flex;
+  padding-bottom: 2.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.3s, color 0.3s;
+  border-style: solid;
+  border-color: darkgray;
+  border-width: 0.2px;
+  height: 100%;
+
+  &:hover {
+    border: solid;
+    border-color: #3B95ED;
+    border-width: 1px;
+    border-radius: 0.625rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+  }
+
+  .cat-img {
+    width: 17.5rem;
+    height: 17.3125rem;
+    border-radius: 0.625rem 0.625rem 0rem 0rem;
+
+  }
+
+  .title-text {
+    color: var(--black, #000);
+    font-family: Open Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5rem; /* 120% */
+  }
+
+  .smallest-text-gray {
+    color: gray;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 200% */
+    max-width: 14.75rem;
+  }
+}
+
+@media screen and (max-width: 650px) { 
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+  
+  .cat-card {
+    display: inline-flex;
+    padding-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.3s, color 0.3s;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 0.2px;
+    height: 100%;
+    
+  
+    &:hover {
+      border: solid;
+      border-color: #3B95ED;
+      border-width: 1px;
+      border-radius: 0.625rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      
+    }
+  
+    .cat-img {
+      width: 10.6875rem;
+      height: 10.5625rem;
+      border-radius: 0.625rem 0.625rem 0rem 0rem;
+      
+  
+    }
+  
+    .title-text {
+      color: var(--black, #000);
+      font-family: Open Sans;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.2rem; /* 120% */
+      max-width: 10rem;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  
+    .smallest-text-gray {
+      color: gray;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 0.625rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 0.9375rem;
+      max-width: 10rem;
+    }
+  }
+
+}
+
+@media screen and (max-width: 415px) { 
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+  
+  .cat-card {
+    display: inline-flex;
+    padding-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.3s, color 0.3s;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 0.2px;
+    height: 100%;
+  
+    
+  
+    &:hover {
+      border: solid;
+      border-color: #3B95ED;
+      border-width: 1px;
+      border-radius: 0.625rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      
+    }
+  
+    .cat-img {
+      width: 100%;
+      height: 9rem;
+      border-radius: 0.625rem 0.625rem 0rem 0rem;
+      
+  
+    }
+  
+    .title-text {
+      color: var(--black, #000);
+      font-family: Open Sans;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.2rem; /* 120% */
+      max-width: 10rem;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  
+    .smallest-text-gray {
+      color: gray;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 0.625rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 0.9375rem;
+      max-width: 10rem;
+    }
+  }
+
+
+}
+

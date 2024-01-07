@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.sorry-container1 {
+
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-self: center;
+  padding: 1rem;
+  align-items: center;
+ 
+
+  border-radius: 0.625rem;
+border: 1px solid rgba(0, 0, 0, 0.30);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    .sorry-header{
+      color: var(--dark-gray, #343434);
+      font-family: Open Sans;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5rem; /* 120% */
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+
+    .sorry-text{
+
+      color: #881616;
+      text-align: center;
+      font-family: Open Sans;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.5rem; /* 150% */
+      width: 80%;
+    }
+
+    .sorry-button {
+      display: flex;
+      border-style: none;
+     padding: 1rem 1.5rem;
+     justify-content: center;
+     align-items: center;
+     gap: 0.625rem;
+     border-radius: 0.625rem;
+     background: var(--dark-blue, #0F253B);
+     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+     margin-top: 1.5rem;
+     color: white;
+     font-size: 1rem;
+     cursor: pointer;
+     width: 50%;
+     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+     &:hover {
+       background-color: #0C1E30; /* Change the background color on hover */
+       transform: scale(1.05); /* Add a subtle scale effect on hover */
+       box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); 
+     }
+
+    
+
+   }
+
+   .sryyImg {
+    margin-top: 2.5rem;
+    
+   }
+
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 850px) { 
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+  
+  .sorry-container1 {
+  
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-self: center;
+    padding: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+   
+  
+    border-radius: 0.625rem;
+  border: 1px solid rgba(0, 0, 0, 0.30);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+      .sorry-header{
+        color: var(--dark-gray, #343434);
+        font-family: Open Sans;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem; /* 120% */
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        width: 100%;
+      }
+  
+  
+      .sorry-text{
+  
+        color: #881616;
+        text-align: center;
+        font-family: Open Sans;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.2rem; /* 150% */
+        width: 100%;
+      }
+  
+      .sorry-button {
+        display: flex;
+        border-style: none;
+       padding:1rem;
+       justify-content: center;
+       align-items: center;
+       gap: 0.625rem;
+       border-radius: 0.625rem;
+       background: var(--dark-blue, #0F253B);
+       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+       margin-top: 1.5rem;
+       color: white;
+       font-size: 1rem;
+       cursor: pointer;
+       width: 50%;
+       transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+       &:hover {
+         background-color: #0C1E30; /* Change the background color on hover */
+         transform: scale(1.05); /* Add a subtle scale effect on hover */
+         box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); 
+       }
+  
+      
+  
+     }
+  
+     .sryyImg {
+      margin-top: 2.5rem;
+      
+     }
+  
+  
+  }
+  
+  
+
+}

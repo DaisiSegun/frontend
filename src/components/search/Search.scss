@@ -1,0 +1,192 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  flex: 1;
+
+  .search-container-2 {
+    display: flex;
+   
+  .search {
+    width: 70vh;
+    border-radius: 0.625rem 0rem 0rem 0.625rem;
+    border: 2px solid var(--Dark-Blue, #0F253B);
+    background: #FFF;
+    /* Elevation 1 */
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+    padding-left: 1rem;
+
+    font-size: 0.875rem;
+    
+    &:focus {
+      border-color: var(--Dark-Blue, #0F253B); // Change the border color to the same as default when focused
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05); // You can customize this as needed
+      outline: none; // Remove the default focus outline
+    }
+  }
+
+  .search-icon-container {
+    display: flex;
+    width: 10%;
+    height: 100%;
+    padding: 0.75rem 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0rem 0.625rem 0.625rem 0rem;
+    background: var(--Dark-Blue, #0F253B);
+    border: 2px solid var(--Dark-Blue, #0F253B);
+    
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-shrink: 0;
+      color: white;
+    }
+  }
+}
+}
+
+@media screen and (max-width: 650px) {
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    
+    
+    margin-left: -0.1rem;
+    width: 100%;
+    
+  
+    .search-container-2 {
+      display: flex;
+      width: 100%;
+      
+     
+    .search {
+      width: 100%;
+    
+      border-radius: 0.625rem 0rem 0rem 0.625rem;
+      border: 2px solid var(--Dark-Blue, #0F253B);
+      background: #FFF;
+      /* Elevation 1 */
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+      padding-left: 1rem;
+      
+      font-size: 0.875rem;
+      
+      &:focus {
+        border-color: var(--Dark-Blue, #0F253B); // Change the border color to the same as default when focused
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05); // You can customize this as needed
+        outline: none; // Remove the default focus outline
+      }
+    }
+  
+    .search-icon-container {
+      display: flex;
+      width: 12%;
+      height: 100%;
+      padding: 0.75rem 1rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0rem 0.625rem 0.625rem 0rem;
+      background: var(--Dark-Blue, #0F253B);
+      border: 2px solid var(--Dark-Blue, #0F253B);
+      
+  
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        color: white;
+      }
+    }
+  }
+  }
+
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1024px) {
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    
+    
+    margin-left: -0.1rem;
+    width: 100%;
+   
+  
+    .search-container-2 {
+      display: flex;
+      width: 100%;
+      
+     
+    .search {
+      width: 100%;
+    
+      border-radius: 0.625rem 0rem 0rem 0.625rem;
+      border: 2px solid var(--Dark-Blue, #0F253B);
+      background: #FFF;
+      /* Elevation 1 */
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+      padding-left: 1rem;
+      
+      font-size: 0.875rem;
+      
+      &:focus {
+        border-color: var(--Dark-Blue, #0F253B); // Change the border color to the same as default when focused
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05); // You can customize this as needed
+        outline: none; // Remove the default focus outline
+      }
+    }
+  
+    .search-icon-container {
+      display: flex;
+      width: 10%;
+      height: 100%;
+      padding: 0.75rem 1rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0rem 0.625rem 0.625rem 0rem;
+      background: var(--Dark-Blue, #0F253B);
+      border: 2px solid var(--Dark-Blue, #0F253B);
+      
+  
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        color: white;
+      }
+    }
+  }
+  }
+
+
+}
