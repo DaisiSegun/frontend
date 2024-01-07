@@ -9,14 +9,9 @@ import ContentLoader from 'react-content-loader';
 import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
 import Testimonial from '../../components/testimonial/Testimonial';
 import Footer from '../../components/footer/Footer';
-import { css } from "@emotion/react";
+
 import newRequest from '../../utils/newRequest';
 
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
 
 function Home() {
   useEffect(() => {
