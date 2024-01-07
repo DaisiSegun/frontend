@@ -8,11 +8,12 @@ import Reviews from '../../components/reviews/Reviews';
 import golf from '../../images/golf.svg';
 import { useQuery } from '@tanstack/react-query';
 import newRequest from '../../utils/newRequest';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
 import { ClipLoader } from 'react-spinners';
 import { css } from '@emotion/react';
+
 
 const override = css`
   display: flex;
@@ -22,6 +23,7 @@ const override = css`
 `;
 
 function SpProfile() {
+  const navigate = useNavigate();
   useEffect(() => {
     document.title = 'View Profile';
   }, []);
@@ -78,9 +80,10 @@ function SpProfile() {
   });
 
   const openWhatsApp = () => {
+    
     if (!currentUser) {
       // If no user is logged in, redirect to the signup page
-      window.location.href = '/register';
+      navigate('/register');
     } else {
       const message = `I want to hire ${dataUser.username} (${data.title})`;
       const phoneNumber = '+2349019971557'; // Replace with the actual phone number

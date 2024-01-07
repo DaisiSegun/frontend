@@ -68,7 +68,7 @@ function SpCard({ item }) {
           </div>
 
           <div className='sec2'>
-            <Link className='link' to={`/view-profile/${item._id}`}>
+            <Link className='link9' to={`/view-profile/${item._id}`}>
               <button className='view-profile'>View Profile</button>
             </Link>
           </div>

@@ -85,6 +85,7 @@
     border-color: darkgray;
     border-width: 0.2px;
     height: 100%;
+    width: 11rem;
     
   
     &:hover {
@@ -130,7 +131,7 @@
 
 }
 
-@media screen and (max-width: 415px) { 
+@media screen and (max-width: 430px) { 
 
 
   * {
@@ -156,6 +157,8 @@
     border-color: darkgray;
     border-width: 0.2px;
     height: 100%;
+    width: 9rem;
+    
   
     
   
