@@ -50,7 +50,7 @@ function SpProfile() {
       enabled: !!userId,
     });
 
-  const { isLoading: isLoadingReviews, error: errorReviews, data: reviewsData } = useQuery({
+  const {  data: reviewsData } = useQuery({
     queryKey: ['reviews'],
     queryFn: () =>
       newRequest.get(`/reviews/${id}`).then((res) => {
@@ -66,7 +66,7 @@ function SpProfile() {
     return <div>Something went wrong!</div>;
   }
 
-  const showNavigationButtons = data.images.length > 1;
+ 
 
   const joinedDate = new Date(dataUser.createdAt);
 
