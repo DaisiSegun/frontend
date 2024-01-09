@@ -45,7 +45,7 @@ function Sps() {
     <div className='sps'>
       <Header showSearch={true} />
       <h1 className='header-24px'>{category}</h1>
-      <p className='subtitle-text'>Background checks for every Root Service Provider (Root Sp) have been completed</p>
+      <p className='subtitle-text'>Each service provider personally selected and endorsed by Root</p>
 
       {filteredData.map((service) => (
         <SpCard key={service._id} item={service} />
