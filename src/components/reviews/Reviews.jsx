@@ -93,7 +93,7 @@ function Reviews({ serviceId }) {
       <h1 className='review-service'>Review this service</h1>
 
       <form action="" onSubmit={handleSubmit} className='create-review5'>
-        <textarea className='input-review' placeholder='Write your opinion' />
+        <textarea className='input-review' placeholder='Please write your opinion' />
         <p className='select-rating'>Select Rating</p>
         <select className='select-star' name='' id=''>
           <option value={1}>1</option>
