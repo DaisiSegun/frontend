@@ -10,7 +10,7 @@ import Register from "./pages/register/Register"
 
 
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {HashRouter as Router, Routes, Route} from 'react-router-dom'
 import {
   QueryClient,
   QueryClientProvider,
