@@ -8,6 +8,11 @@
   text-decoration: none;
   align-self: center;
  }
+ .create-title5 {
+  font-size: 0.75rem;
+  color: darkred;
+  margin-top: -1rem;
+ }
 
  hr{
 
@@ -65,6 +70,12 @@
 
       @media only screen and (max-width: 768px) {
         width: 90%; // Adjusted width for mobile devices
+
+        .create-title5 {
+          font-size: 0.75rem;
+          color: darkred;
+          margin-top: -1rem;
+         }
 
         .error-box {
           background-color: #f8d7da;

@@ -168,7 +168,7 @@ function SignUpSp() {
           <label className='sign-in-text'>Location</label>
           <input
             className='sign-in-input'
-            placeholder='Languages'
+            placeholder='Location'
             name='languages'
             onChange={handleChange}
           />
@@ -176,6 +176,7 @@ function SignUpSp() {
 
         <div className='create-contianer3'>
           <p className='create-title3'>Profile Picture</p>
+          <p className='create-title5'>Use high-quality pictures or logos to attract quality customers.</p>
           <input
             type='file'
             accept='image/*'

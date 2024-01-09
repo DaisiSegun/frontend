@@ -1,15 +1,18 @@
 // TermsAndConditionsPage.js
 
-import React, {useEffect} from 'react';
-import './TermsAndConditionsPage.scss'
+import React, { useEffect } from 'react';
+import './TermsAndConditionsPage.scss';
+
 const TermsAndConditionsPage = () => {
   useEffect(() => {
     document.title = 'Terms and Conditions';
   }, []);
+
   return (
     <div className="terms-page">
       <h1>Root Marketplace Terms and Conditions</h1>
 
+      {/* Section 1: Acceptance of Terms */}
       <section>
         <h2>1. Acceptance of Terms</h2>
         <p>
@@ -19,6 +22,7 @@ const TermsAndConditionsPage = () => {
         </p>
       </section>
 
+      {/* Section 2: Service Overview */}
       <section>
         <h2>2. Service Overview</h2>
         <p>
@@ -29,6 +33,7 @@ const TermsAndConditionsPage = () => {
         </p>
       </section>
 
+      {/* Section 3: Liability and Risk */}
       <section>
         <h2>3. Liability and Risk</h2>
 
@@ -53,19 +58,27 @@ const TermsAndConditionsPage = () => {
           Root is not liable for any damages, losses, or disputes that may occur
           between users.
         </p>
+
+        <p>
+          <strong>3.3. Service Provider Removal:</strong>
+          <br />
+          If a service provider receives consecutive 1-star to 2-star reviews two times (back-to-back), Root reserves the right to remove them from the platform.
+          <br />
+          (Note: A bad review is considered to be a rating between 1 and 2 stars, inclusive).
+        </p>
       </section>
 
+      {/* Section 4: Fee Structure */}
       <section>
         <h2>4. Fee Structure</h2>
 
         <p>
           <strong>4.1. Transaction Fee:</strong>
           <br />
-          Root charges a 10% transaction fee to service providers for
+          Root charges a flat fee of 3,000 Naira to service providers for
           successfully connecting them with customers through the platform.
           <br />
-          This fee is automatically deducted from the service provider's
-          earnings.
+          This fee is automatically deducted from the service provider's earnings.
         </p>
 
         <p>
@@ -76,6 +89,7 @@ const TermsAndConditionsPage = () => {
         </p>
       </section>
 
+      {/* Section 5: Value in Connection */}
       <section>
         <h2>5. Value in Connection</h2>
         <p>
@@ -86,6 +100,7 @@ const TermsAndConditionsPage = () => {
         </p>
       </section>
 
+      {/* Section 6: Dispute Resolution */}
       <section>
         <h2>6. Dispute Resolution</h2>
         <p>
@@ -95,6 +110,7 @@ const TermsAndConditionsPage = () => {
         </p>
       </section>
 
+      {/* Section 7: Platform Changes and Termination */}
       <section>
         <h2>7. Platform Changes and Termination</h2>
         <p>
@@ -104,6 +120,7 @@ const TermsAndConditionsPage = () => {
         </p>
       </section>
 
+      {/* Section 8: Governing Law */}
       <section>
         <h2>8. Governing Law</h2>
         <p>
