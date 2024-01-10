@@ -29,6 +29,7 @@ function Register() {
   const navigate = useNavigate();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,9 +39,18 @@ function Register() {
     }));
   };
 
+  const handleCheckboxChange = () => {
+    setAgreeToTerms((prevValue) => !prevValue);
+  };
+
   const handleRegistration = async () => {
     try {
       setLoading(true);
+
+      if (!agreeToTerms) {
+        setError('Please read & agree to the terms and conditions');
+        return;
+      }
 
       // Make sure passwords match
       if (formData.password !== formData.confirmPassword) {
@@ -129,10 +139,19 @@ function Register() {
 
         {error && <div className='error-box'>{error}</div>}
 
+       
+
 
         <label htmlFor="agreeToTermsCheckbox" className="agree-label">
           By signing up, you have agreed to the{' '}
           <Link to="/terms&conditions">terms and conditions</Link>.
+          <input
+          type='checkbox'
+          id='agreeToTermsCheckbox'
+          checked={agreeToTerms}
+          onChange={handleCheckboxChange}
+          className='check-box'
+        />  
         </label>
 
         <div className='button3' onClick={handleRegistration}>

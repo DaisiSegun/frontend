@@ -21,6 +21,7 @@ import SearchResult from "./pages/searchResult/SearchResult"
 import ThankYou from "./pages/thankYou/ThankYou"
 
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage/TermsAndConditionsPage"
+import ThankYouSp from "./pages/thankYou/ThankYouSp"
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
             <Route path="/create-admin" element={<AdminUpload />} title="Create Admin" />
             <Route path="/more-service" element={<MoreService />} title="More Service" />
             <Route path="/welcome" element={<ThankYou />} title="Welcome" />
+            <Route path="/welcomeSp" element={<ThankYouSp/>} title="Welcome Sp" />
           
             <Route path="/terms&conditions" element={<TermsAndConditionsPage />} title="Terms and Conditions" />
           </Routes>

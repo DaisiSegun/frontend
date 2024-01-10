@@ -26,6 +26,7 @@ function SignUpSp() {
 
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
 
   const navigate = useNavigate();
   const handleChange = (e) => {
@@ -46,10 +47,16 @@ function SignUpSp() {
       }));
     }
   };
-
+  const handleCheckboxChange = () => {
+    setAgreeToTerms((prevValue) => !prevValue);
+  };
   const handleRegistration = async () => {
     try {
       setLoading(true);
+      if (!agreeToTerms) {
+        setError('Please agree to the terms and conditions');
+        return;
+      }
       const url = await upload(formData.profilePicture);
       console.log('Cloudinary URL:', url);
   
@@ -65,7 +72,7 @@ function SignUpSp() {
       localStorage.setItem("currentUser", JSON.stringify(response.data));
   
       // Handle success, e.g., show a success message to the user
-      navigate('/myservice');
+      navigate('/welcomeSp');
     } catch (error) {
       console.error('Registration failed:', error);
   
@@ -158,7 +165,7 @@ function SignUpSp() {
           <label className='sign-in-text'>Interests</label>
           <input
             className='sign-in-input'
-            placeholder='Interests'
+            placeholder='e.g Fashion, repairs, art, music, books, '
             name='interests'
             onChange={handleChange}
           />
@@ -190,9 +197,17 @@ function SignUpSp() {
         
 <hr ></hr>
 
+
         <label htmlFor="agreeToTermsCheckbox" className="agree-label">
           By signing up, you have agreed to the{' '}
           <Link to="/terms&conditions">terms and conditions</Link>.
+          <input
+          type='checkbox'
+          id='agreeToTermsCheckbox'
+          checked={agreeToTerms}
+          onChange={handleCheckboxChange}
+          className='check-box'
+        />  
         </label>
 
         <div className='button3' onClick={handleRegistration}>

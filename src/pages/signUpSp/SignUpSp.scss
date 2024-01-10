@@ -26,6 +26,35 @@
   margin-bottom: 10px;
   margin-top: 1rem;
 }
+.check-box {
+  appearance: none;
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+  border: 2px solid #36D7B7;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+ 
+
+  
+}
+
+.check-box:checked {
+  background-color: #36D7B7;
+  border-color: #36D7B7;
+}
+
+.check-box:checked::before {
+  content: '\2713'; /* Unicode character for checkmark */
+  font-size: 16px; /* Adjust the size as needed */
+  color: #fff; /* Adjust the color as needed */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .agree-checkbox:checked + .agree-label {
   /* Styles for the label when the checkbox is checked */
   color: #2ecc71; /* Change the color to your preferred color */
@@ -76,6 +105,59 @@
           color: darkred;
           margin-top: -1rem;
          }
+         .check-box {
+          appearance: none;
+          width: 24px; /* Adjust the size as needed */
+          height: 24px; /* Adjust the size as needed */
+          border: 2px solid #36D7B7;
+          border-radius: 4px;
+          margin-right: 8px;
+          cursor: pointer;
+          outline: none;
+          position: relative;
+         
+        
+          
+        }
+
+         .check-box:checked {
+          background-color: #36D7B7;
+          border-color: #36D7B7;
+        }
+        
+        .check-box:checked::before {
+          content: '\2713'; /* Unicode character for checkmark */
+          font-size: 16px; /* Adjust the size as needed */
+          color: #fff; /* Adjust the color as needed */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        
+        /* Adjust the styles as needed based on your design preferences */
+        
+        
+        .agree-checkbox:checked + .agree-label {
+          /* Styles for the label when the checkbox is checked */
+          color: #2ecc71; /* Change the color to your preferred color */
+          font-weight: bold;
+        }
+        
+        .agree-checkbox:not(:checked) + .agree-label {
+          /* Styles for the label when the checkbox is not checked */
+          color: #555; /* Change the color to your preferred color */
+          font-weight: normal;
+        }
+        
+        .agree-label {
+          /* Styles for the label */
+          font-size: 0.52rem; /* Adjust the font size to make it very small */
+          display: flex;
+          align-items: center;
+          gap: 0.15rem;
+        }
+        
 
         .error-box {
           background-color: #f8d7da;
@@ -92,6 +174,58 @@
       @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
         width: 70%;
+        .check-box {
+          appearance: none;
+          width: 24px; /* Adjust the size as needed */
+          height: 24px; /* Adjust the size as needed */
+          border: 2px solid #36D7B7;
+          border-radius: 4px;
+          margin-right: 8px;
+          cursor: pointer;
+          outline: none;
+          position: relative;
+         
+        
+          
+        }
+        
+        .check-box:checked {
+          background-color: #36D7B7;
+          border-color: #36D7B7;
+        }
+        
+        .check-box:checked::before {
+          content: '\2713'; /* Unicode character for checkmark */
+          font-size: 16px; /* Adjust the size as needed */
+          color: #fff; /* Adjust the color as needed */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        
+        /* Adjust the styles as needed based on your design preferences */
+        
+        
+        .agree-checkbox:checked + .agree-label {
+          /* Styles for the label when the checkbox is checked */
+          color: #2ecc71; /* Change the color to your preferred color */
+          font-weight: bold;
+        }
+        
+        .agree-checkbox:not(:checked) + .agree-label {
+          /* Styles for the label when the checkbox is not checked */
+          color: #555; /* Change the color to your preferred color */
+          font-weight: normal;
+        }
+        
+        .agree-label {
+          /* Styles for the label */
+          font-size: 0.65rem; /* Adjust the font size to make it very small */
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+        }
 
       }
 
