@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Sps.scss';
 import SpCard from '../../components/spCard/SpCard';
 import Footer from '../../components/footer/Footer';
@@ -8,8 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
 import { css } from "@emotion/react";
 import { ClipLoader } from "react-spinners";
-import { useEffect } from 'react';
-
+import Sorry from '../../components/sorry/Sorry';
 
 const override = css`
   display: flex;
@@ -22,6 +21,7 @@ function Sps() {
   useEffect(() => {
     document.title = 'Service Providers';
   }, []);
+
   // Get the category from the URL using location.pathname
   const category = decodeURIComponent(useLocation().pathname.split('/')[2]);
 
@@ -35,7 +35,7 @@ function Sps() {
   }
 
   if (error) {
-    return <div>Error loading data</div>;
+    return <div>Error loading data, Bad network or refresh page</div>;
   }
 
   // Ensure data is defined before trying to filter
@@ -47,9 +47,14 @@ function Sps() {
       <h1 className='header-24px'>{category}</h1>
       <p className='subtitle-text'>Each service provider personally selected and endorsed by Root</p>
 
-      {filteredData.map((service) => (
-        <SpCard key={service._id} item={service} />
-      ))}
+      {filteredData.length > 0 ? (
+        filteredData.map((service) => (
+          <SpCard key={service._id} item={service} />
+        ))
+      ) : (
+       
+        <Sorry/>
+      )}
 
       <Footer />
     </div>

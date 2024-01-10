@@ -8,8 +8,8 @@ function Search() {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-  
     navigate(`/search-result?search=${input}`);
+    setInput(""); // Clear the input field after navigating
   };
 
   const handleKeyPress = (e) => {

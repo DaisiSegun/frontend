@@ -20,6 +20,7 @@ function SearchResult() {
   useEffect(() => {
     document.title = 'Search Result';
   }, []);
+
   const location = useLocation();
   const search = new URLSearchParams(location.search).get('search');
   const [data, setData] = useState([]);
@@ -29,6 +30,7 @@ function SearchResult() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setIsLoading(true); // Set loading to true when starting a new request
         const response = await newRequest.get(`/services/all?search=${search}`);
         setData(response.data);
       } catch (error) {
@@ -46,7 +48,7 @@ function SearchResult() {
   }
 
   if (error) {
-    return <div>Error loading data</div>;
+    return <div>Error loading data, Bad network or refresh page</div>;
   }
 
   return (
