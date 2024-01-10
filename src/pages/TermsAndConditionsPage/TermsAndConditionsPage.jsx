@@ -126,7 +126,7 @@ const TermsAndConditionsPage = () => {
 
 Root may update these terms periodically, and continued use of the platform constitutes acceptance of any changes.
 
-By signing up & using Root, you acknowledge that you have read, understood, and agree to these Terms and Conditions here above mentioned.
+By signing up, ticking the box on sign up page & using Root, you acknowledge that you have read, understood, and agree to these Terms and Conditions here above mentioned.
       </p>
     </div>
   );
