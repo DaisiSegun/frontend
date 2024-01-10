@@ -214,7 +214,7 @@ function SignUpSp() {
           className='check-box'
         />
 
-        <p className='checkbox'>checkbox</p>
+        {/* <p className='checkbox'>checkbox</p> */}
           </div>
          
         </label>
