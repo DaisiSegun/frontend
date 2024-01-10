@@ -45,7 +45,7 @@ function Sps() {
     <div className='sps'>
       <Header showSearch={true} />
       <h1 className='header-24px'>{category}</h1>
-      <p className='subtitle-text'>Each service provider personally selected and endorsed by Root</p>
+      <p className='subtitle-text'>Each service provider personally selected and approved by Root</p>
 
       {filteredData.length > 0 ? (
         filteredData.map((service) => (

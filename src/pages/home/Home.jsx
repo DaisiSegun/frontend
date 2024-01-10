@@ -89,9 +89,10 @@ function Home() {
 
       <h1 className='header-28px'>See what our Customers are saying about Root</h1>
       <div className='testimonial-container'>
-        <Testimonial />
-        <Testimonial />
-        <Testimonial />
+       
+        <Testimonial title="Oyindamola Sanusi" text="Thanks so much on helping fix my phone without having to stress me at all. No single trace of the repair, it literally looks just as new!" />
+
+        <Testimonial title="Kene Oleah" text="Good service. What i got fixed is still working perfectly well" />
       </div>
 
       <Footer />
