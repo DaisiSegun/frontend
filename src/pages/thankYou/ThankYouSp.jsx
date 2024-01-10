@@ -23,7 +23,7 @@ function ThankYouSp() {
         </div>
         <img className='sryImg' src={welcome} alt='Welcome GIF' />
         <Link className='link' to='/myservice'>
-          <button className='sorry-button'>Go Home</button>
+          <button className='sorry-button'>Go to Dashboard</button>
         </Link>
       </div>
     </div>
