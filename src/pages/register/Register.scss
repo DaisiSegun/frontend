@@ -8,6 +8,23 @@
 .link {
   text-decoration: none;
 }
+.term-con {
+
+  display: flex;
+  gap: 0.2rem;
+}
+
+.tick-box {
+  display: flex;
+  gap:0.3rem;
+  margin-top: 0.3rem;
+}
+
+.checkbox {
+  color: lightgray;
+  font-size: 0.7rem;
+  margin-left: -0.5rem;
+}
 
 /* Add this to your existing Register.scss or create a new CSS file */
 
@@ -58,10 +75,12 @@
 
 .agree-label {
   /* Styles for the label */
-  font-size: 0.8em; /* Adjust the font size to make it very small */
+  font-size: 0.75rem; /* Adjust the font size to make it very small */
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.3rem;
+  margin-top: 0.75rem;
 }
 
 .error-box {
@@ -253,10 +272,11 @@
   
   .agree-label {
     /* Styles for the label */
-    font-size: 0.55rem; /* Adjust the font size to make it very small */
+    font-size: 0.75rem; /* Adjust the font size to make it very small */
     display: flex;
-    align-items: center;
-    gap: 0.15rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
   }
   
   .error-box {
@@ -451,9 +471,10 @@
 
 .agree-label {
   /* Styles for the label */
-  font-size: 0.65rem; /* Adjust the font size to make it very small */
+  font-size: 0.75rem; /* Adjust the font size to make it very small */
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.3rem;
 }
 
