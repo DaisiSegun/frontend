@@ -169,12 +169,12 @@
               
             
             <div className="create-contianer">
-                <p className='create-title'>Certifications (Mininum certification required- WAEC) </p>
+                <p className='create-title'>Number of employees (Use "Solo Entrepreneur" if solo) </p>
                 <input 
                 type="text"
                 name="certification"
                 onChange={handleChange}
-                placeholder='A certification related to your field will be more encouraged.' className='create-input'/>
+                placeholder='If 1 please use (Solo Entrepreneur)' className='create-input'/>
 
             </div>
 

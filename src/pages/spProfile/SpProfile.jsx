@@ -163,7 +163,7 @@ function SpProfile() {
                  <p className='dark-des'>{dataUser.businessLocation}</p>
                </div> 
                <div className='sp-des'>
-                 <p className='light-des'>Certifications</p>
+                 <p className='light-des'>Number of employees</p>
                  <p className='dark-des'>{data.certification}</p>
                </div> 
                <div className='sp-des'>

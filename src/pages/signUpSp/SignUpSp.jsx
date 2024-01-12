@@ -99,10 +99,10 @@ function SignUpSp() {
           
 
         <div className='sign-in-box'>
-          <label className='sign-in-text'>Username</label>
+          <label className='sign-in-text'>Name (Business/brand Name)</label>
           <input
             className='sign-in-input'
-            placeholder='Username'
+            placeholder='Name'
             name='username'
             onChange={handleChange}
           />
