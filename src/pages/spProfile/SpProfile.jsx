@@ -13,6 +13,7 @@ import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
 import { ClipLoader } from 'react-spinners';
 import { css } from '@emotion/react';
+import { Helmet } from 'react-helmet';
 
 
 const override = css`
@@ -99,6 +100,13 @@ function SpProfile() {
 
   return (
     <div className='sp-profile'>
+      <Helmet>
+      <title>{dataUser.username}'s Profile</title>
+      <meta property="og:title" content={data.title} />
+      <meta property="og:description" content={data.desc} />
+      <meta property="og:image" content={data.images[0]} />
+    </Helmet>
+
       <Header showSearch={true} />
 
       <h1 className='header-24px'>{data.title}</h1>
