@@ -13,7 +13,7 @@ import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
 import { ClipLoader } from 'react-spinners';
 import { css } from '@emotion/react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 
 
 const override = css`
@@ -61,6 +61,31 @@ function SpProfile() {
       }),
   });
 
+  useEffect(() => {
+    if (dataUser && data) {
+      document.title = `${dataUser.username}'s Profile`;
+
+      // Update meta tags for social media sharing
+      const metaTags = [
+        { name: 'og:title', content: `${dataUser.username}'s Profile` },
+        { name: 'og:description', content: data.desc || '' },
+        { name: 'og:image', content: data.images && data.images.length > 0 ? data.images[0] : '' },
+      ];
+
+      metaTags.forEach((tag) => {
+        const existingTag = document.head.querySelector(`meta[property="${tag.name}"]`);
+        if (existingTag) {
+          existingTag.content = tag.content;
+        } else {
+          const newTag = document.createElement('meta');
+          newTag.setAttribute('property', tag.name);
+          newTag.content = tag.content;
+          document.head.appendChild(newTag);
+        }
+      });
+    }
+  }, [dataUser, data]);
+
   if (isLoading || isLoadingUser) {
     return <ClipLoader color={'#36D7B7'} css={override} size={150} />;
   }
@@ -99,14 +124,9 @@ function SpProfile() {
   const currentUser = getCurrentUser();
 
   return (
-    <HelmetProvider>
+  
     <div className='sp-profile'>
-      <Helmet>
-      <title>{dataUser.username}'s Profile</title>
-      <meta property="og:title" content={data.title} />
-      <meta property="og:description" content={data.desc} />
-      <meta property="og:image" content={data.images[0]} />
-    </Helmet>
+    
 
       <Header showSearch={true} />
 
@@ -199,7 +219,7 @@ function SpProfile() {
 
       <div className='space1'></div>
     </div>
-    </HelmetProvider>
+   
   );
 }
 
