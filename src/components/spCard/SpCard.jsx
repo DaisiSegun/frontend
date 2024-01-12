@@ -42,8 +42,8 @@ function SpCard({ item }) {
             <div className='sp-title-contianer'>
               <Link className='link' to={`/view-profile/${item._id}`}>
                 <div className='sp-name-title-container'>
-                  <h1 className='sp-title'> {item.title} </h1>
-                  <p className='sp-name-small'> {data.username} </p>
+                  <h1 className='sp-title'>  {data.username}  </h1>
+                  <p className='sp-name-small'> {item.title}</p>
                 </div>
               </Link>
               <div className='rating-container'>
