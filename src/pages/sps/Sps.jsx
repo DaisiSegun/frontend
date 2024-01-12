@@ -35,7 +35,7 @@ function Sps() {
   }
 
   if (error) {
-    return <div>Error loading data, Bad network or refresh page</div>;
+    return <div>network errror, refresh page</div>;
   }
 
   // Ensure data is defined before trying to filter

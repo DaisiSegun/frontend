@@ -13,7 +13,7 @@ import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
 import { ClipLoader } from 'react-spinners';
 import { css } from '@emotion/react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 const override = css`
@@ -66,7 +66,7 @@ function SpProfile() {
   }
 
   if (error || errorUser) {
-    return <div>Something went wrong!</div>;
+    return <div>network error, refresh page</div>;
   }
 
  
@@ -99,6 +99,7 @@ function SpProfile() {
   const currentUser = getCurrentUser();
 
   return (
+    <HelmetProvider>
     <div className='sp-profile'>
       <Helmet>
       <title>{dataUser.username}'s Profile</title>
@@ -198,6 +199,7 @@ function SpProfile() {
 
       <div className='space1'></div>
     </div>
+    </HelmetProvider>
   );
 }
 
