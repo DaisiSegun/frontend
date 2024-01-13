@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './SearchResult.scss';
 import SpCard from '../../components/spCard/SpCard';
-import Footer from '../../components/footer/Footer';
+
 import newRequest from '../../utils/newRequest';
 import Header from '../../components/header/Header';
 import { useLocation } from 'react-router-dom';
