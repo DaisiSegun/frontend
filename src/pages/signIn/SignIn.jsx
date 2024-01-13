@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './SignIn.scss';
-import logo from '../../images/logo.svg';
+import logo from '../../images/rootlogo.svg';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { css } from "@emotion/react";
