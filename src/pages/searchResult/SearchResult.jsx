@@ -64,7 +64,7 @@ function SearchResult() {
       ))}
 
       <div className='space25'></div>
-      <Footer />
+     
     </div>
   );
 }

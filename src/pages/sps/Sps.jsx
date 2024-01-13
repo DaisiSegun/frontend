@@ -56,7 +56,7 @@ function Sps() {
         <Sorry/>
       )}
 
-      <Footer />
+     
     </div>
   );
 }
