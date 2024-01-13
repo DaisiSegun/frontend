@@ -91,7 +91,7 @@
             
                 <option value="">Select a category</option>
                 <option value="Graphic & Logo Design">Graphic & Logo Design</option>
-                <option value="Driver & transportation">Driver & Transportation</option>
+                <option value="Driver & Transportation">Driver & Transportation</option>
                 <option value="Chef">Chef</option>
                 <option value="Event Decor & Planning">Event Decor & Planning</option>
                 <option value="Makeup & Gele Artist">Makeup & Gele Artist</option>

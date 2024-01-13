@@ -23,6 +23,10 @@ function SpCard({ item }) {
       }),
   });
 
+  const openProfile = () => {
+    window.open(`/#/view-profile/${item._id}`, '_blank');
+  };
+
   return (
     <div className='sp-card'>
       {isLoading ? (
@@ -68,9 +72,9 @@ function SpCard({ item }) {
           </div>
 
           <div className='sec2'>
-            <Link className='link9' to={`/view-profile/${item._id}`}>
-              <button className='view-profile'>View Profile</button>
-            </Link>
+          <button className='view-profile' onClick={openProfile}>
+              View Profile
+            </button>
           </div>
         
         </>
