@@ -7,10 +7,12 @@ import getCurrentUser from '../../utils/getCurrentUser.js';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import profileImg from '../../images/avatar.jpg';
 import newRequest from '../../utils/newRequest.js';
+import { ClipLoader } from 'react-spinners'; 
 
 function Header({ showSearch }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showDropdownContent, setShowDropdownContent] = useState(false);
+  const [loadingLogout, setLoadingLogout] = useState(false);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -23,11 +25,14 @@ function Header({ showSearch }) {
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
+      setLoadingLogout(true); // Set loading state to true
       await newRequest.post("/auth/logout");
       localStorage.setItem("currentUser", null);
       navigate("/");
     } catch (err) {
       console.log(err);
+    } finally {
+      setLoadingLogout(false); // Reset loading state
     }
   };
   const currentUser = getCurrentUser();
@@ -47,11 +52,16 @@ function Header({ showSearch }) {
           {currentUser ? (
             <div className='drop-cont'>
               <div className='log-out' onClick={toggleDropdownContent}>
-              <img className='pro-img' src={currentUser?.user?.profilePicture || profileImg} alt={currentUser?.user?.username || 'User Profile'} />
-
+            {loadingLogout ? (
+              <ClipLoader size={20} color={'#36D7B7'} loading={loadingLogout} />
+            ) : (
+              <>
+                <img className='pro-img' src={currentUser?.user?.profilePicture || profileImg} alt={currentUser?.user?.username || 'User Profile'} />
                 <p className='pro-name'>{currentUser?.user?.username}</p>
                 <ArrowDropDownIcon className='pro-icon' />
-              </div>
+              </>
+            )}
+          </div>
               {showDropdownContent && (
                 <div className='dropdown-content-log'>
                   <button className='log-drop' onClick={handleLogout}>

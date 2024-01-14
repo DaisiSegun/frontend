@@ -232,7 +232,7 @@ function SignUpSp() {
 
         <div className='dont-have-an'>
           Already have an account?{' '}
-          <Link to='/register' className='link'>
+          <Link to='/sign-in' className='link'>
             <span className='sign-up-green'>Sign in</span>
           </Link>
         </div>
