@@ -66,7 +66,7 @@
       <div className='create-service'>
         <Header showSearch={false}/>
         <div className="header-create">
-          Creat new service (What can you do)
+          Create new service (What can you do?)
         </div>
         <p className='red-notice'>Each question is a chance to connect warmly and inspire customers to consider your services</p>
 
