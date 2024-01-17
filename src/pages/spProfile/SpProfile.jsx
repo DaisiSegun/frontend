@@ -13,6 +13,8 @@ import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
 import { ClipLoader } from 'react-spinners';
 import { css } from '@emotion/react';
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -65,11 +67,11 @@ function SpProfile() {
     if (dataUser && data) {
       document.title = `${dataUser.username}'s Profile`;
 
-      // Update meta tags for social media sharing
       const metaTags = [
         { name: 'og:title', content: `${dataUser.username}'s Profile` },
         { name: 'og:description', content: data.desc || '' },
         { name: 'og:image', content: data.images && data.images.length > 0 ? data.images[0] : '' },
+        { name: 'og:url', content: window.location.href },
       ];
 
       metaTags.forEach((tag) => {
@@ -85,6 +87,7 @@ function SpProfile() {
       });
     }
   }, [dataUser, data]);
+  
 
   if (isLoading || isLoadingUser) {
     return <ClipLoader color={'#36D7B7'} css={override} size={150} />;
@@ -127,6 +130,13 @@ function SpProfile() {
   
     <div className='sp-profile'>
     
+    <Helmet>
+        {/* Add meta tags for social media sharing within Helmet */}
+        <meta property="og:title" content={`${dataUser.username}'s Profile`} />
+        <meta property="og:description" content={data.desc || ''} />
+        <meta property="og:image" content={data.images && data.images.length > 0 ? data.images[0] : ''} />
+        <meta property="og:url" content={window.location.href} />
+      </Helmet>
 
       <Header showSearch={true} />
 
