@@ -112,6 +112,15 @@
                 <option value="Interior Decoration">Interior Decoration</option>
                 <option value="Hairdresser">Hairdresser</option>
                 <option value="MC">MC</option>
+                <option value="Home Repair & Maintenance">Home Repair & Maintenance</option>
+                <option value="Personal Care & Beauty">Personal Care & Beauty</option>
+                <option value="Creative & Design">Creative & Design</option>
+                <option value="Home Tutor & Lessons">Home Tutor & Lessons</option>
+                <option value="Music Lessons">Music Lessons</option>
+                <option value="Tech Lessons">Tech Lessons</option>
+                <option value="Fumigation">Fumigation & Pest Control</option>
+                <option value="Coding">Coding</option>
+                <option value="Web Development">Web Development</option>
 
             </select>
 
@@ -139,7 +148,7 @@
             </div>
 
             <div className="create-contianer">
-                <p className='create-title'>Starting Price </p>
+                <p className='create-title'>Minimum price (Use "Negotiable" if you dont have) </p>
                 <input
                   type="number"
                   name="price"
@@ -195,7 +204,7 @@
 
 
             <div className="create-contianer2">
-                <label htmlFor="" className='create-title2'>Upload Images (please upload multiple images) </label>
+                <label htmlFor="" className='create-title2'>Upload Images (Maximum of 7 Images) </label>
 
                 {/* <div className="create-img-container">
                   <img className='create-img' src={upload}/>

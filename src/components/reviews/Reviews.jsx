@@ -6,6 +6,9 @@ import newRequest from '../../utils/newRequest';
 import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
 import { CircleLoader } from 'react-spinners';
 
+
+
+
 function Reviews({ serviceId }) {
   const queryClient = useQueryClient();
   const [errorMessage, setErrorMessage] = useState(null);
@@ -93,7 +96,7 @@ function Reviews({ serviceId }) {
       <h1 className='review-service'>Review this service</h1>
 
       <form action="" onSubmit={handleSubmit} className='create-review5'>
-        <textarea className='input-review' placeholder='Please write your opinion' />
+        <textarea  className='input-review' placeholder='Please write your opinion' />
         <p className='select-rating'>Select Rating</p>
         <select className='select-star' name='' id=''>
           <option value={1}>1</option>
@@ -101,7 +104,10 @@ function Reviews({ serviceId }) {
           <option value={3}>3</option>
           <option value={4}>4</option>
           <option value={5}>5</option>
+         
         </select>
+        
+       
         <button className='review-button' disabled={submitLoading} type="submit">
           {submitLoading ? <CircleLoader size={20} color="#ffffff" /> : "Submit"}
         </button>
