@@ -156,7 +156,7 @@
                   type="text"
                   name="price"
                   onChange={handleChange}
-                placeholder='The minimum fee for your service' className='create-input'/>
+                placeholder='minimum fee for your service or type negotiable' className='create-input'/>
 
             </div>
             
