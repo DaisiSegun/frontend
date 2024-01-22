@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Search.scss';
 import search from '../../images/search-icon.svg';
-import axios from 'axios'; // Import axios
+import newRequest from '../../utils/newRequest.js';
 import { useNavigate } from "react-router-dom";
 
 function Search() {
@@ -26,7 +26,7 @@ function Search() {
 
     // Fetch suggestions using axios directly
     try {
-      const response = await axios.get(`https://app.roothq.africa/api/services/service-suggestions?search=${inputValue}`);
+      const response = await newRequest.get(`/services/service-suggestions?search=${inputValue}`);
       setSuggestions(response.data);
     } catch (error) {
       console.error('Error fetching suggestions:', error);
@@ -36,6 +36,7 @@ function Search() {
   const handleSuggestionClick = (suggestion) => {
     setInput(suggestion);
     setSuggestions([]); // Clear suggestions after selecting one
+    handleSubmit(); // Navigate to search results
   };
 
   return (
