@@ -153,7 +153,7 @@
             <div className="create-contianer">
                 <p className='create-title'>Minimum price (Use "Negotiable" if you dont have) </p>
                 <input
-                  type="number"
+                  type="text"
                   name="price"
                   onChange={handleChange}
                 placeholder='The minimum fee for your service' className='create-input'/>
