@@ -26,7 +26,7 @@ function Search() {
 
     // Fetch suggestions using axios directly
     try {
-      const response = await axios.get(`http://localhost:5000/api/services/service-suggestions?search=${inputValue}`);
+      const response = await axios.get(`https://app.roothq.africa/api/services/service-suggestions?search=${inputValue}`);
       setSuggestions(response.data);
     } catch (error) {
       console.error('Error fetching suggestions:', error);
