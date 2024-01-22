@@ -34,9 +34,9 @@ function Search() {
   };
 
   const handleSuggestionClick = (suggestion) => {
-    setInput(suggestion);
+    
     setSuggestions([]); // Clear suggestions after selecting one
-    handleSubmit(); // Navigate to search results
+    handleSubmit(suggestion); // Navigate to search results
   };
 
   return (

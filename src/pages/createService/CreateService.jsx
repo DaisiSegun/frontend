@@ -96,6 +96,7 @@
                 <option value="Event Decor & Planning">Event Decor & Planning</option>
                 <option value="Makeup & Gele Artist">Makeup & Gele Artist</option>
                 <option value="DJs & Sound Engineers">DJs & Sound Engineers</option>
+                <option value="Makerting & Social Media">Makerting & Social Media</option>
                 <option value="Phone, Tablet & Laptop repair">Phone, Tablet & Laptop Repair</option>
                 <option value="Plumber">Plumber</option>
                 <option value="Electrician">Electrician</option>
@@ -121,6 +122,8 @@
                 <option value="Fumigation">Fumigation & Pest Control</option>
                 <option value="Coding">Coding</option>
                 <option value="Web Development">Web Development</option>
+                <option value="Content Writing">Content Writing</option>
+                <option value="Animation">Animation</option>
 
             </select>
 
