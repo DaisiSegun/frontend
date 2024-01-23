@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser';
 import welcome from '../../images/welcome.gif';
