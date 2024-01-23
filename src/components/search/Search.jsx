@@ -36,8 +36,10 @@ function Search() {
   const handleSuggestionClick = (suggestion) => {
     
     setSuggestions([]); // Clear suggestions after selecting one
-    handleSubmit(suggestion); // Navigate to search results
+    navigate(`/search-result?search=${suggestion}`);// Navigate to search results
+  
   };
+
 
   return (
     <div className='search-container'>

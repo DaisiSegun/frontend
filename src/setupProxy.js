@@ -5,7 +5,7 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://app.roothq.africa/api', // Replace with your API URL
+      target: 'https://app.roothq.africa', // Replace with your API URL
       changeOrigin: true,
       secure: false, // Set to false if your server doesn't have a valid certificate
     })

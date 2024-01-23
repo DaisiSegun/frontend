@@ -112,6 +112,8 @@ function SpProfile() {
     
     if (!currentUser) {
       // If no user is logged in, redirect to the signup page
+      localStorage.setItem('intendedAction', 'requestQuote');
+      localStorage.setItem('spId', id);
       navigate('/register');
     } else {
       const message = `I want to hire ${dataUser.username} (${data.title})`;

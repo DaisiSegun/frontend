@@ -5,6 +5,7 @@ import Review from '../review/Review';
 import newRequest from '../../utils/newRequest';
 import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
 import { CircleLoader } from 'react-spinners';
+import getCurrentUser from '../../utils/getCurrentUser.js';
 
 
 
@@ -43,6 +44,14 @@ function Reviews({ serviceId }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+
+    if (!currentUser) {
+      setErrorMessage("You can only review after using a service.");
+      return;
+    }
+  
+
     const desc = e.target[0].value;
     const star = e.target[1].value;
 
@@ -62,6 +71,7 @@ function Reviews({ serviceId }) {
       setSubmitLoading(false);
     }
   };
+  const currentUser = getCurrentUser();
   return (
     <div className='review'>
       <h2 className='a-r'>Reviews ({data ? data.length : 0})</h2>

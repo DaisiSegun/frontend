@@ -1,14 +1,24 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser';
 import welcome from '../../images/welcome.gif';
-import { Link } from 'react-router-dom';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import './ThankYou.scss';
 
 function ThankYou() {
-  useEffect(() => {
-    document.title = 'Welcome';
-  }, []);
+  const handleContinue = () => {
+    // Check for intended action and SP ID in local storage
+    const intendedAction = localStorage.getItem('intendedAction');
+    const spId = localStorage.getItem('spId');
+
+    if (intendedAction === 'requestQuote' && spId) {
+      // Redirect to the SP profile page with the SP ID
+      window.open(`/#/view-profile/${spId}`, '_blank');
+    }
+
+    localStorage.removeItem('intendedAction');
+    localStorage.removeItem('spId');
+  };
 
   const currentUser = getCurrentUser();
 
@@ -22,8 +32,8 @@ function ThankYou() {
           </div>
         </div>
         <img className='sryImg' src={welcome} alt='Welcome GIF' />
-        <Link className='link' to='/'>
-          <button className='sorry-button'>Go Home</button>
+        <Link className='link' to='/' onClick={handleContinue}>
+          <button className='sorry-button'>Continue</button>
         </Link>
       </div>
     </div>
