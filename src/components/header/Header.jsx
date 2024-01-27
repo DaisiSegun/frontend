@@ -37,6 +37,18 @@ function Header({ showSearch }) {
   };
   const currentUser = getCurrentUser();
 
+  const openEditProfile = () => {
+    // Open a new browser window for the Edit Profile page
+    window.open('#/edit-profile', '_blank');
+  };
+
+  const openMyService = () => {
+    // Open a new browser window for the My Service page
+    window.open('#/myservice', '_blank');
+  };
+
+
+
   return (
     <div className='header'>
       <div className='header-container'>
@@ -64,9 +76,17 @@ function Header({ showSearch }) {
           </div>
               {showDropdownContent && (
                 <div className='dropdown-content-log'>
-                  <button className='log-drop' onClick={handleLogout}>
-                    Log Out
-                  </button>
+                 <div className='dropdown-content2'>
+                 <Link className='drop-text' onClick={openEditProfile}  >
+                  Edit Profile
+                  </Link>
+                <Link className='drop-text' onClick={openMyService} >
+                 Seller Dashboard
+                </Link>
+                <Link className='drop-text' onClick={handleLogout}>
+                  Log out
+                </Link>
+              </div>  
                 </div>
               )}
             </div>

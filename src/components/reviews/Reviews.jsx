@@ -72,6 +72,7 @@ function Reviews({ serviceId }) {
     }
   };
   const currentUser = getCurrentUser();
+  console.log (currentUser);
   return (
     <div className='review'>
       <h2 className='a-r'>Reviews ({data ? data.length : 0})</h2>

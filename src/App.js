@@ -22,6 +22,9 @@ import ThankYou from "./pages/thankYou/ThankYou"
 
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage/TermsAndConditionsPage"
 import ThankYouSp from "./pages/thankYou/ThankYouSp"
+import ResetEmail from "./pages/resetEmail/ResetEmail"
+import ChangePassword from "./pages/changePassword/ChangePassword"
+import EditProfile from "./pages/editProfile/EditProfile"
 
 
 function App() {
@@ -49,8 +52,10 @@ function App() {
             <Route path="/more-service" element={<MoreService />} title="More Service" />
             <Route path="/welcome" element={<ThankYou />} title="Welcome" />
             <Route path="/welcomeSp" element={<ThankYouSp/>} title="Welcome Sp" />
-          
             <Route path="/terms&conditions" element={<TermsAndConditionsPage />} title="Terms and Conditions" />
+            <Route path="/reset-password" element={<ResetEmail/>} title="Reset Password" />
+            <Route path="/change-password/:id" element={ <ChangePassword/> } title="Change Password" />
+            <Route path="/edit-profile" element={ <EditProfile/> } title="Edit Profile" />
           </Routes>
         </Router>
       </QueryClientProvider>

@@ -7,34 +7,39 @@
 .link {
   text-decoration:  none;
 }
+
+.email-sent {
+  width: 10rem;
+  height: 10rem;
+
+  align-self: center;
+}
+
+.send-reset-text1 {
+  font-size: 0.65rem;
+  margin-bottom: 0.5rem;
+  margin-top: -0.5rem;
+  color: black;
+  margin-bottom: 1.2rem;
+}
+.success-box {
+  background-color: #d9f8d9; /* Light green background color */
+  color: #4caf50; /* Green text color */
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-self: center;
+  margin-left: -1rem;
+}
 .error-box {
   background-color: #f8d7da;
   color: #721c24;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
-}
-
-.link6 {
-  text-decoration: none;
-  align-self: flex-end;
-}
-
-.forgot-password {
-  align-self: flex-end;
-  font-size: 0.85rem;
-  color: #0F253B;
-  transition:  text-decoration 0.3s,;
-  cursor: pointer;
-  font-weight: 500;
-
-  &:hover {
-    text-decoration: underline;
-  
-  
-  }
-
-
 }
 
 .home-logo {
@@ -63,14 +68,14 @@
       padding: 2rem;
       width: 35%;
 
-        .sign-in-header{
+        .sign-in-header8{
           color: #000;
           font-family: Open Sans;
-          font-size: 2.25rem;
+          font-size: 1.5rem;
           font-style: normal;
-          font-weight: 400;
+          font-weight: 600;
           line-height: 3rem; /* 133.333% */
-          margin-bottom: 1rem;
+          margin-bottom: 0.25rem;
               
         }
           
@@ -202,12 +207,12 @@
         height: 70vh;
         
   
-          .sign-in-header{
+          .sign-in-header8{
             color: #000;
             font-family: Open Sans;
             font-size: 1.25rem;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 600;
             line-height: 1.5rem; /* 133.333% */
             
                 
@@ -339,12 +344,12 @@
         padding: 2rem;
         width: 50%;
   
-          .sign-in-header{
+          .sign-in-header8{
             color: #000;
             font-family: Open Sans;
             font-size: 2rem;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 600;
             line-height: 3rem; /* 133.333% */
             margin-bottom: 1rem;
                 

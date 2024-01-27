@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import './SignIn.scss';
+import './ResetEmail.scss';
 import logo from '../../images/rootlogo.svg';
 import { Link } from 'react-router-dom';
-import { useNavigate } from "react-router-dom";
+
 import { css } from "@emotion/react";
 import { CircleLoader } from "react-spinners";
 import newRequest from "../../utils/newRequest.js";
+import email from '../../images/email.gif'
 
 const override = css`
   display: block;
@@ -13,9 +14,9 @@ const override = css`
   border-color: red;
 `;
 
-function SignIn() {
+function ResetEmail() {
   useEffect(() => {
-    document.title = 'Sign In';
+    document.title = 'Res';
   }, []);
   const [formData, setFormData] = useState({
     email: '',
@@ -23,8 +24,9 @@ function SignIn() {
   });
 
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+ 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,13 +39,13 @@ function SignIn() {
   const handleLogin = async () => {
     try {
       setLoading(true);
-      const response = await newRequest.post('/auth/login', formData);
+      const response = await newRequest.post('/auth/forgot-password', formData);
       localStorage.setItem("currentUser", JSON.stringify(response.data));
+      setSuccess('We’ve sent the password reset instructions to your email')
      
-      navigate("/");
     } catch (error) {
    
-      setError('Invalid username or password');
+      setError('Email not found');
     } finally {
       setLoading(false);
     }
@@ -55,12 +57,14 @@ function SignIn() {
         <img src={logo} className='logo-1' alt='logo' />
       </Link>
       <div className='sign-in-container2'>
-        <div className='sign-in-header'>Sign in</div>
+        <div className='sign-in-header8'>Forgot your password?</div>
+        <p className='send-reset-text1'>No problem! Just enter the email address that you signed up with to reset it.</p>
 
         {error && <div className='error-box'>{error}</div>}
+       
 
         <div className='sign-in-box'>
-          <label className='sign-in-text'>Email</label>
+   
           <input
             className='sign-in-input'
             placeholder='Email'
@@ -68,39 +72,21 @@ function SignIn() {
             onChange={handleChange}
           />
         </div>
-
-        <div className='sign-in-box'>
-          <label className='sign-in-text'>Password</label>
-          <input
-            type='password'
-            className='sign-in-input'
-            placeholder='Password'
-            name='password'
-            onChange={handleChange}
-          />
-        </div>
-
-        <Link className='link6' to='/reset-password'>
-        <p className='forgot-password'>Forgot password?</p>
-        </Link>
+        {success && <div className='success-box'>{success}</div>}
+        {success && <img className='email-sent' src={email} alt='Email Sent' />}
 
         <div className='button3' onClick={handleLogin}>
           {loading ? (
             <CircleLoader color={"#36D7B7"} css={override} size={20} />
           ) : (
-            'Login'
+            'Send reset instructions'
           )}
         </div>
 
-        <div className='dont-have-an'>
-          Don't have an account? 
-          <Link className='link' to='/register'>
-            <span className='sign-up-green'> Sign up</span>
-          </Link>
-        </div>
+      
       </div>
     </div>
   );
 }
 
-export default SignIn;
+export default ResetEmail;
