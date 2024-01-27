@@ -175,7 +175,19 @@
     width: 80%;
     
   }
-  
+  .success-box {
+    background-color: #d9f8d9; /* Light green background color */
+    color: #4caf50; /* Green text color */
+    padding: 8px;
+    margin-top: 8px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-self: center;
+    margin-left: -1rem;
+    font-size: 10px;
+  }
   .home-logo {
     align-self: center;
   }
@@ -214,6 +226,7 @@
             font-style: normal;
             font-weight: 600;
             line-height: 1.5rem; /* 133.333% */
+            margin-bottom: 1rem;
             
                 
           }
