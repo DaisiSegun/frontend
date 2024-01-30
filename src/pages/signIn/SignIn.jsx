@@ -49,6 +49,12 @@ function SignIn() {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleLogin();
+    }
+  };
+
   return (
     <div className='sign-in'>
       <Link className='home-logo' to='/'>
@@ -66,6 +72,7 @@ function SignIn() {
             placeholder='Email'
             name='email'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -77,6 +84,7 @@ function SignIn() {
             placeholder='Password'
             name='password'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 

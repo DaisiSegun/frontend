@@ -91,8 +91,9 @@ function Home() {
       <div className='testimonial-container'>
        
         <Testimonial title="Oyindamola Sanusi" text="Thanks so much on helping fix my phone without having to stress me at all. No single trace of the repair, it literally looks just as new!" />
-
+        <Testimonial title="Jumoke" text="Arise Kitchen's chef service on the platform was a lifesaver! Delicious meal, saved me time and effort. My husband loved it too. Will definitely use her again. Thanks" />
         <Testimonial title="Kene Oleah" text="Good service. What i got fixed is still working perfectly well" />
+        
       </div>
 
       <Footer />

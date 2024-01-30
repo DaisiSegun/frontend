@@ -83,6 +83,11 @@ function SignUpSp() {
   };
   
   
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleRegistration();
+    }
+  };
 
 
   return (
@@ -105,6 +110,7 @@ function SignUpSp() {
             placeholder='Name'
             name='username'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -116,6 +122,7 @@ function SignUpSp() {
             placeholder='Email'
             name='email'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -126,6 +133,7 @@ function SignUpSp() {
             placeholder='Phone Number'
             name='phone'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -137,6 +145,7 @@ function SignUpSp() {
             placeholder='Password'
             name='password'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -148,6 +157,7 @@ function SignUpSp() {
             placeholder='Confirm Password'
             name='confirmPassword'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -158,6 +168,7 @@ function SignUpSp() {
             placeholder='e.g English, Igbo & Yoruba'
             name='businessLocation'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -168,6 +179,7 @@ function SignUpSp() {
             placeholder='e.g Fashion, repairs, art, music, books, '
             name='interests'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -178,6 +190,7 @@ function SignUpSp() {
             placeholder='Location'
             name='languages'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -190,6 +203,7 @@ function SignUpSp() {
             className='sign-in-input'
             name='profilePicture'
             onChange={handleImageChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 

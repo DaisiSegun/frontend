@@ -72,7 +72,11 @@ function Register() {
       setLoading(false);
     }
   };
-
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleRegistration();
+    }
+  };
   return (
     <div className='sign-in'>
       <Link className='home-logo' to='/'>
@@ -90,6 +94,7 @@ function Register() {
             placeholder='Username'
             name='username'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -101,6 +106,7 @@ function Register() {
             placeholder='Email'
             name='email'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -112,6 +118,7 @@ function Register() {
             placeholder='Phone number'
             name='phone'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -123,6 +130,7 @@ function Register() {
             placeholder='Password'
             name='password'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -134,6 +142,7 @@ function Register() {
             placeholder='Confirm Password'
             name='confirmPassword'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 

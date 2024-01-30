@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Header.scss';
 import logo from '../../images/rootlogo.svg';
 import Search from '../search/Search';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser.js';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import profileImg from '../../images/avatar.jpg';
@@ -22,13 +22,13 @@ function Header({ showSearch }) {
     setShowDropdownContent(!showDropdownContent);
   };
 
-  const navigate = useNavigate();
+
   const handleLogout = async () => {
     try {
       setLoadingLogout(true); // Set loading state to true
       await newRequest.post("/auth/logout");
       localStorage.setItem("currentUser", null);
-      navigate("/");
+     
     } catch (err) {
       console.log(err);
     } finally {
