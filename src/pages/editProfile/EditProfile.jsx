@@ -70,7 +70,7 @@ function EditProfile() {
       // Make API call to update profile
       const response = await newRequest.put('/auth/edit-profile', updatedFormData);
       localStorage.setItem("currentUser", JSON.stringify(response.data));
-      setSuccess('Profile updared sucessfully')
+      setSuccess('Profile updated sucessfully')
       console.log('Profile updated successfully:', response.data);
 
     } catch (error) {

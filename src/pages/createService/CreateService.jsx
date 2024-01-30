@@ -8,6 +8,7 @@
   import newRequest from '../../utils/newRequest.js'
   import upload from "../../utils/upload.js";
   import { CircleLoader} from "react-spinners";
+  import Resizer from 'react-image-file-resizer';
 
   function CreateService() {
     useEffect(() => {
@@ -29,32 +30,53 @@
       });
     };
 
-
-
     const handleCreateService = async (e) => {
       e.preventDefault();
       setUploading(true);
-
+    
       try {
-        const images = await Promise.all(
+        const resizedImages = await Promise.all(
           [...files].map(async (file) => {
-            const url = await upload(file);
+            return new Promise((resolve, reject) => {
+              Resizer.imageFileResizer(
+                file,
+                file.width, // Maintain original width
+                file.height, // Maintain original height
+                file.type === 'image/jpeg' ? 'JPEG' : 'PNG', // Use original format
+                65, // Quality of the resized image (adjust as needed, 100 for no compression)
+                0,
+                (uri) => {
+                  resolve(uri);
+                },
+                'base64'
+              );
+            });
+          })
+        );
+    
+        const images = await Promise.all(
+          resizedImages.map(async (resizedImage) => {
+            const url = await upload(resizedImage);
             return url;
           })
         );
-
-        const serviceData = { ...state, images }; // Combine service data with uploaded images
-
-      await newRequest.post("/services", serviceData);
-
+    
+        const serviceData = { ...state, images };
+    
+        await newRequest.post('/services', serviceData);
+    
         setUploading(false);
-        dispatch({ type: "ADD_IMAGES", payload: { images } });
-        setSuccessMessage("Service Created! Please click on the Logo to go home");
+        dispatch({ type: 'ADD_IMAGES', payload: { images } });
+        setSuccessMessage(
+          'Service Created! Please click on the Logo to go home'
+        );
         setErrorMessage(null);
       } catch (err) {
         console.log(err);
         setUploading(false);
-        setErrorMessage("Error uploading images or creating service. Please try again.");
+        setErrorMessage(
+          'Error uploading images or creating service. Please try again.'
+        );
         setSuccessMessage(null);
       }
     };

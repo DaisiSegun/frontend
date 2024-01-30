@@ -60,7 +60,9 @@ function Reviews({ serviceId }) {
       setSuccessMessage(null);
       setSubmitLoading(true);
 
-      await newRequest.post("/reviews", { serviceId, desc, star });
+      const userId = currentUser.user?._id || currentUser.id;
+
+      await newRequest.post("/reviews", { serviceId, userId, desc, star });
 
       // If successful, set the success message and invalidate the query
       setSuccessMessage("Review submitted successfully!");
@@ -72,7 +74,7 @@ function Reviews({ serviceId }) {
     }
   };
   const currentUser = getCurrentUser();
-  console.log (currentUser);
+ 
   return (
     <div className='review'>
       <h2 className='a-r'>Reviews ({data ? data.length : 0})</h2>
