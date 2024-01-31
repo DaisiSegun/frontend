@@ -115,6 +115,7 @@
                 <option value="Graphic & Logo Design">Graphic & Logo Design</option>
                 <option value="Driver & Transportation">Driver & Transportation</option>
                 <option value="Chef">Chef</option>
+                <option value="Yogurt, Cake & pastry">Yogurt, Cake & pastry</option>
                 <option value="Event Decor & Planning">Event Decor & Planning</option>
                 <option value="Makeup & Gele Artist">Makeup & Gele Artist</option>
                 <option value="DJs & Sound Engineers">DJs & Sound Engineers</option>
@@ -137,6 +138,7 @@
                 <option value="MC">MC</option>
                 <option value="Home Repair & Maintenance">Home Repair & Maintenance</option>
                 <option value="Personal Care & Beauty">Personal Care & Beauty</option>
+                <option value="Tshirt design">Tshirt design</option>
                 <option value="Creative & Design">Creative & Design</option>
                 <option value="Home Tutor & Lessons">Home Tutor & Lessons</option>
                 <option value="Music Lessons">Music Lessons</option>
@@ -145,6 +147,7 @@
                 <option value="Coding">Coding</option>
                 <option value="Web Development">Web Development</option>
                 <option value="Content Writing">Content Writing</option>
+                <option value="Resume/Cv Writing">Resume/Cv Writing</option>
                 <option value="Animation">Animation</option>
 
             </select>
