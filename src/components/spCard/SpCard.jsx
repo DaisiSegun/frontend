@@ -5,7 +5,7 @@ import rating from '../../images/rating.svg';
 import { useQuery } from "@tanstack/react-query";
 import newRequest from '../../utils/newRequest';
 
-function SpCard({ item }) {
+function SpCard({ item, index }) {
   const { isLoading, error, data } = useQuery({
     queryKey: [item.userId],
     queryFn: () =>
@@ -28,6 +28,7 @@ function SpCard({ item }) {
 
   return (
     <div className='sp-card' onClick={openProfile} style={{ cursor: 'pointer' }}>
+       {index && <p style={{ marginRight: '0.3rem' }}>{index}.</p>}
       {isLoading ? (
         "Loading..."
       ) : error ? (
@@ -39,6 +40,7 @@ function SpCard({ item }) {
           </div>
 
           <div className='sp-card-text-contianer'>
+         
             <div className='sp-title-contianer'>
               <div className='sp-name-title-container'>
                 <h1 className='sp-title'> {item.title} </h1>
