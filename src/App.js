@@ -26,6 +26,7 @@ import ResetEmail from "./pages/resetEmail/ResetEmail"
 import ChangePassword from "./pages/changePassword/ChangePassword"
 import EditProfile from "./pages/editProfile/EditProfile"
 import AllServices from "./components/allServices/AllServices"
+import EditService from "./pages/editService/EditService"
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
             <Route path="/change-password/:id" element={ <ChangePassword/> } title="Change Password" />
             <Route path="/edit-profile" element={ <EditProfile/> } title="Edit Profile" />
             <Route path="/all-services" element={<AllServices/> } title="All Services" />
+            <Route path="/edit-service/:id" element={<EditService/> } title="Edit Service" />
           </Routes>
         </Router>
       </QueryClientProvider>

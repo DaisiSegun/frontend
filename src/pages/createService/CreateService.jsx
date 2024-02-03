@@ -31,10 +31,56 @@
     };
 
     const handleCreateService = async (e) => {
+      try {
+        // Check for title
+        if (!state.title) {
+          console.error('Title is required');
+          throw new Error('Title is required');
+        }
+    
+        // Check for category
+        if (!state.cat) {
+          console.error('Category is required');
+          throw new Error('Category is required');
+        }
+    
+        // Check for description
+        if (!state.desc) {
+          console.error('Description is required');
+          throw new Error('Description is required');
+        }
+
+        if (!state.shortDesc) {
+          console.error('Service Location is required');
+          throw new Error('Service Location is required');
+        }
+
+        if (!state.certification) {
+          console.error('Number of Employees is required');
+          throw new Error('Number of Employees  is required');
+        }
+
+        if (!state.yearsOfExperience) {
+          console.error('Experience is required');
+          throw new Error('Experience is required');
+        }
+
+        if (!state.price) {
+          console.error('Minimum Fee is required');
+          throw new Error('Minimum Fee is required');
+        }
+
+
+       
+       
+   
+
+
+
       e.preventDefault();
       setUploading(true);
     
-      try {
+    
         const resizedImages = await Promise.all(
           [...files].map(async (file) => {
             return new Promise((resolve, reject) => {
@@ -74,12 +120,11 @@
       } catch (err) {
         console.log(err);
         setUploading(false);
-        setErrorMessage(
-          'Error uploading images or creating service. Please try again.'
-        );
+        setErrorMessage(err.message || 'An unexpected error occurred. Please try again.');
         setSuccessMessage(null);
       }
     };
+
 
     return (
 
@@ -186,7 +231,6 @@
             </div>
             
           
-
           
           </div>
 

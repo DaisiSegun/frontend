@@ -80,7 +80,7 @@ function EditProfile() {
       setLoading(false);
     }
   };
-  
+
 
   return (
     <div className='sign-in'>
@@ -90,7 +90,7 @@ function EditProfile() {
       <div className='sign-in-container3'>
         <div className='sign-in-header'>Edit Profile</div>
         <p className='sign-up-now'>Edit your profile</p>
-
+       
         <div className='sign-in-box'>
           <label className='sign-in-text'> Change Username</label>
           <input
