@@ -9,6 +9,7 @@ import newRequest from '../../utils/newRequest.js'
 import upload from "../../utils/upload.js";
 import { CircleLoader} from "react-spinners";
 import Resizer from 'react-image-file-resizer';
+import getCurrentUser from "../../utils/getCurrentUser.js";
 
 function EditService() {
   const location = useLocation();
@@ -28,7 +29,6 @@ function EditService() {
     fetchService();
   }, [serviceId]);
 
-  console.log(previousService)
 
 
 
@@ -45,10 +45,16 @@ function EditService() {
       payload: { name: e.target.name, value: e.target.value },
     });
   };
+  const currentUser = getCurrentUser();
+  const userId = currentUser?.user?._id || currentUser?.user?.id;
+ 
 
   const handleCreateService = async (e) => {
     e.preventDefault();
     setUploading(true);
+
+ 
+  
   
     try {
       const resizedImages = await Promise.all(
@@ -68,8 +74,19 @@ function EditService() {
             );
           });
         })
+      
       );
-  
+
+      if (!userId) {
+        const errorMessage = 'Only authenticated Sellers can edit a service';
+        setErrorMessage(
+          'Error uploading images or creating service. '
+        );
+        console.error(errorMessage); // Log the error to the console
+        // You can also display an alert message to the user
+        // alert(errorMessage);
+        throw new Error(errorMessage); // Throw the error to stop further execution
+      }
       const images = await Promise.all(
         resizedImages.map(async (resizedImage) => {
           const url = await upload(resizedImage);
@@ -77,8 +94,9 @@ function EditService() {
         })
       );
   
-      const serviceData = { ...state, images };
+      const serviceData = { ...state, images, userId  };
   
+        
       await newRequest.put(`/services/${serviceId}`, serviceData);
 
       console.log(serviceId);
@@ -93,7 +111,7 @@ function EditService() {
       console.log(err);
       setUploading(false);
       setErrorMessage(
-        'Error uploading images or creating service. Please try again.'
+        'Error uploading images or creating service. '
       );
       setSuccessMessage(null);
     }
@@ -102,9 +120,9 @@ function EditService() {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this service?')) {
       try {
-        await newRequest.delete(`/services/${serviceId}`);
+        await newRequest.delete(`/services/${serviceId}`, { data: { userId } });
         // Assuming you want to redirect to another page after deletion
-        // Replace '/services' with your desired route
+        // Replace '/myservice' with your desired route
         navigate('/myservice');
       } catch (error) {
         console.error('Error deleting service:', error);
@@ -301,7 +319,7 @@ function EditService() {
                 />
 
               {successMessage && <p className="success-box">{successMessage}</p>}
-
+              {errorMessage && <p className="error-box">{errorMessage}</p>}
               {/* <button onClick={handleUpload}>
                 {uploading ? "uploading" : "Upload"}
               </button> */}
@@ -323,7 +341,7 @@ function EditService() {
           </button>
           
     
-      {errorMessage && <p className="error-box">{errorMessage}</p>}
+     
         </div>
       </div>
     

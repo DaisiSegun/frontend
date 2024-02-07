@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.scss';
 import Header from '../../components/header/Header';
 import homeImg from '../../images/home.svg';
 import Search from '../../components/search/Search';
-import CatCard from '../../components/CatCard/CatCard';
-import ContentLoader from 'react-content-loader';
+import CatCard2 from '../../components/CatCard/CatCard2';
+// import ContentLoader from 'react-content-loader';
 import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
 import Testimonial from '../../components/testimonial/Testimonial';
 import Footer from '../../components/footer/Footer';
+import staticCatData from './StaticData';
 
-import newRequest from '../../utils/newRequest';
+// import newRequest from '../../utils/newRequest';
 
 
 function Home() {
@@ -18,24 +19,24 @@ function Home() {
     document.title = 'Root';
   }, []);
 
-  const [catData, setCatData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [catData, setCatData] = useState([]);
+  // const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    newRequest
-      .get('/cat/all')
-      .then(response => {
-        const shuffledCatData = response.data.cats.sort(() => Math.random() - 0.5);
-        const limitedCatData = shuffledCatData.slice(0, 8);
-        setCatData(limitedCatData);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching category data:', error);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   newRequest
+  //     .get('/cat/all')
+  //     .then(response => {
+  //       const shuffledCatData = response.data.cats.sort(() => Math.random() - 0.5);
+  //       const limitedCatData = shuffledCatData.slice(0, 8);
+  //       setCatData(limitedCatData);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching category data:', error);
+  //       setLoading(false);
+  //     });
+  // }, []);
 
   const navigateToFindSP = () => {
     navigate('/more-service');
@@ -45,7 +46,7 @@ function Home() {
     <div className='home'>
       <Header showSearch={false} />
       <img className='home-img' src={homeImg} alt="Home" />
-      <h1 className='header-32px'>Hire a Service Provider in Lagos</h1>
+      <h1 className='header-32px'>Discover services in Lagos</h1>
       <div className='search6'>
         <Search />
       </div>
@@ -55,7 +56,7 @@ function Home() {
       <div className='root-services-section'>
         <div className='cat-container'>
           {/* Display CatCard components with data from the backend */}
-          {loading ? (
+          {/* {loading ? (
             <>
               {[1, 2, 3, 4].map((index) => (
                 <ContentLoader
@@ -77,7 +78,10 @@ function Home() {
             catData.map((cat) => (
               <CatCard key={cat.category} categoryId={cat._id} />
             ))
-          )}
+          )} */}
+{staticCatData && staticCatData.map(cat => (
+  <CatCard2 key={cat.id} categoryId={cat.id} />
+))}
         </div>
 
         {/* Show more button to navigate to '/findsp' page */}

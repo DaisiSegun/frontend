@@ -99,7 +99,7 @@ function SignUpSp() {
       </Link>
       <div className='sign-in-containr'>
         <div className='sign-in-header'>Sign up</div>
-        <p className='sign-up-now'>Sign up as a service provider</p>
+        <p className='sign-up-now'>Sign up as a seller</p>
 
           
 

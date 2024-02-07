@@ -9,6 +9,7 @@
   import upload from "../../utils/upload.js";
   import { CircleLoader} from "react-spinners";
   import Resizer from 'react-image-file-resizer';
+  import getCurrentUser from "../../utils/getCurrentUser.js";
 
   function CreateService() {
     useEffect(() => {
@@ -29,8 +30,13 @@
         payload: { name: e.target.name, value: e.target.value },
       });
     };
-
+ 
+    const currentUser = getCurrentUser();
+    const userId = currentUser?.user?._id || currentUser?.user?.id;
+    
     const handleCreateService = async (e) => {
+   
+      
       try {
         // Check for title
         if (!state.title) {
@@ -69,7 +75,14 @@
           console.error('Minimum Fee is required');
           throw new Error('Minimum Fee is required');
         }
-
+        if (!userId) {
+          const errorMessage = 'Only authenticated Sellers can create a service';
+          console.error(errorMessage); // Log the error to the console
+          // You can also display an alert message to the user
+          // alert(errorMessage);
+          throw new Error(errorMessage); // Throw the error to stop further execution
+        }
+      
 
        
        
@@ -107,7 +120,7 @@
           })
         );
     
-        const serviceData = { ...state, images };
+        const serviceData = { ...state, images, userId };
     
         await newRequest.post('/services', serviceData);
     
@@ -125,6 +138,7 @@
       }
     };
 
+ 
 
     return (
 
@@ -291,7 +305,7 @@
                   />
 
                 {successMessage && <p className="success-box">{successMessage}</p>}
-
+                {errorMessage && <p className="error-box">{errorMessage}</p>}
                 {/* <button onClick={handleUpload}>
                   {uploading ? "uploading" : "Upload"}
                 </button> */}
@@ -313,7 +327,7 @@
             </button>
             
       
-        {errorMessage && <p className="error-box">{errorMessage}</p>}
+        
           </div>
         </div>
       

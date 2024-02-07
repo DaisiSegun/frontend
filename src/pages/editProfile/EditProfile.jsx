@@ -53,11 +53,15 @@ function EditProfile() {
         return;
       }
 
+     
+
   
       // Retrieve current user information
       const currentUser = getCurrentUser();
-      const userId = currentUser.user._id || currentUser.user.id;
-      
+      const userId = currentUser?.user?._id || currentUser?.user?.id;
+
+     
+    
       
   
       // Add the user ID to the formData
@@ -69,6 +73,12 @@ function EditProfile() {
   
       // Make API call to update profile
       const response = await newRequest.put('/auth/edit-profile', updatedFormData);
+
+         
+      if (!userId) {
+        throw new Error('Only authenticated users can update profile');
+      }
+ 
       localStorage.setItem("currentUser", JSON.stringify(response.data));
       setSuccess('Profile updated sucessfully')
       console.log('Profile updated successfully:', response.data);
