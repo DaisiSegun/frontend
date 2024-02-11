@@ -182,7 +182,8 @@ function EditService() {
           
               <option value="">Select a category</option>
               <option value="Graphic & Logo Design">Graphic & Logo Design</option>
-              <option value="Driver & Transportation">Driver & Transportation</option>
+              <option value="Writing">Writing</option>
+              <option value="Copy Writing">Copy Writing</option> 
               <option value="Chef">Chef</option>
               <option value="Yogurt, Cake & pastry">Yogurt, Cake & pastry</option>
               <option value="Event Decor & Planning">Event Decor & Planning</option>
@@ -218,6 +219,9 @@ function EditService() {
               <option value="Content Writing">Content Writing</option>
               <option value="Resume/Cv Writing">Resume/Cv Writing</option>
               <option value="Animation">Animation</option>
+              <option value="Music">Music</option>
+              <option value="Driver & Transportation">Driver & Transportation</option>
+              <option value="others">others</option>
 
           </select>
 
