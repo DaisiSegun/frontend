@@ -3,7 +3,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './Menu.scss';
 import Header from '../../components/header/Header';
 import NavBar from '../../components/navBar/NavBar';
-import { Link } from 'react-router-dom';
+
 
 function ContactUs() {
   return (

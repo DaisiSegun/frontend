@@ -10,13 +10,13 @@ import newRequest from '../../utils/newRequest.js';
 import { ClipLoader } from 'react-spinners'; 
 
 function Header({ showSearch }) {
-  const [showDropdown, setShowDropdown] = useState(false);
+  // const [showDropdown, setShowDropdown] = useState(false);
   const [showDropdownContent, setShowDropdownContent] = useState(false);
   const [loadingLogout, setLoadingLogout] = useState(false);
 
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
+  // const toggleDropdown = () => {
+  //   setShowDropdown(!showDropdown);
+  // };
 
   const toggleDropdownContent = () => {
     setShowDropdownContent(!showDropdownContent);

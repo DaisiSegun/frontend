@@ -20,10 +20,12 @@ function Sorry() {
       <h1 className='sorry-header'>We are sorry this service is not available yet</h1>
       <p className='sorry-text'>Regardless, please feel free to contact us, and we'll go the extra mile to find this service from our network of sellers for you</p>
       <button onClick={openWhatsApp} className='sorry-button'>Contact us</button>
-      <img className='sryyImg' src={sorrtImg} alt='' />
+      <img className='sryyImg' src={sorrtImg} alt='' />3
 
     </div>
   );
 }
 
 export default Sorry;
+
+

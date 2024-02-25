@@ -13,7 +13,7 @@ function NavBar() {
       
     <Link className='link' to="/">
       <div className='icon-container'>
-        <img className='nav-icon' src={homeIcon} />
+        <img className='nav-icon' src={homeIcon} alt=''  />
         <p className='nav-text'>Home</p>
       </div>
       </Link>
@@ -21,7 +21,7 @@ function NavBar() {
       <Link className='link' to="/services">
       
       <div className='icon-container'>
-        <img className='nav-icon' src={serviceIcon} />
+        <img className='nav-icon' src={serviceIcon} alt=''  />
         <p className='nav-text'>Services</p>
       </div>
 
@@ -30,14 +30,14 @@ function NavBar() {
       <Link className='link' to="/all-product">
       
       <div className='icon-container'>
-        <img className='nav-icon' src={productIcon} />
+        <img className='nav-icon' src={productIcon} alt=''  />
         <p className='nav-text'>African products</p>
       </div>
       </Link>
 
       <Link className='link' to="/menu">
       <div className='icon-container'>
-        <img className='nav-icon' src={menuIcon} />
+        <img className='nav-icon' src={menuIcon} alt=''  />
         <p className='nav-text'>Menu</p>
       </div>
       </Link>

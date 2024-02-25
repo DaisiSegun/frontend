@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -25,7 +25,7 @@ function Home() {
 
  
 
-  const [sliderSettings, setSliderSettings] = useState({
+  const [sliderSettings] = useState({
     dots: false,
 infinite: false,
 speed: 200,

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Home.scss';
 import Header from '../../components/header/Header';
 
-import Search2 from '../../components/search/Search2';
 import CatCard2 from '../../components/CatCard/CatCard2';
 
 import CatCard4 from '../../components/CatCard/CatCard4';
@@ -14,7 +13,7 @@ import CatCard4 from '../../components/CatCard/CatCard4';
 
 import NavBar from '../../components/navBar/NavBar';
 import staticCatData from './StaticData';
-import staticCatData2 from './StaticData2';
+
 import staticCatData3 from './StaticData3';
 
 
@@ -25,7 +24,7 @@ function Services() {
 
  
 
-  const [sliderSettings, setSliderSettings] = useState({
+  const [sliderSettings] = useState({
     dots: false,
 infinite: false,
 speed: 200,

@@ -12,12 +12,6 @@ import ProductCard from '../../components/productCard/ProductCard';
 import './Products.scss'
 import NavBar from '../../components/navBar/NavBar';
 
-const override = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Use 100vh to make it full height */
-`;
 
 function Products() {
   useEffect(() => {

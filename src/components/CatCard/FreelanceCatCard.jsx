@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './CatCard.scss';
 import { Link } from 'react-router-dom';
-import ContentLoader from 'react-content-loader';
-import newRequest from '../../utils/newRequest.js';
+
 import staticCatData2 from '../../pages/moreService/StaticData2';
 
 function FreelanceCatCard({ categoryId }) {
