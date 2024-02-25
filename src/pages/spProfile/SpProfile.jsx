@@ -14,6 +14,7 @@ import swipeImg from '../../images/swipe.svg';
 import { Helmet } from 'react-helmet';
 import aiDance from '../../images/dance.gif'
 import load from '../../images/load.gif'
+import NavBar from '../../components/navBar/NavBar.jsx';
 
 
 
@@ -92,6 +93,8 @@ function SpProfile() {
         <img className='dance-gif' src={aiDance} alt='Loading...' />
         
         </div>
+
+        <NavBar/>
      
       </div>
     );
@@ -223,10 +226,12 @@ function SpProfile() {
 
           <div className='sp-profile'>
             <img className='sp-profile-img' src={dataUser.profilePicture} alt={`${dataUser.username}'s Profile`} />
-            <p className='profile-name'>{dataUser.username}</p>
-            <button onClick={openWhatsApp} className='button2'>
+            <p className='profile-name'>
+            {dataUser.username.length > 12 ? `${dataUser.username.slice(0, 12)}...` : dataUser.username}
+          </p>
+            {/* <button onClick={openWhatsApp} className='button2'>
               Contact me
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

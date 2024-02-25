@@ -15,6 +15,7 @@ import swipeImg from '../../images/swipe.svg';
 import { Helmet } from 'react-helmet';
 import aiDance from '../../images/dance.gif'
 import load from '../../images/load.gif'
+import NavBar from '../../components/navBar/NavBar.jsx';
 
 
 
@@ -95,7 +96,7 @@ function ViewProduct() {
         <img className='dance-gif' src={aiDance} alt='Loading...' />
         
         </div>
-     
+     <NavBar/>
       </div>
     );
   }
@@ -192,7 +193,7 @@ function ViewProduct() {
             Order Product
             <img src={golf} alt='Golf Icon' className='golf' />
           </div>
-          <h2 className='a-service'>About my service</h2>
+          <h2 className='a-service'>About product</h2>
           <p className='service-des'> {data.desc}</p>
         </div>
 
