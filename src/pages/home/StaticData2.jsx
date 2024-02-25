@@ -42,7 +42,7 @@ const staticCatData2 = [
   {
     id: "6",
     category: "Women's Footwear",
-    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709910/okbxett9r4ijqbnd9qyw.png",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708877941/kyk40xyvdeo9uczithj1.png",
     title: "Women's Footwear",
     desc: "Footwears for Every Vibe"
   },
@@ -59,7 +59,7 @@ const staticCatData2 = [
   {
     id: "8",
     category: "Men's Footwear",
-    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709833/rzugzgy9ghnkci4gypde.png",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708877941/glysnu2inhshxc6r7yhq.png",
     title: "Men's Footwear",
     desc: "Footwears for Every Mile"
   },

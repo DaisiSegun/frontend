@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Home.scss';
 import Header from '../../components/header/Header';
-import homeImg from '../../images/dgif.gif';
+import homeImg from '../../images/homegif.gif';
 import Search2 from '../../components/search/Search2';
 import CatCard2 from '../../components/CatCard/CatCard2';
 import CatCard3 from '../../components/CatCard/CatCard3';
