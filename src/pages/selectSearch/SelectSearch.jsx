@@ -1,8 +1,8 @@
 import React from 'react'
 import './SelectSearch.scss'
 import { Link } from 'react-router-dom';
-import searchService from '../../images/search-service.svg'
-import searchProduct from '../../images/search-product.svg'
+import searchService from '../../images/serviceSearch.jpg'
+import searchProduct from '../../images/productSearch.jpg'
 import NavBar from '../../components/navBar/NavBar';
 
 function SelectSearch() {
