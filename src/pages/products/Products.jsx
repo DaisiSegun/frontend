@@ -4,7 +4,6 @@ import newRequest from '../../utils/newRequest';
 import Header from '../../components/header/Header';
 import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
-import { css } from "@emotion/react";
 import aiDance from '../../images/dance.gif'
 import load from '../../images/load.gif'
 import Sorry2 from '../../components/sorry/Sorry2';
