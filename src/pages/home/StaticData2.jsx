@@ -8,9 +8,9 @@ const staticCatData2 = [
   },
   {
     id: "2",
-    category: "Crochet & knittig",
+    category: "Crochet & knitting",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709911/xwplda3rn6qf7daslimt.png",
-    title: "Crochet & knittig",
+    title: "Crochet & knitting",
     desc: "Knitted for you"
   },
 
@@ -25,17 +25,17 @@ const staticCatData2 = [
 
   {
     id: "4",
-    category: "Men's clothen",
+    category: "Men's clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709833/hvabnxdzznzdkfjjjip8.png",
-    title: "Men's clothen",
+    title: "Men's clothing",
     desc: "Confidence Defined"
   },
 
   {
     id: "5",
-    category: "Women's clothen",
+    category: "Women's clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png",
-    title: "Women's clothen",
+    title: "Women's clothing",
     desc: "Dress Your Story"
   },
 

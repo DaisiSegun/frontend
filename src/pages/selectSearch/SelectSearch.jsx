@@ -19,7 +19,7 @@ function SelectSearch() {
           <Link to="/search-service" className='link'>
 
           <div className="select-button">
-              <img className='ss-img' src={searchService} alt="" />
+              <img src={searchService} alt="" />
               <p className='btn-text'>Services</p>
           </div>
           </Link>
@@ -27,7 +27,7 @@ function SelectSearch() {
           <Link to="/search-product" className='link'>
 
           <div className="select-button">
-            <img className='ss-img' src={searchProduct} alt="" />
+            <img src={searchProduct} alt="" />
             <p className='btn-text'>Handmade items</p>
           </div>
 
