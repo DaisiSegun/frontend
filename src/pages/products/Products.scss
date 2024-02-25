@@ -1,0 +1,142 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.load-page {
+  background-color: #FFF6F8;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .load-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0F253B;
+
+    .load-gif {
+      width: 10rem;
+      margin-top: -20rem;
+    }
+  }
+
+  .dance-gif {
+    width: 8rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.products {
+ 
+  display: flex;
+  flex-direction: column;
+
+  .product-header-24px {
+    margin-left: 2rem;
+    color: #000;
+    font-family: Open Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5rem; /* 100% */
+    margin-top: 2rem;
+   }
+
+   .product-subtitle-text {
+    color: gray;
+    font-family: Open Sans;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 171.429% */
+    margin-left: 2rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+   }
+
+   .product-cards {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+   }
+}
+
+@media screen and (max-width: 850px) {
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+  .load-page {
+    background-color: #FFF6F8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2rem;
+  
+    .load-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0F253B;
+  
+      .load-gif {
+        width: 10rem;
+        margin-top: -20rem;
+      }
+    }
+  
+    .dance-gif {
+      width: 8rem;
+      margin-top: 1.5rem;
+    }
+  }
+  
+  .products {
+   
+    display: flex;
+    flex-direction: column;
+  
+    .product-header-24px {
+      margin-left: 1rem;
+      color: #000;
+      font-family: Open Sans;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1rem; /* 100% */
+      margin-top: 1rem;
+     }
+  
+     .product-subtitle-text {
+      color: gray;
+      font-family: Open Sans;
+      font-size: 0.65rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5rem; /* 171.429% */
+      margin-left: 1rem;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+     }
+  
+     .product-cards {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 1rem;
+     }
+  }
+  
+
+}

@@ -5,6 +5,21 @@
   font-family: 'Open Sans';
 }
 
+.limit-text {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: rgb(98, 91, 91);
+ 
+  width: 35rem;
+}
+
+.read-more{
+  font-weight: 600;
+  color: black;
+ 
+}
+
+
 .link9 {
   text-decoration: none;
 }
@@ -210,6 +225,16 @@
   .link9 {
     text-decoration: none;
   }
+
+  .limit-text {
+    font-weight: 400;
+    font-size: 0.7rem;
+   
+    width: 20rem;
+    margin-bottom: 0.2rem;
+    color: rgb(98, 91, 91);
+  }
+  
   
   .sp-card {
     display: flex;

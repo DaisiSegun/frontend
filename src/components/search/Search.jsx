@@ -4,7 +4,7 @@ import search from '../../images/search-icon.svg';
 import newRequest from '../../utils/newRequest.js';
 import { useNavigate } from "react-router-dom";
 
-function Search() {
+function Search({ placeholder }) {
   const [input, setInput] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ function Search() {
           onKeyPress={handleKeyPress}
           value={input}
           className='search'
-          placeholder='Which service do you require?'
+          placeholder={placeholder}
         />
 
         <div onClick={handleSubmit} className='search-icon-container'>

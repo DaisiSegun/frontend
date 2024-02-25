@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './SpCard.scss';
 import spProfile from '../../images/avatar.jpg';
 import rating from '../../images/rating.svg';
@@ -25,6 +25,7 @@ function SpCard({ item, index }) {
   const openProfile = () => {
     window.open(`/#/view-profile/${item._id}`, '_blank');
   };
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <div className='sp-card' onClick={openProfile} style={{ cursor: 'pointer' }}>
@@ -59,6 +60,23 @@ function SpCard({ item, index }) {
             </div>
             <p className='service-description'>{item.shortDesc}.</p>
 
+            <p className="limit-text">
+  {expanded ? item.desc : item.desc.split(' ').slice(0, 20).join(' ')}
+  {item.desc.split(' ').length > 20 && !expanded && (
+    <>
+      {'... '}
+      <span
+        className="read-more"
+        onClick={(e) => {
+          e.stopPropagation();
+          setExpanded(true);
+        }}
+      >
+        Read more
+      </span>
+    </>
+  )}
+</p>
             <div className='starting-price'>
               <p className='starting-price-text'>Base fee:</p>
               <div className='price-container'>

@@ -1,4 +1,5 @@
 import React from "react"
+import './styles.css';
 import Home from "./pages/home/Home"
 import Sps from "./pages/sps/Sps"
 import SpProfile from "./pages/spProfile/SpProfile"
@@ -27,6 +28,21 @@ import ChangePassword from "./pages/changePassword/ChangePassword"
 import EditProfile from "./pages/editProfile/EditProfile"
 import AllServices from "./components/allServices/AllServices"
 import EditService from "./pages/editService/EditService"
+import SelectSearch from "./pages/selectSearch/SelectSearch"
+import SearchProduct from "./pages/searchPoint/SearchProduct"
+import SearchService from "./pages/searchPoint/SearchService"
+import Menu from "./pages/menu/Menu"
+import ContactUs from "./pages/menu/ContactUs"
+import Products from "./pages/products/Products"
+import MoreFreelance from "./pages/moreService/MoreFreelance"
+import MoreProduct from "./pages/moreService/MoreProduct"
+import Services from "./pages/home/Services"
+import ProductResult from "./pages/searchResult/ProductResult"
+import ViewProduct from "./pages/spProfile/ViewProduct"
+import CreateProduct from "./pages/createService/CreateProduct"
+import MyProduct from "./pages/addService/MyProduct"
+import EditProduct from "./pages/editService/EditProduct";
+import SellerDashboard from "./pages/sellerDashboad/SellerDashboard";
 
 
 function App() {
@@ -46,8 +62,10 @@ function App() {
             <Route path="/register" element={<Register />} title="Register" />
             <Route path="/findsp/:cats" element={<Sps />} title="Service Providers" />
             <Route path="/search-result" element={<SearchResult />} title="Search Result " />
+            <Route path="/product-result" element={<ProductResult/>} title="Search Result " />
             <Route path="/view-profile/:id" element={<SpProfile />} title="View Profile" />
-            <Route path="/myservice" element={<AddService />} title="My Service" />
+            <Route path="/view-product/:id" element={<ViewProduct/>} title="View Product" />
+            <Route path="/myservice" element={<AddService />} title="My Service" /> 
             <Route path="/createservice" element={<CreateService />} title="Create Service" />
             <Route path="/signup-sp" element={<SignUpSp />} title="Sign Up Service Provider" />
             <Route path="/create-admin" element={<AdminUpload />} title="Create Admin" />
@@ -60,6 +78,20 @@ function App() {
             <Route path="/edit-profile" element={ <EditProfile/> } title="Edit Profile" />
             <Route path="/all-services" element={<AllServices/> } title="All Services" />
             <Route path="/edit-service/:id" element={<EditService/> } title="Edit Service" />
+            <Route path="/select-search" element={<SelectSearch/> } title="Select" />
+            <Route path="/search-product" element={<SearchProduct/> } title="Search" />
+            <Route path="/search-service" element={<SearchService/> } title="Search" />
+            <Route path="/menu" element={<Menu/>} title="Menu" />
+            <Route path="/contact-us" element={<ContactUs/>} title="Contact us" />
+            <Route path="/products/:cats" element={<Products/>} title="Products" />
+            <Route path="/all-freelance" element={<MoreFreelance/>} title="Freelance services" />
+            <Route path="/all-product" element={<MoreProduct/>} title="All Products" />
+            <Route path="/services" element={<Services/>} title="Services" />
+            <Route path="/services" element={<Services/>} title="Services" />
+            <Route path="/create-product" element={<CreateProduct/>} title="Create Product" />
+            <Route path="/my-product" element={<MyProduct/>} title="My Product" />
+            <Route path="/edit-product/:id" element={<EditProduct/>} title="Edit Product" />
+            <Route path="/seller-dashboard" element={<SellerDashboard/>} title="Seller Dashboard" />
           </Routes>
         </Router>
       </QueryClientProvider>

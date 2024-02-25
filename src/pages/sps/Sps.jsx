@@ -6,16 +6,11 @@ import newRequest from '../../utils/newRequest';
 import Header from '../../components/header/Header';
 import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
-import { css } from "@emotion/react";
-import { ClipLoader } from "react-spinners";
 import Sorry from '../../components/sorry/Sorry';
+import aiDance from '../../images/dance.gif'
+import load from '../../images/load.gif'
+import NavBar from '../../components/navBar/NavBar';
 
-const override = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Use 100vh to make it full height */
-`;
 
 function Sps() {
   useEffect(() => {
@@ -31,7 +26,17 @@ function Sps() {
   });
 
   if (isLoading) {
-    return <ClipLoader color={"#36D7B7"} css={override} size={150} />;
+    return (
+      <div className='loader'>
+        
+        <div className='load-page'>
+        <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
+        <img className='dance-gif' src={aiDance} alt='Loading...' />
+        
+        </div>
+        <NavBar/>
+      </div>
+    );
   }
 
   if (error) {
@@ -45,7 +50,7 @@ function Sps() {
     <div className='sps'>
       <Header showSearch={true} />
       <h1 className='header-24px'>{category}</h1>
-      <p className='subtitle-text'>Each service provider personally selected and approved by Root</p>
+      <p className='subtitle-text'>Each seller personally selected and approved by Root</p>
 
       {filteredData.length > 0 ? (
         filteredData.map((service) => (
@@ -55,8 +60,8 @@ function Sps() {
        
         <Sorry/>
       )}
-
-     
+  <div style={{ marginBottom: '4rem' }}></div>
+     <NavBar/>
     </div>
   );
 }

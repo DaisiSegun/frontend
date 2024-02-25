@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import { ClipLoader } from 'react-spinners';
+
 import Header from '../../components/header/Header';
 import newRequest from '../../utils/newRequest';
 import CatCard from '../../components/CatCard/CatCard';
 import './MoreService.scss';
+import load from '../../images/load.gif'
+import NavBar from '../../components/navBar/NavBar';
 
 function MoreService() {
   useEffect(() => {
@@ -52,12 +54,12 @@ function MoreService() {
     <div className='more'>
       <Header showSearch={true} />
 
-      <h1 className='header-24px'>Root Services</h1>
+      <h1 className='header-24px'>Local Services</h1>
 
       <div className='root-services-section'>
         <div className='cat-container'>
           {loading ? (
-            <ClipLoader color='#36D7B7' loading={loading} size={150} />
+            <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please wait..</p>
           ) : (
             catDataToDisplay.map((cat) => (
               <CatCard key={cat.category} categoryId={cat._id} />
@@ -82,6 +84,8 @@ function MoreService() {
           </button>
         </div>
       </div>
+      <div style={{ marginBottom: '7rem' }}></div>
+      <NavBar/>
     </div>
   );
 }

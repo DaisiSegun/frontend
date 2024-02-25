@@ -1,17 +1,21 @@
-import React, {  useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import './Home.scss';
 import Header from '../../components/header/Header';
-import homeImg from '../../images/home.svg';
-import Search from '../../components/search/Search';
+import homeImg from '../../images/dgif.gif';
+import Search2 from '../../components/search/Search2';
 import CatCard2 from '../../components/CatCard/CatCard2';
-// import ContentLoader from 'react-content-loader';
-import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
-import Testimonial from '../../components/testimonial/Testimonial';
-import Footer from '../../components/footer/Footer';
-import staticCatData from './StaticData';
+import CatCard3 from '../../components/CatCard/CatCard3';
+import CatCard4 from '../../components/CatCard/CatCard4';
 
-// import newRequest from '../../utils/newRequest';
+import Testimonial from '../../components/testimonial/Testimonial';
+import NavBar from '../../components/navBar/NavBar';
+import staticCatData from './StaticData';
+import staticCatData2 from './StaticData2';
+import staticCatData3 from './StaticData3';
 
 
 function Home() {
@@ -19,88 +23,128 @@ function Home() {
     document.title = 'Root';
   }, []);
 
-  // const [catData, setCatData] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
+ 
 
-  // useEffect(() => {
-  //   newRequest
-  //     .get('/cat/all')
-  //     .then(response => {
-  //       const shuffledCatData = response.data.cats.sort(() => Math.random() - 0.5);
-  //       const limitedCatData = shuffledCatData.slice(0, 8);
-  //       setCatData(limitedCatData);
-  //       setLoading(false);
-  //     })
-  //     .catch(error => {
-  //       console.error('Error fetching category data:', error);
-  //       setLoading(false);
-  //     });
-  // }, []);
+  const [sliderSettings, setSliderSettings] = useState({
+    dots: false,
+infinite: false,
+speed: 200,
+slidesToShow: 4,
+slidesToScroll: 1,
+prevArrow: <button className="slick-prev"></button>,
+nextArrow: <button className="slick-next"></button>,
+swipeToSlide: true,
 
-  const navigateToFindSP = () => {
-    navigate('/more-service');
-  };
+responsive: [
+  {
+    breakpoint: 1300,
+    settings: {
+      slidesToShow: 2.5,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: false,
+     
+    },
+  },
+  {
+    breakpoint: 600,
+    settings: {
+
+      slidesToShow: 2.4,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        
+        
+     
+    },
+  },
+],
+
+  });
 
   return (
     <div className='home'>
       <Header showSearch={false} />
-      <img className='home-img' src={homeImg} alt="Home" />
-      <h1 className='header-32px'>Discover services in Lagos</h1>
+      <img className='home-img' src={homeImg} alt='Home' />
+      <h1 className='header-32px'>Services & handmade items in Lagos</h1>
       <div className='search6'>
-        <Search />
+        <Search2 />
       </div>
-
-      <h1 className='header-24px'>Services on Root</h1>
 
       <div className='root-services-section'>
-        <div className='cat-container'>
-          {/* Display CatCard components with data from the backend */}
-          {/* {loading ? (
-            <>
-              {[1, 2, 3, 4].map((index) => (
-                <ContentLoader
-                  key={index}
-                  speed={2}
-                  width={200}
-                  height={250}
-                  viewBox="0 0 200 250"
-                  backgroundColor="#f3f3f3"
-                  foregroundColor="#ecebeb"
-                >
-                  <rect x="0" y="0" rx="10" ry="10" width="200" height="150" />
-                  <rect x="10" y="170" rx="3" ry="3" width="180" height="10" />
-                  <rect x="10" y="190" rx="3" ry="3" width="120" height="10" />
-                </ContentLoader>
-              ))}
-            </>
-          ) : (
-            catData.map((cat) => (
-              <CatCard key={cat.category} categoryId={cat._id} />
-            ))
-          )} */}
-{staticCatData && staticCatData.map(cat => (
-  <CatCard2 key={cat.id} categoryId={cat.id} />
-))}
-        </div>
 
-        {/* Show more button to navigate to '/findsp' page */}
-        <button className='load-more-button' onClick={navigateToFindSP}>
-          View More
-          <CallMissedOutgoingIcon className='load-more-icon' />
-        </button>
+   <div>
+          
+      <div className='see-all-con'>
+          <h1 className='header-new'>Freelance services</h1>
+          {/* <button className='see-all'>See all</button> */}
       </div>
 
-      <h1 className='header-28px'>See what our Customers are saying about Root</h1>
-      <div className='testimonial-container'>
+        <Slider className='custom-slider' {...sliderSettings}>
+          {staticCatData.map((cat) => (
+            <CatCard2 className='slide-card'  key={cat.id} categoryId={cat.id} />
+          ))}
+        </Slider>
+    </div>
+
+   <div>
+
+        <div className='see-all-con'>
+          <h1 className='header-new'>Handmade items</h1>
+          {/* <button className='see-all'>See all</button> */}
+      </div>
+
+        <Slider className='custom-slider' {...sliderSettings}>
+          {staticCatData2.map((cat) => (
+            <CatCard3 className='slide-card'  key={cat.id} categoryId={cat.id} />
+          ))}
+        </Slider>
+
+    </div>
+
+
+   <div>
+        <div className='see-all-con'>
+          <h1 className='header-new'>Local services</h1>
+
+          <Link className='link' to='more-service'>
+          <button className='see-all'>See all</button>
+          </Link>
+      </div>
+
+        <Slider className='custom-slider' {...sliderSettings}>
+          {staticCatData3.map((cat) => (
+            <CatCard4 className='slide-card'  key={cat.id} categoryId={cat.id} />
+          ))}
+        </Slider>
+
        
-        <Testimonial title="Oyindamola Sanusi" text="Thanks so much on helping fix my phone without having to stress me at all. No single trace of the repair, it literally looks just as new!" />
-        <Testimonial title="Jumoke" text="Arise Kitchen's chef service on the platform was a lifesaver! Delicious meal, saved me time and effort. My husband loved it too. Will definitely use her again. Thanks" />
-        <Testimonial title="Kene Oleah" text="Good service. What i got fixed is still working perfectly well" />
-        
       </div>
 
-      <Footer />
+  </div>
+         
+     
+
+      <h1 className='header-28px'>See what customers are saying about Root</h1>
+      <div className='testimonial-container'>
+        <Testimonial
+          title='Oyindamola Sanusi'
+          text='Thanks so much on helping fix my phone without having to stress me at all. No single trace of the repair, it literally looks just as new!'
+        />
+        <Testimonial
+          title='Jumoke'
+          text="Arise Kitchen's chef service on the platform was a lifesaver! Delicious meal, saved me time and effort. My husband loved it too. Will definitely use her again. Thanks"
+        />
+        <Testimonial
+          title='Kene Oleah'
+          text='Good service. What i got fixed is still working perfectly well'
+        />
+      </div>
+
+      <div style={{ marginBottom: '3rem' }}></div>
+
+
+      <NavBar />
     </div>
   );
 }

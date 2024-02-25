@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './SearchResult.scss';
-import SpCard from '../../components/spCard/SpCard';
+
 
 import newRequest from '../../utils/newRequest';
 import Header from '../../components/header/Header';
 import { useLocation } from 'react-router-dom';
-import { css } from "@emotion/react";
-import { ClipLoader } from "react-spinners";
+import SpCard from '../../components/spCard/SpCard';
 import Sorry from '../../components/sorry/Sorry';
+import aiDance from '../../images/dance.gif'
+import load from '../../images/load.gif'
+import NavBar from '../../components/navBar/NavBar';
 
-const override = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Use 100vh to make it full height */
-`;
+
 
 function SearchResult() {
   useEffect(() => {
@@ -41,10 +38,19 @@ function SearchResult() {
     };
 
     fetchData();
-  }, [search]);
+  },[search] );
 
   if (isLoading) {
-    return <ClipLoader color={"#36D7B7"} css={override} size={150} />;
+    return (
+      <div className='loader'>
+        <div className='load-page'>
+        <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
+        <img className='dance-gif' src={aiDance} alt='Loading...' />
+        
+        </div>
+        <NavBar/>
+      </div>
+    );
   }
 
   if (error) {
@@ -55,7 +61,7 @@ function SearchResult() {
     <div className='sps'>
       <Header showSearch={true} />
       <h1 className='header-24px'>Search Result</h1>
-      <p className='subtitle-text'>Find your service</p>
+      <p className='subtitle-text'>Find African Product</p>
 
       {data.length === 0 &&  <Sorry />} 
 
@@ -63,8 +69,9 @@ function SearchResult() {
         <SpCard key={service._id} item={service} />
       ))}
 
+
       <div className='space25'></div>
-     
+     <NavBar/>
     </div>
   );
 }

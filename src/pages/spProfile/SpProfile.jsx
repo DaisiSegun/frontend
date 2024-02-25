@@ -11,19 +11,14 @@ import newRequest from '../../utils/newRequest';
 import { useParams, useNavigate } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
-import { ClipLoader } from 'react-spinners';
-import { css } from '@emotion/react';
 import { Helmet } from 'react-helmet';
+import aiDance from '../../images/dance.gif'
+import load from '../../images/load.gif'
 
 
 
 
-const override = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Use 100vh to make it full height */
-`;
+
 
 function SpProfile() {
   const navigate = useNavigate();
@@ -90,7 +85,16 @@ function SpProfile() {
   
 
   if (isLoading || isLoadingUser) {
-    return <ClipLoader color={'#36D7B7'} css={override} size={150} />;
+    return (
+      <div className='loader'>
+        <div className='load-page'>
+        <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
+        <img className='dance-gif' src={aiDance} alt='Loading...' />
+        
+        </div>
+     
+      </div>
+    );
   }
 
   if (error || errorUser) {

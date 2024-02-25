@@ -19,7 +19,7 @@ function SignUpSp() {
     confirmPassword: '',
     businessLocation: '',
     interests: '',
-    languages: '',
+    location: '',
     profilePicture: null,
     userType: 'seller', // Added userType with default value 'user'
   });
@@ -52,11 +52,41 @@ function SignUpSp() {
   };
   const handleRegistration = async () => {
     try {
+    
+
+    
+      
+
+
       setLoading(true);
       if (!agreeToTerms) {
         setError('Please agree to the terms and conditions');
         return;
       }
+
+      // Check if businessLocation is empty
+    if (!formData.businessLocation) {
+      setError('Language is required');
+      return;
+    }
+
+    // Check if interests is empty
+    if (!formData.interests) {
+      setError('Interests is required');
+      return;
+    }
+
+    // Check if phone is empty
+    if (!formData.phone) {
+      setError('Phone number is required');
+      return;
+    }
+
+    // Check if location is empty
+    if (!formData.location) {
+      setError('Location is required');
+      return;
+    }
       const url = await upload(formData.profilePicture);
       console.log('Cloudinary URL:', url);
   
@@ -184,11 +214,11 @@ function SignUpSp() {
         </div>
 
         <div className='sign-in-box'>
-          <label className='sign-in-text'>Location</label>
+          <label className='sign-in-text'>Location(please keep it short)</label>
           <input
             className='sign-in-input'
-            placeholder='Location'
-            name='languages'
+            placeholder='City & state e.g Ikeja, Lagos'
+            name='location'
             onChange={handleChange}
             onKeyPress={handleKeyPress}
           />

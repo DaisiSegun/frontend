@@ -10,12 +10,14 @@ import getCurrentUser from '../../utils/getCurrentUser.js';
 
 
 
-function Reviews({ serviceId }) {
+function Reviews({ serviceId, sellerId }) {
   const queryClient = useQueryClient();
   const [errorMessage, setErrorMessage] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
   const [displayedReviews, setDisplayedReviews] = useState(4); // Initial number of reviews to display
   const [submitLoading, setSubmitLoading] = useState(false);
+
+  
 
   const { isLoading, error, data } = useQuery({
     queryKey: ["reviews", serviceId],
@@ -47,7 +49,7 @@ function Reviews({ serviceId }) {
 
 
     if (!currentUser) {
-      setErrorMessage("You can only review after using a service.");
+      setErrorMessage("Review after purchase only");
       return;
     }
   
@@ -62,7 +64,7 @@ function Reviews({ serviceId }) {
 
       const userId = currentUser.user?._id || currentUser.id;
 
-      await newRequest.post("/reviews", { serviceId, userId, desc, star });
+      await newRequest.post("/reviews", { serviceId, sellerId, userId, desc, star });
 
       // If successful, set the success message and invalidate the query
       setSuccessMessage("Review submitted successfully!");
@@ -88,7 +90,8 @@ function Reviews({ serviceId }) {
       }
 
       {errorMessage && (
-        <p className='error-box'>{errorMessage}</p>
+        <p className='error-box' style={{ marginBottom: '1.2rem' }}>{errorMessage}</p>
+
 
       )}
 

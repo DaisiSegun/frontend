@@ -1,0 +1,171 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+
+  .image-con {
+    position: relative;
+    width: 17.5rem;
+    height: 17.5rem;
+    border-radius: 0.625rem;
+    .product-img {
+        width: 17.5rem;
+        height: 17.5rem;
+        border-radius: 0.625rem;
+        background-color: darkgray;
+        object-fit: cover;
+     
+
+        
+    }
+
+    .avatar-img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 2rem;
+        border: solid;
+        border-color: white;
+        border-width: 1.5px;
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        object-fit: cover;
+      
+    }
+
+  }
+
+  .title-cont {
+
+    display: flex;
+    gap: 0.5rem;
+
+    .title-texts {
+      font-size: 1rem;
+      font-weight: 600;
+
+    }
+
+    .rating-cont {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+
+        .rate-img {
+          width: 1rem;
+          height: 1rem;
+        }
+        .rate {
+          color: black;
+        }
+    }
+
+  }
+
+
+  .product-price {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+
+  .image-con {
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 0.625rem;
+    .product-img {
+        width: 9rem;
+        height: 9rem;
+        border-radius: 0.625rem;
+        background-color: darkgray;
+        object-fit: cover;
+     
+
+        
+    }
+
+    .avatar-img {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 1.5rem;
+        border: solid;
+        border-color: white;
+        border-width: 1.5px;
+        position: absolute;
+        bottom: 0.35rem;
+        right: 0.35rem;
+        object-fit: cover;
+      
+    }
+
+  }
+
+  .title-cont {
+
+    display: flex;
+    gap: 0.5rem;
+
+    .title-texts {
+      font-size: 0.75rem;
+      font-weight: 600;
+
+    }
+
+    .rating-cont {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+
+        .rate-img {
+          width: 1rem;
+          height: 1rem;
+        }
+        .rate {
+          color: black;
+          font-size: 0.75rem;
+        }
+    }
+
+  }
+
+
+  .product-price {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+}
+
+
+}
+
+
+

@@ -60,7 +60,7 @@
   }
 }
 
-@media screen and (max-width: 650px) { 
+@media screen and (max-width: 700px) { 
 
   * {
     margin: 0;
@@ -85,7 +85,7 @@
     border-color: darkgray;
     border-width: 0.2px;
     height: 100%;
-    width: 11rem;
+    width: 7.75rem;
     
   
     &:hover {
@@ -99,7 +99,7 @@
   
     .cat-img {
       width: 100%;
-      height: 9rem;
+      height: 7.75rem;
       border-radius: 0.625rem 0.625rem 0rem 0rem;
       
   
@@ -108,10 +108,10 @@
     .title-text {
       color: var(--black, #000);
       font-family: Open Sans;
-      font-size: 0.75rem;
+      font-size: 0.625rem;
       font-style: normal;
       font-weight: 600;
-      line-height: 1.2rem; /* 120% */
+     
       max-width: 10rem;
       text-align: center;
       margin-top: 0.5rem;
@@ -121,7 +121,7 @@
       color: gray;
       text-align: center;
       font-family: Open Sans;
-      font-size: 0.625rem;
+      font-size: 0.5rem;
       font-style: normal;
       font-weight: 400;
       line-height: 0.9375rem;
@@ -145,7 +145,7 @@
  }
   .cat-card {
     display: inline-flex;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     flex-direction: column;
     align-items: center;
     gap: 0.1rem;
@@ -157,7 +157,7 @@
     border-color: darkgray;
     border-width: 0.2px;
     height: 100%;
-    width: 9rem;
+    width: 7.75rem;
     
   
     
@@ -173,7 +173,7 @@
   
     .cat-img {
       width: 100%;
-      height: 9rem;
+      height: 7.75rem;
       border-radius: 0.625rem 0.625rem 0rem 0rem;
       
   
@@ -182,10 +182,10 @@
     .title-text {
       color: var(--black, #000);
       font-family: Open Sans;
-      font-size: 0.75rem;
+      font-size: 0.625rem;
       font-style: normal;
       font-weight: 600;
-      line-height: 1.2rem; /* 120% */
+     
       max-width: 10rem;
       text-align: center;
       margin-top: 0.5rem;
@@ -195,7 +195,7 @@
       color: gray;
       text-align: center;
       font-family: Open Sans;
-      font-size: 0.625rem;
+      font-size: 0.5rem;
       font-style: normal;
       font-weight: 400;
       line-height: 0.9375rem;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Header.scss';
 import logo from '../../images/rootlogo.svg';
-import Search from '../search/Search';
+import Search2 from '../search/Search2';
 import { Link } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser.js';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -44,9 +44,14 @@ function Header({ showSearch }) {
 
   const openMyService = () => {
     // Open a new browser window for the My Service page
-    window.open('#/myservice', '_blank');
+    window.open('#/seller-dashboard', '_blank');
   };
-
+  const openWhatsApp = () => {
+    const message = "I want to join Root as a seller";
+    const phoneNumber = "+2349019971557"; // Update with your WhatsApp number
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank');
+  };
 
 
   return (
@@ -57,7 +62,7 @@ function Header({ showSearch }) {
         </Link>
 
         <div className="sectionBContainer">
-          {showSearch && <Search />}
+          {showSearch && <Search2 />}
         </div>
 
         <div className='links'>
@@ -69,7 +74,7 @@ function Header({ showSearch }) {
             ) : (
               <>
                 <img className='pro-img' src={currentUser?.user?.profilePicture || profileImg} alt={currentUser?.user?.username || 'User Profile'} />
-                <p className='pro-name'>{currentUser?.user?.username}</p>
+                <p className='pro-name'>{currentUser?.user?.username.length > 10 ? currentUser?.user?.username.substring(0, 10) + '..' : currentUser?.user?.username}</p>
                 <ArrowDropDownIcon className='pro-icon' />
               </>
             )}
@@ -96,7 +101,7 @@ function Header({ showSearch }) {
             </Link>
           )}
 
-          <div className='dropdown'>
+          {/* <div className='dropdown'>
             <button className='button-1' onClick={toggleDropdown}>
               Contact Us
             </button>
@@ -113,6 +118,13 @@ function Header({ showSearch }) {
                 </Link>
               </div>
             )}
+          </div> */}
+
+          <div className='dropdown'>
+          <button className='button-1' onClick={openWhatsApp}>
+            Become a Seller
+          </button>
+           
           </div>
         </div>
       </div>

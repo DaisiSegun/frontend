@@ -19,6 +19,17 @@
 
   }
 
+  .load-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0F253B;
+
+    .load-gif {
+      width: 10rem;
+      margin-top: -2rem;
+    }
+  }
+
   .root-services-section{
 
     display: flex;
@@ -103,6 +114,17 @@
     font-family: 'Open Sans';
   }
   
+
+  .load-text {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #0F253B;
+
+    .load-gif {
+      width: 10rem;
+      margin-top: -2rem;
+    }
+  }
   .more {
     display: flex;
     flex-direction: column;
@@ -128,7 +150,7 @@
         margin-left: 1rem;
         margin-right: 1rem;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 3rem;
         margin-bottom: 2rem;
         
        }
