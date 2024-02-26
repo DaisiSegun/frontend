@@ -18,7 +18,7 @@ function Search2() {
   className='search'
   style={{ color: 'lightgray', backgroundColor: 'transparent', textAlign: 'start' }}
 >
-  Discover african talents & products
+  Discover African talents & products
 </button>
 
         <div onClick={handleNavigate} className='search-icon-container'>

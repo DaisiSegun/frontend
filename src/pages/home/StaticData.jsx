@@ -13,9 +13,17 @@ const staticCatData = [
     title: "Web Development",
     desc: "Code. Click. Launch."
   },
-
   {
     id: "3",
+    category: "Resume & Cv Writing",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708974560/wwe7u9ndxgdn32fxtz1w.png",
+    title: "Resume & Cv Writing",
+    desc: "Crafting Career Stories"
+  },
+
+
+  {
+    id: "4",
     category: "Photo Editing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705607/xetjulth6i3gyurokgrn.png",
     title: "Photo Editing",
@@ -23,7 +31,7 @@ const staticCatData = [
   },
 
   {
-    id: "4",
+    id: "5",
     category: "Writing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708703880/pclyvfdsv9pxntdh0xml.png",
     title: "Writing",
@@ -31,7 +39,7 @@ const staticCatData = [
   },
 
   {
-    id: "5",
+    id: "6",
     category: "SEO Optimization",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705607/vm14qnohjr367hmm8mem.png",
     title: "SEO Optimization",
@@ -39,7 +47,7 @@ const staticCatData = [
   },
 
   {
-    id: "6",
+    id: "7",
     category: "Digital marketing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705607/uklkosh96iehslz6tgc4.png",
     title: "Digital marketing",
@@ -48,7 +56,7 @@ const staticCatData = [
  
 
   {
-    id: "7",
+    id: "8",
     category: "Session guitarist",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708707010/lhdeaqgs8ippxjppvmxn.png",
     title: "Session guitarist",
@@ -56,7 +64,7 @@ const staticCatData = [
   },
 
   {
-    id: "8",
+    id: "9",
     category: "Project reseach assistant",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705843/vm6i3ggqx6olniyohlss.png",
     title: "Project reseach assistant",
@@ -65,7 +73,7 @@ const staticCatData = [
  
   
   {
-    id: "9",
+    id: "10",
     category: "Content creator",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705607/d8bhrkrzew3zmvwychde.png",
     title: "Content creator",
