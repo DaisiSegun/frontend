@@ -7,7 +7,7 @@ import Header from '../../components/header/Header';
 import { useLocation } from 'react-router-dom';
 
 import Sorry2 from '../../components/sorry/Sorry2';
-import aiDance from '../../images/dance.gif'
+
 import load from '../../images/load.gif'
 import NavBar from '../../components/navBar/NavBar';
 import ProductCard from '../../components/productCard/ProductCard';
@@ -46,7 +46,7 @@ function ProductResult() {
         <div className='load-page'>
         <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
        
-        <img className='dance-gif' src={aiDance} alt='Loading...' />
+        
         
         </div>
         <NavBar/>
@@ -62,7 +62,7 @@ function ProductResult() {
     <div className='sps'>
       <Header showSearch={true} />
       <h1 className='header-24px'>Search Result</h1>
-      <p className='subtitle-text'>Find your service</p>
+      <p className='subtitle-text'>Find an African made product</p>
       <div style={{ marginTop: '1rem' }}></div>
 
 

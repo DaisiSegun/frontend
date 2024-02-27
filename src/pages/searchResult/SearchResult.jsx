@@ -7,7 +7,7 @@ import Header from '../../components/header/Header';
 import { useLocation } from 'react-router-dom';
 import SpCard from '../../components/spCard/SpCard';
 import Sorry from '../../components/sorry/Sorry';
-import aiDance from '../../images/dance.gif'
+
 import load from '../../images/load.gif'
 import NavBar from '../../components/navBar/NavBar';
 
@@ -45,7 +45,7 @@ function SearchResult() {
       <div className='loader'>
         <div className='load-page'>
         <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
-        <img className='dance-gif' src={aiDance} alt='Loading...' />
+      
         
         </div>
         <NavBar/>

@@ -4,7 +4,7 @@ import newRequest from '../../utils/newRequest';
 import Header from '../../components/header/Header';
 import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
-import aiDance from '../../images/dance.gif'
+
 import load from '../../images/load.gif'
 import Sorry2 from '../../components/sorry/Sorry2';
 import ProductCard from '../../components/productCard/ProductCard';
@@ -31,7 +31,7 @@ function Products() {
         
         <div className='load-page'>
         <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
-        <img className='dance-gif' src={aiDance} alt='Loading...' />
+       
         
         </div>
         <NavBar/>

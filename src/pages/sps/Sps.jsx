@@ -7,7 +7,7 @@ import Header from '../../components/header/Header';
 import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
 import Sorry from '../../components/sorry/Sorry';
-import aiDance from '../../images/dance.gif'
+
 import load from '../../images/load.gif'
 import NavBar from '../../components/navBar/NavBar';
 
@@ -31,7 +31,7 @@ function Sps() {
         
         <div className='load-page'>
         <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
-        <img className='dance-gif' src={aiDance} alt='Loading...' />
+   
         
         </div>
         <NavBar/>

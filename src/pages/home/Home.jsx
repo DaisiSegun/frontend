@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Home.scss';
 import Header from '../../components/header/Header';
-import homeImg from '../../images/homegif.gif';
+// import homeImg from '../../images/homegif.gif';
 import Search2 from '../../components/search/Search2';
 import CatCard2 from '../../components/CatCard/CatCard2';
 import CatCard3 from '../../components/CatCard/CatCard3';
@@ -65,7 +65,7 @@ responsive: [
   return (
     <div className='home'>
       <Header showSearch={false} />
-      <img className='home-img' src={homeImg} alt='Home' />
+      {/* <img className='home-img' src={homeImg} alt='Home' /> */}
       <h1 className='header-32px'>Services & handmade items in Lagos</h1>
       <div className='search6'>
         <Search2 />

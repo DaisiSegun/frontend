@@ -13,7 +13,7 @@ import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
 
 import { Helmet } from 'react-helmet';
-import aiDance from '../../images/dance.gif'
+
 import load from '../../images/load.gif'
 import NavBar from '../../components/navBar/NavBar.jsx';
 
@@ -93,7 +93,7 @@ function ViewProduct() {
       <div className='loader'>
         <div className='load-page'>
         <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
-        <img className='dance-gif' src={aiDance} alt='Loading...' />
+       
         
         </div>
      <NavBar/>
