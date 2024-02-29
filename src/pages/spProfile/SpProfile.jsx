@@ -181,10 +181,14 @@ function SpProfile() {
               ))}
             </AwesomeSlider>
 
+            {data.images.length > 1 && (
             <div className='swipe'>
               <p className='swipe-text'>Swipe image</p>
               <img className='swipe-img' src={swipeImg} alt='Swipe Icon' />
             </div>
+          )}
+
+
           </div>
 
           <div onClick={openWhatsApp} className='button1'>
@@ -203,9 +207,16 @@ function SpProfile() {
                  <p className='dark-des'>{data.shortDesc}</p>
                </div> 
                <div className='sp-des'>
-                 <p className='light-des'>Interests</p>
-                 <p className='dark-des'>{dataUser.interests}</p>
-               </div>   
+                <p className='light-des'>Interests</p>
+                <p className='dark-des'>
+                  {dataUser.interests
+                    .split(' ')
+                    .slice(0, 5)
+                    .join(' ')}
+                  {dataUser.interests.split(' ').length > 5 ? '...' : ''}
+                </p>
+              </div>
+ 
                <div className='sp-des'>
                  <p className='light-des'>Languages</p>
                  <p className='dark-des'>{dataUser.businessLocation}</p>

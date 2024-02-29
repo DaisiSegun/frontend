@@ -172,28 +172,32 @@
             
                 <option value="">Select a category</option>
                 <option value="Graphic & Logo Design">Graphic & Logo Design</option>
-                <option value="Content Writing">Content Writing</option>
                 <option value="Resume & Cv Writing">Resume & Cv Writing</option>
                 <option value="Writing">Writing</option>
                 <option value="Copy Writing">Copy Writing</option>
+                <option value="Content creator">Content creator</option>
+                <option value="SEO Optimization">SEO Optimization</option>
                 <option value="Chef">Chef</option>
                 <option value="Yogurt, Cake & pastry">Yogurt, Cake & pastry</option>
                 <option value="Event Decor & Planning">Event Decor & Planning</option>
+                <option value="Photo Editing">Photo Editing</option>
                 <option value="Makeup & Gele Artist">Makeup & Gele Artist</option>
                 <option value="DJs & Sound Engineers">DJs & Sound Engineers</option>
                 <option value="Makerting & Social Media">Makerting & Social Media</option>
                 <option value="Phone, Tablet & Laptop repair">Phone, Tablet & Laptop Repair</option>
+                <option value="Logistics">Logistics</option>
                 <option value="Plumber">Plumber</option>
                 <option value="Electrician">Electrician</option>
                 <option value="Photography & Videography">Photography & Videography</option>
                 <option value="Instrumentalists">Instrumentalists</option>
                 <option value="Cleaning Services">Cleaning Services</option>
-                <option value="Fashion Design">Fashion Design</option>
+                <option value="Women's tailor">Women's tailor</option>
+                <option value="Men's tailor">Men's tailor</option>
                 <option value="Lash & Brow Experts">Lash & Brow Experts</option>
                 <option value="Real Estate Agency">Real Estate Agency</option>
                 <option value="Personal Shopping & Errands">Personal Shopping & Errands</option>
                 <option value="Carpentry">Carpentry</option>
-                <option value="Research Project Assistant">Research Project Assistant</option>
+                <option value="Project reseach assistant">Research Project Assistant</option>
                 <option value="Catering">Catering</option>
                 <option value="Interior Decoration">Interior Decoration</option>
                 <option value="Hairdresser">Hairdresser</option>
@@ -201,7 +205,7 @@
                 <option value="Home Repair & Maintenance">Home Repair & Maintenance</option>
                 <option value="Personal Care & Beauty">Personal Care & Beauty</option>
                 <option value="Tshirt design">Tshirt design</option>
-                <option value="Creative & Design">Creative & Design</option>
+                
                 <option value="Home Tutor & Lessons">Home Tutor & Lessons</option>
                 <option value="Music Lessons">Music Lessons</option>
                 <option value="Tech Lessons">Tech Lessons</option>

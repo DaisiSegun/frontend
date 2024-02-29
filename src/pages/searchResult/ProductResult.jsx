@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './SearchResult.scss';
+import './ProductResult.scss';
 
 
 import newRequest from '../../utils/newRequest';
@@ -68,9 +68,13 @@ function ProductResult() {
 
       {data.length === 0 &&  <Sorry2 />} 
 
+      <div className='pro-card'>
+
       {data.map((service) => (
         <ProductCard key={service._id} item={service} />
       ))}
+
+    </div>
 
       <div className='space25'></div>
      <NavBar/>

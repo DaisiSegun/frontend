@@ -6,6 +6,12 @@
   font-family: 'Open Sans';
 }
 
+.product-price1 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+}
+
 .load-page {
   background-color: #FFF6F8;
   height: 100vh;
@@ -52,6 +58,33 @@
   .swipe-img {
     width: 0.84375rem;
     height: 0.86806rem;
+  }
+ 
+}
+.swipe4 {
+  display: none;
+  border-radius: 1.25rem;
+  background: var(--light-dark-blue, #F2F2F2);
+  align-items: center;
+  margin-top: 1rem;
+  width: max-content;
+  padding: 0.35rem;
+  gap: 0.25rem;
+  
+
+  .swipe-text4 {
+    color: #000;
+    font-family: Open Sans;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 200% */
+  }
+
+  .swipe-img4 {
+    width: 0.84375rem;
+    height: 0.86806rem;
+    
   }
  
 }
@@ -381,6 +414,13 @@
   /* SpProfileCustomStyles.scss */
 
 /* SpProfileCustomStyles.scss */
+
+.product-price1 {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-left: 1rem;
+}
+
 .load-page {
   background-color: #FFF6F8;
   height: 100vh;
@@ -400,6 +440,8 @@
       margin-top: -10rem;
     }
   }
+
+ 
 
   .dance-gif {
     width: 8rem;
@@ -428,6 +470,34 @@
   }
 
   .swipe-img {
+    width: 0.84375rem;
+    height: 0.86806rem;
+    
+  }
+ 
+}
+
+.swipe4 {
+  display: flex;
+  border-radius: 1.25rem;
+  background: var(--light-dark-blue, #F2F2F2);
+  align-items: center;
+  margin-top: 1rem;
+  width: max-content;
+  padding: 0.35rem;
+  gap: 0.25rem;
+  
+
+  .swipe-text4 {
+    color: #000;
+    font-family: Open Sans;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 200% */
+  }
+
+  .swipe-img4 {
     width: 0.84375rem;
     height: 0.86806rem;
     

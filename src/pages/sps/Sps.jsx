@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Sps.scss';
 import SpCard from '../../components/spCard/SpCard';
 
@@ -8,11 +8,12 @@ import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
 import Sorry from '../../components/sorry/Sorry';
 
-import load from '../../images/load.gif'
+import load from '../../images/load.gif';
 import NavBar from '../../components/navBar/NavBar';
 
-
 function Sps() {
+  const [loadingProgress, setLoadingProgress] = useState(0);
+
   useEffect(() => {
     document.title = 'Service Providers';
   }, []);
@@ -22,19 +23,47 @@ function Sps() {
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['services'],
-    queryFn: () => newRequest('/services/all').then((res) => res.data),
+    queryFn: ({ pageParam = 0 }) =>
+      newRequest(`/services/all?page=${pageParam}`).then((res) => {
+        setLoadingProgress(100); // Set progress to 100% when data is loaded
+        return res.data;
+      }),
+    onSuccess: () => {
+      setLoadingProgress(100); // Set progress to 100% when data is loaded
+    },
+    onError: () => {
+      setLoadingProgress(0); // Reset progress to 0% on error
+    },
   });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLoadingProgress((prevProgress) => {
+        const newProgress = prevProgress + 1;
+        return newProgress > 100 ? 100 : newProgress;
+      });
+    }, 50);
+  
+    if (loadingProgress >= 100) {
+      clearInterval(interval);
+    }
+  
+    return () => {
+      clearInterval(interval);
+    };
+  }, [loadingProgress]);
+  
 
   if (isLoading) {
     return (
       <div className='loader'>
-        
         <div className='load-page'>
-        <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
-   
-        
+          <p className='load-text'>
+            Loading {loadingProgress}% <img className='load-gif' src={load} alt='Loading..' />
+            please kindly wait..
+          </p>
         </div>
-        <NavBar/>
+        <NavBar />
       </div>
     );
   }
@@ -53,15 +82,12 @@ function Sps() {
       <p className='subtitle-text'>Each seller personally selected and approved by Root</p>
 
       {filteredData.length > 0 ? (
-        filteredData.map((service) => (
-          <SpCard key={service._id} item={service} />
-        ))
+        filteredData.map((service) => <SpCard key={service._id} item={service} />)
       ) : (
-       
-        <Sorry/>
+        <Sorry />
       )}
-  <div style={{ marginBottom: '4rem' }}></div>
-     <NavBar/>
+      <div style={{ marginBottom: '4rem' }}></div>
+      <NavBar />
     </div>
   );
 }

@@ -183,11 +183,18 @@ function ViewProduct() {
               ))}
             </AwesomeSlider>
 
-            <div className='swipe'>
-              <p className='swipe-text'>Swipe image</p>
-              <img className='swipe-img' src={swipeImg} alt='Swipe Icon' />
+            <p className='product-price1'>₦ {data.price}</p>
+
+            {data.images.length > 1 && (
+            <div className='swipe4'>
+              <p className='swipe-text4'>Swipe image</p>
+              <img className='swipe-img4' src={swipeImg} alt='Swipe Icon' />
             </div>
+          )}
+            
           </div>
+
+        
 
           <div onClick={openWhatsApp} className='button1'>
             Order Product
@@ -200,10 +207,10 @@ function ViewProduct() {
         <div className='section-2'>
              
              <div className='sp-info'>
-             <div className='sp-des'>
+             {/* <div className='sp-des'>
                  <p className='light-des'>My location</p>
                  <p className='dark-des'>{dataUser.location}</p>
-               </div> 
+               </div>  */}
                <div className='sp-des'>
                  <p className='light-des'>Interests</p>
                  <p className='dark-des'>{dataUser.interests}</p>

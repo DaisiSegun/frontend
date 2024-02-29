@@ -164,8 +164,8 @@ function CreateProduct() {
               < option value="Ladies' Handbag">Ladies' Handbag</option>
                 <option value="Crochet & knittig">Crochet & Knitting</option>
                 <option value="Artwork">Artwork</option>
-                <option value="Men's clothen">Men's Clothing</option>
-                <option value="Women's clothen">Women's Clothing</option>
+                <option value="Men's Clothing">Men's Clothing</option>
+                <option value="Women's Clothing">Women's Clothing</option>
                 <option value="Women's Footwear">Women's Footwear</option>
                 <option value="Men's Bags">Men's Bags</option>
                 <option value="Men's Footwear">Men's Footwear</option>
