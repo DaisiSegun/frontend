@@ -63,7 +63,30 @@ const staticCatData2 = [
     title: "Men's Footwear",
     desc: "Footwears for Every Mile"
   },
- 
+  
+  // {
+  //   id: "9",
+  //   category: "Women's bead",
+  //   image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708877941/glysnu2inhshxc6r7yhq.png",
+  //   title: "Women's bead",
+  //   desc: "Crafted Elegance, Empowering Women"
+  // },
+
+  // {
+  //   id: "10",
+  //   category: "Men's bead",
+  //   image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708877941/glysnu2inhshxc6r7yhq.png",
+  //   title: "Men's bead",
+  //   desc: "Crafted Elega, Empowering Women"
+  // },
+  
+  // {
+  //   id: "11",
+  //   category: "Earings",
+  //   image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708877941/glysnu2inhshxc6r7yhq.png",
+  //   title: "Earings",
+  //   desc: "Crafted Elega, Empowering Women"
+  // },
   
  
  
