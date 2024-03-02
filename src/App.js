@@ -43,6 +43,7 @@ import CreateProduct from "./pages/createService/CreateProduct"
 import MyProduct from "./pages/addService/MyProduct"
 import EditProduct from "./pages/editService/EditProduct";
 import SellerDashboard from "./pages/sellerDashboad/SellerDashboard";
+import Admin from "./pages/admin/Admin";
 
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
             <Route path="/my-product" element={<MyProduct/>} title="My Product" />
             <Route path="/edit-product/:id" element={<EditProduct/>} title="Edit Product" />
             <Route path="/seller-dashboard" element={<SellerDashboard/>} title="Seller Dashboard" />
+            <Route path="/admin" element={<Admin/>} title="Admin" />
           </Routes>
         </Router>
       </QueryClientProvider>

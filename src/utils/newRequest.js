@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const newRequest = axios.create({
-  baseURL: "https://bewildered-pike-cowboy-hat.cyclic.app/api", // Make sure to include the protocol (http/https)
+  baseURL: "https://app.roothq.africa/api", // Make sure to include the protocol (http/https)
   withCredentials: true,
 });
 
