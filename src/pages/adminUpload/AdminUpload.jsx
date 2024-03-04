@@ -106,7 +106,7 @@ function AdminUpload() {
         </div>
 
         <div className='sign-in-box'>
-          <label className='sign-in-text'>Categoryyy</label>
+          <label className='sign-in-text'>Category</label>
           <input
             type='email'
             className='sign-in-input'
