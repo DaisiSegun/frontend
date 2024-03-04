@@ -5,21 +5,26 @@ import SpCard from '../../components/spCard/SpCard';
 import newRequest from '../../utils/newRequest';
 import Header from '../../components/header/Header';
 import { useQuery } from '@tanstack/react-query';
-import { css } from "@emotion/react";
-import { ClipLoader } from "react-spinners";
-import Sorry from '../../components/sorry/Sorry';
 
-const override = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Use 100vh to make it full height */
-`;
+
+import Sorry from '../../components/sorry/Sorry';
+import NavBar from '../navBar/NavBar';
+import getCurrentUser from '../../utils/getCurrentUser';
+import { useNavigate } from 'react-router-dom';
+
+
 
 function AllServices() {
   useEffect(() => {
     document.title = 'Service Providers';
   }, []);
+
+  const currentUser = getCurrentUser();
+  const navigate = useNavigate();
+
+
+
+
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['services'],
@@ -27,7 +32,7 @@ function AllServices() {
   });
 
   if (isLoading) {
-    return <ClipLoader color={"#36D7B7"} css={override} size={150} />;
+    return <p> <Header showSearch={true} />Loading...</p>;
   }
 
   if (error) {
@@ -36,6 +41,12 @@ function AllServices() {
 
   // Ensure data is defined before rendering
   const services = data || [];
+
+  if (!currentUser || !currentUser.user.isAdmin) {
+    // Redirect to a different page if the user is not an admin
+    navigate('/');
+    return null; // Render nothing while redirecting
+  }
 
   return (
     <div className='sps'>
@@ -50,6 +61,8 @@ function AllServices() {
       ) : (
         <Sorry />
       )}
+      <div style={{ marginBottom: '5rem' }}></div>
+      <NavBar/>
     </div>
   );
 }

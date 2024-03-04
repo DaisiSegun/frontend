@@ -43,7 +43,9 @@ import CreateProduct from "./pages/createService/CreateProduct"
 import MyProduct from "./pages/addService/MyProduct"
 import EditProduct from "./pages/editService/EditProduct";
 import SellerDashboard from "./pages/sellerDashboad/SellerDashboard";
-import Admin from "./pages/admin/Admin";
+import Admin from "./pages/admin/Admin"
+import AllUsers from "./pages/admin/AllUsers";
+import AllProducts from "./pages/allProducts/AllProducts";
 
 
 function App() {
@@ -69,7 +71,7 @@ function App() {
             <Route path="/myservice" element={<AddService />} title="My Service" /> 
             <Route path="/createservice" element={<CreateService />} title="Create Service" />
             <Route path="/signup-sp" element={<SignUpSp />} title="Sign Up Service Provider" />
-            <Route path="/create-admin" element={<AdminUpload />} title="Create Admin" />
+            <Route path="/create-servicecat" element={<AdminUpload />} title="Create Admin" />
             <Route path="/more-service" element={<MoreService />} title="More Service" />
             <Route path="/welcome" element={<ThankYou />} title="Welcome" />
             <Route path="/welcomeSp" element={<ThankYouSp/>} title="Welcome Sp" />
@@ -94,6 +96,9 @@ function App() {
             <Route path="/edit-product/:id" element={<EditProduct/>} title="Edit Product" />
             <Route path="/seller-dashboard" element={<SellerDashboard/>} title="Seller Dashboard" />
             <Route path="/admin" element={<Admin/>} title="Admin" />
+            <Route path="/allusers" element={<AllUsers/>} title="allusers" />
+            <Route path="/all-products" element={<AllProducts/>} title="All Products" />
+            
           </Routes>
         </Router>
       </QueryClientProvider>

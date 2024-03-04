@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import './AdminUpload.scss';
 import upload from '../../utils/upload.js';
-import logo from '../../images/rootlogo.png';
+
 
 
 import newRequest from '../../utils/newRequest.js';
 import { CircleLoader } from 'react-spinners';
+import Header from '../../components/header/Header.jsx';
+import NavBar from '../../components/navBar/NavBar.jsx';
+import getCurrentUser from '../../utils/getCurrentUser';
+import { useNavigate } from 'react-router-dom';
 
 function AdminUpload() {
+  const currentUser = getCurrentUser();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: '',
     category: '',
@@ -64,13 +70,20 @@ function AdminUpload() {
       setLoading(false);
     }
   };
+  if (!currentUser || !currentUser.user.isAdmin) {
+    // Redirect to a different page if the user is not an admin
+    navigate('/');
+    return null; // Render nothing while redirecting
+  }
 
   return (
     <div className='sign-in'>
-      <img src={logo} className='logo-1' alt='logo' />
+   
+
+      <Header/>
 
       <div className='sign-in-container'>
-        <div className='sign-in-header'>Create Category</div>
+        <div className='sign-in-header'>Create Service Category</div>
         <p className='sign-up-now'>Add Categories</p>
 
         <div className='sign-in-box'>
@@ -135,6 +148,8 @@ function AdminUpload() {
           )}
         </div>
       </div>
+      <div style={{ marginBottom: '5rem' }}></div>
+      <NavBar/>
     </div>
   );
 }
