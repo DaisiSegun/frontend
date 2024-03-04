@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+
 import './UserCard.scss';
 import newRequest from '../../utils/newRequest';
 
@@ -10,7 +10,7 @@ const UserCard = ({ user, index }) => {
     const isConfirmed = window.confirm('Are you sure you want to delete this user?');
 
     if (isConfirmed) {
-      newRequest.delete('/users/${user._id}', {
+      newRequest.delete(`/users/${user._id}`, {
         data: { userId: user._id } // Send user._id in the request body
       })
         .then(response => {
