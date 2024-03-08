@@ -23,7 +23,7 @@ function SpCard({ item, index }) {
   });
 
   const openProfile = () => {
-    window.open(`/view-profile/${item._id}`, '_blank');
+    window.open(`#/view-profile/${item._id}`, '_blank');
   };
   const [expanded, setExpanded] = useState(false);
 
