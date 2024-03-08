@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "https://app.roothq.africa",
+  "proxy": "https://whale-app-ho8op.ondigitalocean.app",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://roothq.africa",

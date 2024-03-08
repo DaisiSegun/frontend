@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const newRequest = axios.create({
-  baseURL: "https://app.roothq.africa/api", // Make sure to include the protocol (http/https)
+  baseURL: "https://whale-app-ho8op.ondigitalocean.app/api", // Make sure to include the protocol (http/https)
   withCredentials: true,
 })
 
