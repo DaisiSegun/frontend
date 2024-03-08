@@ -39,12 +39,12 @@ function Header({ showSearch }) {
 
   const openEditProfile = () => {
     // Open a new browser window for the Edit Profile page
-    window.open('#/edit-profile', '_blank');
+    window.open('/edit-profile', '_blank');
   };
 
   const openMyService = () => {
     // Open a new browser window for the My Service page
-    window.open('#/seller-dashboard', '_blank');
+    window.open('/seller-dashboard', '_blank');
   };
   const openWhatsApp = () => {
     const message = "I want to join Root as a seller";

@@ -5,6 +5,14 @@
   font-family: 'Open Sans';
 }
 
+.admin-watch {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  align-items: center;
+}
+
 .limit-text {
   font-weight: 400;
   font-size: 0.75rem;
@@ -91,6 +99,15 @@
               font-size: 0.8rem;
               font-style: normal;
               font-weight: 500;
+              margin-top: 0.25rem;
+             
+            }
+            .sp-name-small2 {
+              color: rgb(56, 56, 56);
+              font-family: Open Sans;
+              font-size: 0.9rem;
+              font-style: normal;
+              font-weight: 700;
               margin-top: 0.25rem;
              
             }
@@ -225,7 +242,10 @@
   .link9 {
     text-decoration: none;
   }
+  .admin-text {
+    font-size: 0.9rem
 
+  }
   .limit-text {
     font-weight: 400;
     font-size: 0.7rem;
@@ -303,6 +323,17 @@
                 font-size: 0.7rem;
                 font-style: normal;
                 font-weight: 500;
+                margin-top: 0.25rem;
+                line-height: 0.85rem;
+                width: 9rem;
+               
+              }
+              .sp-name-small2 {
+                color: rgb(56, 56, 56);
+                font-family: Open Sans;
+                font-size: 0.7rem;
+                font-style: normal;
+                font-weight: 700;
                 margin-top: 0.25rem;
                 line-height: 0.85rem;
                 width: 9rem;

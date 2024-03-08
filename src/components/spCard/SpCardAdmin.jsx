@@ -5,7 +5,7 @@ import rating from '../../images/rating.svg';
 import { useQuery } from "@tanstack/react-query";
 import newRequest from '../../utils/newRequest';
 
-function SpCard({ item, index }) {
+function SpCardAdmin({ item, index }) {
   const { isLoading, error, data } = useQuery({
     queryKey: [item.userId],
     queryFn: () =>
@@ -22,13 +22,11 @@ function SpCard({ item, index }) {
       }),
   });
 
-  const openProfile = () => {
-    window.open(`/view-profile/${item._id}`, '_blank');
-  };
+
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className='sp-card' onClick={openProfile} style={{ cursor: 'pointer' }}>
+    <div className='sp-card' >
        {index && <p style={{ marginRight: '0.3rem' }}>{index}.</p>}
       {isLoading ? (
         "Loading..."
@@ -44,8 +42,29 @@ function SpCard({ item, index }) {
          
             <div className='sp-title-contianer'>
               <div className='sp-name-title-container'>
-                <h1 className='sp-title'> {item.title} </h1>
-                <p className='sp-name-small'> {data.username} </p>
+               
+
+                <div className='admin-watch'>
+                  <p className='admin-text'>Name:</p>
+                <p className='sp-name-small2'  > {data.username} </p>
+                </div>
+
+                <div className='admin-watch'>
+                <p className='admin-text'> Service:</p>
+                <p className='sp-name-small2' > {item.title}</p>
+                </div>
+
+                <div className='admin-watch'>
+                <p className='admin-text'>Phone:</p>
+                <p className='sp-name-small2'  > {data.phone} </p>
+                </div>
+
+
+                <div className='admin-watch'>
+                <p className='admin-text'>Email:</p>
+                <p className='sp-name-small2' >{data.email}</p>
+                </div>
+
               </div>
               <div className='rating-container'>
                 <img src={rating} className='rating-icon' alt='Rating' />
@@ -85,13 +104,11 @@ function SpCard({ item, index }) {
             </div>
           </div>
 
-          <div className='sec2'>
-            <button className='view-profile'>View Profile</button>
-          </div>
+        
         </>
       )}
     </div>
   );
 }
 
-export default SpCard;
+export default SpCardAdmin;

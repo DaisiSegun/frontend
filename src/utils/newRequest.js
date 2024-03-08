@@ -3,7 +3,7 @@ import axios from "axios";
 const newRequest = axios.create({
   baseURL: "https://app.roothq.africa/api", // Make sure to include the protocol (http/https)
   withCredentials: true,
-});
+})
 
 // Add a request interceptor
 newRequest.interceptors.request.use(

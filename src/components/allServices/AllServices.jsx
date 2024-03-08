@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './AllServices.scss';
-import SpCard from '../../components/spCard/SpCard';
+import SpCardAdmin from '../../components/spCard/SpCardAdmin';
 
 import newRequest from '../../utils/newRequest';
 import Header from '../../components/header/Header';
@@ -56,7 +56,7 @@ function AllServices() {
 
       {services.length > 0 ? (
         services.map((service, index) => (
-          <SpCard key={service._id} item={service} index={index + 1} />
+          <SpCardAdmin key={service._id} item={service} index={index + 1} />
         ))
       ) : (
         <Sorry />
