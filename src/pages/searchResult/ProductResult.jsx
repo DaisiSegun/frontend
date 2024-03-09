@@ -76,7 +76,7 @@ function ProductResult() {
 
     </div>
 
-      <div className='space25'></div>
+    <div style={{ marginBottom: '6rem' }}></div>
      <NavBar/>
     </div>
   );

@@ -67,7 +67,7 @@ function Products() {
      
       {filteredData.length === 0 && <Sorry2 />}
 
-      <div style={{ marginBottom: '4rem' }}></div>
+      <div style={{ marginBottom: '6rem' }}></div>
     <NavBar/>
     </div>
   );
