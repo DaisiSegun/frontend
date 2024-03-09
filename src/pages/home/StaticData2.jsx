@@ -25,17 +25,17 @@ const staticCatData2 = [
 
   {
     id: "4",
-    category: "Men's clothing",
+    category: "Men's Clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709833/hvabnxdzznzdkfjjjip8.png",
-    title: "Men's clothing",
+    title: "Men's Clothing",
     desc: "Confidence Defined"
   },
 
   {
     id: "5",
-    category: "Women's clothing",
+    category: "Women's Clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png",
-    title: "Women's clothing",
+    title: "Women's Clothing",
     desc: "Dress Your Story"
   },
 
