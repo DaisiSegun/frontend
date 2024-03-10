@@ -190,7 +190,7 @@ function CreateProduct() {
          
 
           <div className="create-contianer">
-              <p className='create-title'>Price (Use "Negotiable if you dont have a fixed price" ) </p>
+              <p className='create-title'>Price (Use "Negotiable" if you don't have a fixed price ) </p>
               <input
                 type="text"
                 name="price"
