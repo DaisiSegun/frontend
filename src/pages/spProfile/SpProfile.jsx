@@ -207,20 +207,31 @@ function SpProfile() {
                  <p className='dark-des'>{data.shortDesc}</p>
                </div> 
                <div className='sp-des'>
-                <p className='light-des'>Interests</p>
-                <p className='dark-des'>
-                  {dataUser.interests
-                    .split(' ')
-                    .slice(0, 5)
-                    .join(' ')}
-                  {dataUser.interests.split(' ').length > 5 ? '...' : ''}
-                </p>
-              </div>
+                  <p className='light-des'>Interests</p>
+                  {dataUser.interests ? (
+                    <p className='dark-des'>
+                      {dataUser.interests
+                        .split(' ')
+                        .slice(0, 5)
+                        .join(' ')}
+                      {dataUser.interests.split(' ').length > 5 ? '...' : ''}
+                    </p>
+                  ) : (
+                    <p className='dark-des'>No interests listed</p>
+                  )}
+                </div>
+
  
-               <div className='sp-des'>
-                 <p className='light-des'>Languages</p>
-                 <p className='dark-des'>{dataUser.businessLocation}</p>
-               </div> 
+                <div className='sp-des'>
+                  <p className='light-des'>Languages</p>
+                  {dataUser.languages ? (
+                    <p className='dark-des'>{dataUser.businessLocation}</p>
+                  ) : (
+                    <p className='dark-des'>No languages listed</p>
+                  )}
+                </div>
+
+ 
                <div className='sp-des'>
                  <p className='light-des'>Number of employees</p>
                  <p className='dark-des'>{data.certification}</p>
