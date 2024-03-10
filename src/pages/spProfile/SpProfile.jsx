@@ -224,7 +224,7 @@ function SpProfile() {
  
                 <div className='sp-des'>
                   <p className='light-des'>Languages</p>
-                  {dataUser.languages ? (
+                  {dataUser.businessLocation ? (
                     <p className='dark-des'>{dataUser.businessLocation}</p>
                   ) : (
                     <p className='dark-des'>No languages listed</p>
