@@ -17,6 +17,14 @@ const staticCatData2 = [
   
   {
     id: "3",
+    category: "Kitchenware",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710101977/nzmn2gxjsgi96l3kym8w.jpg",
+    title: "Kitchenware",
+    desc: "Handcrafted Kitchen Charm"
+  },
+
+  {
+    id: "4",
     category: "Artwork",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709911/xvk4zbxxwtqwcek5frqd.png",
     title: "Artwork",
@@ -24,7 +32,7 @@ const staticCatData2 = [
   },
 
   {
-    id: "4",
+    id: "5",
     category: "Men's Clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709833/hvabnxdzznzdkfjjjip8.png",
     title: "Men's Clothing",
@@ -32,7 +40,7 @@ const staticCatData2 = [
   },
 
   {
-    id: "5",
+    id: "6",
     category: "Women's Clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png",
     title: "Women's Clothing",
@@ -40,7 +48,7 @@ const staticCatData2 = [
   },
 
   {
-    id: "6",
+    id: "7",
     category: "Women's Footwear",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708877941/kyk40xyvdeo9uczithj1.png",
     title: "Women's Footwear",
@@ -49,7 +57,7 @@ const staticCatData2 = [
  
 
   {
-    id: "7",
+    id: "8",
     category: "Men's Bags",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709889/vopmkwzcwy5t1a0vynxp.png",
     title: "Men's Bags",
@@ -57,7 +65,7 @@ const staticCatData2 = [
   },
 
   {
-    id: "8",
+    id: "9",
     category: "Men's Footwear",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708877941/glysnu2inhshxc6r7yhq.png",
     title: "Men's Footwear",

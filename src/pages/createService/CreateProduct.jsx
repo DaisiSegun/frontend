@@ -169,6 +169,7 @@ function CreateProduct() {
                 <option value="Women's Footwear">Women's Footwear</option>
                 <option value="Men's Bags">Men's Bags</option>
                 <option value="Men's Footwear">Men's Footwear</option>
+                <option value="Kitchenware">Kitchenware</option>
                 <option value="others">others</option>
 
           </select>
@@ -189,12 +190,12 @@ function CreateProduct() {
          
 
           <div className="create-contianer">
-              <p className='create-title'>Price </p>
+              <p className='create-title'>Price (Use "Negotiable if you dont have a fixed price" ) </p>
               <input
                 type="text"
                 name="price"
                 onChange={handleChange}
-              placeholder='e.g, 15,000' className='create-input'/>
+              placeholder='e.g, 15,000 or Negotiable' className='create-input'/>
 
           </div>
           
