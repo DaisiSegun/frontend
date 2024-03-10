@@ -18,7 +18,7 @@ const staticCatData2 = [
   {
     id: "3",
     category: "Kitchenware",
-    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710101977/nzmn2gxjsgi96l3kym8w.jpg",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710103029/swug22utbhrm6wta1epz.jpg",
     title: "Kitchenware",
     desc: "Handcrafted Kitchen Charm"
   },
