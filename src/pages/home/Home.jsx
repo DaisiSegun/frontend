@@ -10,6 +10,7 @@ import Search2 from '../../components/search/Search2';
 import CatCard2 from '../../components/CatCard/CatCard2';
 import CatCard3 from '../../components/CatCard/CatCard3';
 import CatCard4 from '../../components/CatCard/CatCard4';
+import { Helmet } from 'react-helmet';
 
 import Testimonial from '../../components/testimonial/Testimonial';
 import NavBar from '../../components/navBar/NavBar';
@@ -64,6 +65,19 @@ responsive: [
 
   return (
     <div className='home'>
+      <Helmet>
+        <title>Root</title>
+        <meta name='description' content='Explore services & handmade items in Lagos' />
+        <meta property='og:title' content='Services & handmade items in Lagos' />
+        <meta
+          property='og:description'
+          content='"Explore services & African made products in Lagos'
+        />
+        <meta
+          property='og:image'
+          content='https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png'
+        />
+      </Helmet>
       <Header showSearch={false} />
       {/* <img className='home-img' src={homeImg} alt='Home' /> */}
       <h1 className='header-32px'>Services & handmade items in Lagos</h1>
