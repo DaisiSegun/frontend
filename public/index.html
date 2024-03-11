@@ -33,6 +33,19 @@
   <body>
     <noscript>Root marketplace</noscript>
     <div id="root"></div>
+    <script>
+      const imageUrl = 'https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png';
+
+      const metaTags = [
+        { property: 'og:image', content: imageUrl },
+      ];
+
+      metaTags.forEach(tag => {
+        const metaTag = document.createElement('meta');
+        Object.entries(tag).forEach(([key, value]) => metaTag.setAttribute(key, value));
+        document.head.appendChild(metaTag);
+      });
+  </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
