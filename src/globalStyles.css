@@ -1,0 +1,13 @@
+:root {
+  --background-color: white; /* Default background color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212; /* Dark mode background color */
+  }
+}
+
+body {
+  background-color: var(--background-color);
+}
