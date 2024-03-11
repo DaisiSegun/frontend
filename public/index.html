@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/rooticon.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -29,23 +29,24 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Root</title>
-  </head>
-  <body>
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://roothq.africa/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Root">
+    <meta property="og:description" content="Explore services & African made products in Lagos">
+    <meta property="og:image" content="https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="roothq.africa">
+    <meta property="twitter:url" content="https://roothq.africa/">
+    <meta name="twitter:title" content="Root">
+    <meta name="twitter:description" content="Explore services & African made products in Lagos">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png">
+</head>
+<body>
     <noscript>Root marketplace</noscript>
     <div id="root"></div>
-    <script>
-      const imageUrl = 'https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png';
-
-      const metaTags = [
-        { property: 'og:image', content: imageUrl },
-      ];
-
-      metaTags.forEach(tag => {
-        const metaTag = document.createElement('meta');
-        Object.entries(tag).forEach(([key, value]) => metaTag.setAttribute(key, value));
-        document.head.appendChild(metaTag);
-      });
-  </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -56,5 +57,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
 </html>
