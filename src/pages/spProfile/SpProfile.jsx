@@ -227,7 +227,7 @@ function SpProfile() {
                   {dataUser.businessLocation ? (
                     <p className='dark-des'>{dataUser.businessLocation}</p>
                   ) : (
-                    <p className='dark-des'>No languages listed.</p>
+                    <p className='dark-des'>No languages listed</p>
                   )}
                 </div>
 

@@ -4,7 +4,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans';
-  background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white;
+    color: black;
+  }
 }
 
 .sace {
