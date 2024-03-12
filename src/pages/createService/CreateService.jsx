@@ -212,6 +212,7 @@
                 <option value="Fumigation">Fumigation & Pest Control</option>
                 <option value="Coding">Coding</option>
                 <option value="Web Development">Web Development</option>
+                <option value="Music Band">Music Band</option>
                 <option value="Animation">Animation</option>
                 <option value="Driver & Transportation">Driver & Transportation</option>
                 <option value="Music">Music</option>

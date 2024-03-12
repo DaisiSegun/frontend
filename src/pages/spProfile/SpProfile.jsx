@@ -15,6 +15,7 @@ import { Helmet } from 'react-helmet';
 
 import load from '../../images/load.gif'
 import NavBar from '../../components/navBar/NavBar.jsx';
+import ReactMarkdown from 'react-markdown';
 
 
 
@@ -135,6 +136,8 @@ function SpProfile() {
 
   const currentUser = getCurrentUser();
 
+  console.log(dataUser);
+
   return (
   
     <div className='sp-profile'>
@@ -160,7 +163,7 @@ function SpProfile() {
         <div className='rating-review'>
           <img src={ratingIcon} alt='Rating Icon' className='rating-icon' />
           <p className='rating-num'>
-            {!isNaN(data.totalStars / data.starNumber) && Math.round(data.totalStars / data.starNumber)}
+            {!isNaN(dataUser.totalStars / dataUser.starNumber) && Math.round(dataUser.totalStars / dataUser.starNumber)}
           </p>
           <p className='num-job-done'>({reviewsData.length})</p>
         </div>
@@ -196,7 +199,7 @@ function SpProfile() {
             <img src={golf} alt='Golf Icon' className='golf' />
           </div>
           <h2 className='a-service'>About my service</h2>
-          <p className='service-des'> {data.desc}</p>
+          <ReactMarkdown className='service-des' children={data.desc} />
         </div>
 
         <div className='section-2'>
@@ -258,7 +261,7 @@ function SpProfile() {
         </div>
       </div>
 
-      <Reviews serviceId={id} />
+      <Reviews serviceId={id} sellerId={userId} />
 
       <div className='space1'></div>
     </div>
