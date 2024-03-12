@@ -162,8 +162,8 @@ function ViewProduct() {
         <div className='rating-review'>
           <img src={ratingIcon} alt='Rating Icon' className='rating-icon' />
           <p className='rating-num'>
-            {!isNaN(dataUser.totalStars / dataUser.starNumber) && Math.round(dataUser.totalStars / dataUser.starNumber)}
-          </p>
+          {!isNaN(dataUser.totalStars / dataUser.starNumber) && (dataUser.totalStars / dataUser.starNumber).toFixed(1)}
+        </p>
           <p className='num-job-done'>({reviewsData.length})</p>
         </div>
       </div>

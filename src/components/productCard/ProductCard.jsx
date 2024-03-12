@@ -47,9 +47,10 @@ function ProductCard({ item, index }) {
 
 
               <p className='rate'>
-                  {!isNaN(data.totalStars / data.starNumber) &&
-                    Math.round(data.totalStars / data.starNumber)}
-                </p>
+                {!isNaN(data.totalStars / data.starNumber) &&
+                  (data.totalStars / data.starNumber).toFixed(1)}
+              </p>
+
 
               {reviewsData && reviewsData.length > 0 && (
               <p className='rate'> ({reviewsData.length})</p>

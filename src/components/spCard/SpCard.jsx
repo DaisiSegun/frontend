@@ -50,9 +50,10 @@ function SpCard({ item, index }) {
               <div className='rating-container'>
                 <img src={rating} className='rating-icon' alt='Rating' />
                 <p className='rating'>
-                  {!isNaN(data.totalStars / data.starNumber) &&
-                    Math.round(data.totalStars / data.starNumber)}
-                </p>
+                {!isNaN(data.totalStars / data.starNumber) &&
+                  (data.totalStars / data.starNumber).toFixed(1)}
+              </p>
+
                 {reviewsData && reviewsData.length > 0 && (
                   <p className='num-job-done'>({reviewsData.length})</p>
                 )}
