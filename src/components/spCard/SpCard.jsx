@@ -45,7 +45,10 @@ function SpCard({ item, index }) {
             <div className='sp-title-contianer'>
               <div className='sp-name-title-container'>
                 <h1 className='sp-title'> {item.title} </h1>
-                <p className='sp-name-small'> {data.username} </p>
+                <p className='sp-name-small'>
+                {data.username.length > 18 ? `${data.username.slice(0, 18)}...` : data.username}
+              </p>
+
               </div>
               <div className='rating-container'>
                 <img src={rating} className='rating-icon' alt='Rating' />
