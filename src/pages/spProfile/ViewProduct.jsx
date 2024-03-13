@@ -66,24 +66,24 @@ function ViewProduct() {
     if (dataUser && data) {
       document.title = `${dataUser.username}'s Profile`;
 
-      const metaTags = [
-        { name: 'og:title', content: `${dataUser.username}'s Profile` },
-        { name: 'og:description', content: data.desc || '' },
-        { name: 'og:image', content: data.images && data.images.length > 0 ? data.images[0] : '' },
-        { name: 'og:url', content: window.location.href },
-      ];
+      // const metaTags = [
+      //   { name: 'og:title', content: `${dataUser.username}'s Profile` },
+      //   { name: 'og:description', content: data.desc || '' },
+      //   { name: 'og:image', content: data.images && data.images.length > 0 ? data.images[0] : '' },
+      //   { name: 'og:url', content: window.location.href },
+      // ];
 
-      metaTags.forEach((tag) => {
-        const existingTag = document.head.querySelector(`meta[property="${tag.name}"]`);
-        if (existingTag) {
-          existingTag.content = tag.content;
-        } else {
-          const newTag = document.createElement('meta');
-          newTag.setAttribute('property', tag.name);
-          newTag.content = tag.content;
-          document.head.appendChild(newTag);
-        }
-      });
+      // metaTags.forEach((tag) => {
+      //   const existingTag = document.head.querySelector(`meta[property="${tag.name}"]`);
+      //   if (existingTag) {
+      //     existingTag.content = tag.content;
+      //   } else {
+      //     const newTag = document.createElement('meta');
+      //     newTag.setAttribute('property', tag.name);
+      //     newTag.content = tag.content;
+      //     document.head.appendChild(newTag);
+      //   }
+      // });
     }
   }, [dataUser, data]);
   
@@ -138,16 +138,19 @@ function ViewProduct() {
   const currentUser = getCurrentUser();
 
   return (
-  
-    <div className='sp-profile'>
-    
+
+    <> 
+
     <Helmet>
-        {/* Add meta tags for social media sharing within Helmet */}
-        <meta property="og:title" content={`${dataUser.username}'s Profile`} />
+          <meta property="og:title" content={`${dataUser.username}'s Profile`} />
         <meta property="og:description" content={data.desc || ''} />
         <meta property="og:image" content={data.images && data.images.length > 0 ? data.images[0] : ''} />
         <meta property="og:url" content={window.location.href} />
       </Helmet>
+  
+    <div className='sp-profile'>
+    
+    
 
       <Header showSearch={true} />
 
@@ -257,6 +260,7 @@ function ViewProduct() {
 
       <div className='space1'></div>
     </div>
+    </> 
    
   );
 }
