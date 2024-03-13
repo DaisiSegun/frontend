@@ -15,16 +15,16 @@ const staticCatData2 = [
   },
 
   
-  {
-    id: "3",
-    category: "Kitchenware",
-    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710103029/swug22utbhrm6wta1epz.jpg",
-    title: "Kitchenware",
-    desc: "Handcrafted Kitchen Charm"
-  },
+  // {
+  //   id: "3",
+  //   category: "Kitchenware",
+  //   image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710103029/swug22utbhrm6wta1epz.jpg",
+  //   title: "Kitchenware",
+  //   desc: "Handcrafted Kitchen Charm"
+  // },
 
   {
-    id: "4",
+    id: "3",
     category: "Artwork",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709911/xvk4zbxxwtqwcek5frqd.png",
     title: "Artwork",
@@ -32,11 +32,18 @@ const staticCatData2 = [
   },
 
   {
-    id: "5",
+    id: "4",
     category: "Men's Clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709833/hvabnxdzznzdkfjjjip8.png",
     title: "Men's Clothing",
     desc: "Confidence Defined"
+  },
+  {
+    id: "5",
+    category: "Women's bead",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710332638/yljqln01ah7yxhnpme08.png",
+    title: "Women's bead",
+    desc: "Crafted Elegance, Empowering Women"
   },
 
   {
@@ -46,6 +53,7 @@ const staticCatData2 = [
     title: "Women's Clothing",
     desc: "Dress Your Story"
   },
+  
 
   {
     id: "7",
@@ -72,13 +80,7 @@ const staticCatData2 = [
     desc: "Footwears for Every Mile"
   },
   
-  // {
-  //   id: "9",
-  //   category: "Women's bead",
-  //   image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708877941/glysnu2inhshxc6r7yhq.png",
-  //   title: "Women's bead",
-  //   desc: "Crafted Elegance, Empowering Women"
-  // },
+
 
   // {
   //   id: "10",
