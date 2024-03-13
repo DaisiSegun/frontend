@@ -52,7 +52,7 @@ const staticCatData2 = [
     category: "Women's bead",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710332638/yljqln01ah7yxhnpme08.png",
     title: "Women's bead",
-    desc: "Crafted Elegance, Empowering Women"
+    desc: "Elegant Beaded Grace"
   },
 
   {
