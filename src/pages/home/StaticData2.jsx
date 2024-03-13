@@ -38,22 +38,22 @@ const staticCatData2 = [
     title: "Men's Clothing",
     desc: "Confidence Defined"
   },
-  {
-    id: "5",
-    category: "Women's bead",
-    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710332638/yljqln01ah7yxhnpme08.png",
-    title: "Women's bead",
-    desc: "Crafted Elegance, Empowering Women"
-  },
+ 
 
   {
-    id: "6",
+    id: "5",
     category: "Women's Clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png",
     title: "Women's Clothing",
     desc: "Dress Your Story"
   },
-  
+  {
+    id: "6",
+    category: "Women's bead",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710332638/yljqln01ah7yxhnpme08.png",
+    title: "Women's bead",
+    desc: "Crafted Elegance, Empowering Women"
+  },
 
   {
     id: "7",
