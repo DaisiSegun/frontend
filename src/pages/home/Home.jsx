@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async'; // Use HelmetProvider
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Home.scss';
@@ -53,7 +53,7 @@ function Home() {
   });
 
   return (
-    <div className='home'>
+    <HelmetProvider>
       <Helmet>
         <title>Root | Freelance services, handmade items & local services</title>
         <meta
@@ -65,73 +65,75 @@ function Home() {
           content='https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png'
         />
       </Helmet>
-      <Header showSearch={false} />
-      {/* <img className='home-img' src={homeImg} alt='Home' /> */}
-      <h1 className='header-32px'>Services & handmade items in Lagos</h1>
-      <div className='search6'>
-        <Search2 />
-      </div>
-
-      <div className='root-services-section'>
-        <div>
-          <div className='see-all-con'>
-            <h1 className='header-new'>Freelance services</h1>
-            {/* <button className='see-all'>See all</button> */}
-          </div>
-          <Slider className='custom-slider' {...sliderSettings}>
-            {staticCatData.map((cat) => (
-              <CatCard2 className='slide-card' key={cat.id} categoryId={cat.id} />
-            ))}
-          </Slider>
+      <div className='home'>
+        <Header showSearch={false} />
+        {/* <img className='home-img' src={homeImg} alt='Home' /> */}
+        <h1 className='header-32px'>Services & handmade items in Lagos</h1>
+        <div className='search6'>
+          <Search2 />
         </div>
 
-        <div>
-          <div className='see-all-con'>
-            <h1 className='header-new'>Handmade items</h1>
-            {/* <button className='see-all'>See all</button> */}
+        <div className='root-services-section'>
+          <div>
+            <div className='see-all-con'>
+              <h1 className='header-new'>Freelance services</h1>
+              {/* <button className='see-all'>See all</button> */}
+            </div>
+            <Slider className='custom-slider' {...sliderSettings}>
+              {staticCatData.map((cat) => (
+                <CatCard2 className='slide-card' key={cat.id} categoryId={cat.id} />
+              ))}
+            </Slider>
           </div>
-          <Slider className='custom-slider' {...sliderSettings}>
-            {staticCatData2.map((cat) => (
-              <CatCard3 className='slide-card' key={cat.id} categoryId={cat.id} />
-            ))}
-          </Slider>
+
+          <div>
+            <div className='see-all-con'>
+              <h1 className='header-new'>Handmade items</h1>
+              {/* <button className='see-all'>See all</button> */}
+            </div>
+            <Slider className='custom-slider' {...sliderSettings}>
+              {staticCatData2.map((cat) => (
+                <CatCard3 className='slide-card' key={cat.id} categoryId={cat.id} />
+              ))}
+            </Slider>
+          </div>
+
+          <div>
+            <div className='see-all-con'>
+              <h1 className='header-new'>Local services</h1>
+              <Link className='link' to='more-service'>
+                <button className='see-all'>See all</button>
+              </Link>
+            </div>
+            <Slider className='custom-slider' {...sliderSettings}>
+              {staticCatData3.map((cat) => (
+                <CatCard4 className='slide-card' key={cat.id} categoryId={cat.id} />
+              ))}
+            </Slider>
+          </div>
         </div>
 
-        <div>
-          <div className='see-all-con'>
-            <h1 className='header-new'>Local services</h1>
-            <Link className='link' to='more-service'>
-              <button className='see-all'>See all</button>
-            </Link>
-          </div>
-          <Slider className='custom-slider' {...sliderSettings}>
-            {staticCatData3.map((cat) => (
-              <CatCard4 className='slide-card' key={cat.id} categoryId={cat.id} />
-            ))}
-          </Slider>
+        <h1 className='header-28px'>See what customers are saying about Root</h1>
+        <div className='testimonial-container'>
+          <Testimonial
+            title='Oyindamola Sanusi'
+            text='Thanks so much on helping fix my phone without having to stress me at all. No single trace of the repair, it literally looks just as new!'
+          />
+          <Testimonial
+            title='Jumoke'
+            text="Arise Kitchen's chef service on the platform was a lifesaver! Delicious meal, saved me time and effort. My husband loved it too. Will definitely use her again. Thanks"
+          />
+          <Testimonial
+            title='Kene Oleah'
+            text='Good service. What i got fixed is still working perfectly well'
+          />
         </div>
+
+        <div style={{ marginBottom: '3rem' }}></div>
+
+        <NavBar />
       </div>
-
-      <h1 className='header-28px'>See what customers are saying about Root</h1>
-      <div className='testimonial-container'>
-        <Testimonial
-          title='Oyindamola Sanusi'
-          text='Thanks so much on helping fix my phone without having to stress me at all. No single trace of the repair, it literally looks just as new!'
-        />
-        <Testimonial
-          title='Jumoke'
-          text="Arise Kitchen's chef service on the platform was a lifesaver! Delicious meal, saved me time and effort. My husband loved it too. Will definitely use her again. Thanks"
-        />
-        <Testimonial
-          title='Kene Oleah'
-          text='Good service. What i got fixed is still working perfectly well'
-        />
-      </div>
-
-      <div style={{ marginBottom: '3rem' }}></div>
-
-      <NavBar />
-    </div>
+    </HelmetProvider>
   );
 }
 
