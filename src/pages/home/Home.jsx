@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import { Helmet, HelmetProvider } from 'react-helmet-async'; // Use HelmetProvider
+import { HelmetProvider } from 'react-helmet-async'; // Use HelmetProvider
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Home.scss';
@@ -16,6 +16,10 @@ import NavBar from '../../components/navBar/NavBar';
 import staticCatData from './StaticData';
 import staticCatData2 from './StaticData2';
 import staticCatData3 from './StaticData3';
+import MetaDecorator from '../../utils/MetaDecorator';
+const root = require("../../data/root.json");
+
+
 
 function Home() {
   useEffect(() => {
@@ -54,17 +58,12 @@ function Home() {
 
   return (
     <HelmetProvider>
-      <Helmet>
-        <title>Root | Freelance services, handmade items & local services</title>
-        <meta
-          name='description'
-          content='Explore services & African made products in Lagos'
-        />
-        <meta
-          property='og:image'
-          content='https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png'
-        />
-      </Helmet>
+      <MetaDecorator
+        description={root.pageDescription}
+        title={root.pageTitle}
+        imageUrl={root.Thumbnail}
+        imageAlt={root.metaImageAlt}
+      />
       <div className='home'>
         <Header showSearch={false} />
         {/* <img className='home-img' src={homeImg} alt='Home' /> */}
