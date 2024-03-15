@@ -17,9 +17,14 @@ const MetaDecorator = ({ title, description, imageUrl, imageAlt }) => (
       property="og:url"
       content={metaDecorator.hostname + window.location.pathname + window.location.search}
     />
-    <meta name="twitter:card" content="summary_large_image" />
+     <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={metaDecorator.hostname} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://res.cloudinary.com/dsddxqtss/image/upload/v1710425399/coeh3fvaxfgb9vl2cq0f.png"/>
     <meta name="twitter:image:alt" content={imageAlt} />
     <meta name="twitter:site" content={metaDecorator.twitterUsername} />
+    <meta property="twitter:domain" content={metaDecorator.hostname} />
   </Helmet>
 );
 
@@ -31,3 +36,10 @@ MetaDecorator.propTypes = {
 };
 
 export default MetaDecorator;
+
+
+
+
+
+
+

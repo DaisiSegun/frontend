@@ -17,6 +17,7 @@ import staticCatData from './StaticData';
 import staticCatData2 from './StaticData2';
 import staticCatData3 from './StaticData3';
 import MetaDecorator from '../../utils/MetaDecorator';
+import metaImage from '../../images/meta5.png'
 const root = require("../../data/root.json");
 
 
@@ -61,7 +62,7 @@ function Home() {
       <MetaDecorator
         description={root.pageDescription}
         title={root.pageTitle}
-        imageUrl={root.Thumbnail}
+        imageUrl={metaImage}
         imageAlt={root.metaImageAlt}
       />
       <div className='home'>

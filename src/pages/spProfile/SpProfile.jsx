@@ -13,8 +13,8 @@ import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
 import { Helmet } from 'react-helmet';
 
-import load from '../../images/load.gif'
-import NavBar from '../../components/navBar/NavBar.jsx';
+// import load from '../../images/load.gif'
+// import NavBar from '../../components/navBar/NavBar.jsx';
 import ReactMarkdown from 'react-markdown';
 
 
@@ -89,13 +89,14 @@ function SpProfile() {
   if (isLoading || isLoadingUser) {
     return (
       <div className='loader'>
+          <Header showSearch={true} />
         <div className='load-page'>
-        <p className='load-text'>Loading <img className='load-gif' src={load} alt='Loading..'/>  please kindly wait..</p>
+        <p className='load-text'>Loading. please kindly wait..</p>
        
         
         </div>
 
-        <NavBar/>
+        {/* <NavBar/> */}
      
       </div>
     );
