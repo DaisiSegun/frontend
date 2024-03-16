@@ -8,9 +8,9 @@ const staticCatData3 = [
   },
   {
     id: "2",
-    category: "Crochet & knittig",
+    category: "Crochet & knitting",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709911/xwplda3rn6qf7daslimt.png",
-    title: "Crochet & knittig",
+    title: "Crochet & knitting",
     desc: "Knitted for you"
   },
 
@@ -25,7 +25,7 @@ const staticCatData3 = [
 
   {
     id: "4",
-    category: "Men's clothen",
+    category: "Men's clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709833/hvabnxdzznzdkfjjjip8.png",
     title: "Men's clothen",
     desc: "Confidence Defined"
@@ -33,7 +33,7 @@ const staticCatData3 = [
 
   {
     id: "5",
-    category: "Women's clothen",
+    category: "Women's clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png",
     title: "Women's clothen",
     desc: "Dress Your Story"
@@ -63,7 +63,14 @@ const staticCatData3 = [
     title: "Men's Footwear",
     desc: "Footwears for Every Mile"
   },
- 
+  {
+    id: "9",
+    category: "Women's bead",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710332638/yljqln01ah7yxhnpme08.png",
+    title: "Women's bead",
+    desc: "Elegant Beaded Grace"
+  },
+
   
  
  

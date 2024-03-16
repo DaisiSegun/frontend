@@ -1,0 +1,82 @@
+.top-nav {
+  background-color: #ffffff;
+ 
+  
+  padding: 1rem;
+  
+ 
+
+
+  .t-cat {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 0.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.4px solid darkgray;
+    cursor: pointer;
+    transition: box-shadow 0.3s, font-weight 0.3s;
+  
+    .t-cat-img {
+      width: 0.85rem;
+    }
+  
+    &:hover {
+       /* Add shadow effect on hover */
+      font-weight: 700; /* Make text bold on hover */
+      border-bottom: 1px solid rgba(75, 118, 46, 0.50);
+     
+      
+      
+    }
+  }
+  
+  .t-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  
+
+}
+
+
+
+@media screen and (max-width: 850px) {  
+
+
+  .top-nav {
+    background-color: white;
+   
+    
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin-bottom: -1rem;
+    
+   
+  
+  
+  .t-cat {
+    display: flex;
+   
+    align-items: center;
+    width: max-content;
+    gap: 0.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.4px solid darkgray; /* Only border on top */
+    cursor: pointer;
+   
+  
+    .t-cat-img{
+      width: 0.8rem;
+    }
+  }
+  
+  .t-text {
+    font-size: 0.65rem;
+    font-weight: 600;
+  }
+  
+  }
+
+ }

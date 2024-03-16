@@ -8,6 +8,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import profileImg from '../../images/avatar.jpg';
 import newRequest from '../../utils/newRequest.js';
 import { ClipLoader } from 'react-spinners'; 
+// import TopNavBar from '../topNavBar/TopNavBar.jsx';
 
 function Header({ showSearch }) {
   // const [showDropdown, setShowDropdown] = useState(false);
@@ -55,6 +56,7 @@ function Header({ showSearch }) {
 
 
   return (
+    <div>
     <div className='header'>
       <div className='header-container'>
         <Link className='link' to='/'>
@@ -101,24 +103,7 @@ function Header({ showSearch }) {
             </Link>
           )}
 
-          {/* <div className='dropdown'>
-            <button className='button-1' onClick={toggleDropdown}>
-              Contact Us
-            </button>
-            {showDropdown && (
-              <div className='dropdown-content'>
-                <Link className='drop-text' to='tel:+2349019971557'>
-                  Call us
-                </Link>
-                <a className='drop-text' href='https://wa.me/+2349019971557'>
-                  Text us
-                </a>
-                <Link className='drop-text' to='mailto:rootsgotyou@gmail.com'>
-                  Send us an Email
-                </Link>
-              </div>
-            )}
-          </div> */}
+         
 
           <div className='dropdown'>
           <button className='button-1' onClick={openWhatsApp}>
@@ -128,7 +113,10 @@ function Header({ showSearch }) {
           </div>
         </div>
       </div>
+  
     </div>
+   {/* <TopNavBar/> */}
+   </div>
   );
 }
 
