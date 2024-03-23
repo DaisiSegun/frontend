@@ -117,7 +117,7 @@ function CreateProduct() {
       setUploading(false);
       dispatch({ type: 'ADD_IMAGES', payload: { images } });
       setSuccessMessage(
-        ' Product Created! Go home and search for your product'
+        ' Product Created! Go back to view product'
       );
       setErrorMessage(null);
     } catch (err) {

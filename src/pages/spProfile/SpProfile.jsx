@@ -88,9 +88,9 @@ function SpProfile() {
 
   if (isLoading || isLoadingUser) {
     return (
-      <div className='loader'>
+      <div className='loader2'>
           <Header showSearch={true} />
-        <div className='load-page'>
+        <div className='load-page2'>
         <p className='load-text'>Loading. please kindly wait..</p>
        
         

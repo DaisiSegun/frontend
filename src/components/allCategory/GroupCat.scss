@@ -1,0 +1,59 @@
+.group-cat {
+
+
+
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+
+.group-cat-card {
+  background-color: #ffffff;
+  
+  cursor: pointer;
+  padding: 0.5rem;
+  border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #ddd;
+padding-bottom: 0.5rem;
+
+ 
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  gap: 1.5rem;
+  .title-group{
+       
+  .group-cat-title {
+    margin-bottom: 0.25rem;
+  }
+
+  .small-text-cat {
+    font-size: 0.7rem;
+    color: darkgray;
+  }
+  
+  }
+
+  .icon-nav {
+    width: 0.75rem;
+  }
+
+
+
+
+}
+
+
+
+}
+
+.category-link {
+  text-decoration: none;
+  color: black;
+}

@@ -17,8 +17,9 @@ function Sorry2() {
 
   return (
     <div className='sorry-container1'>
-      <h1 className='sorry-header'>We are sorry this product is not available yet</h1>
-      <p className='sorry-text'>Regardless, please feel free to contact us, and we'll go the extra mile to find this product from our network of sellers for you</p>
+      <h1 className='sorry-header'>This product is Coming soon!!!</h1>
+      <p className='sorry-text'>Feel free to contact us, and we'll do our best to find the product for you as soon as possible from our network of sellers</p>
+     
       <button onClick={openWhatsApp} className='sorry-button'>Contact us</button>
       <img className='sryyImg' src={sorrtImg} alt='' />
 

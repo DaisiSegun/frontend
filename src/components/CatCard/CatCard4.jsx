@@ -17,7 +17,8 @@ function CatCard3({ categoryId }) {
     <Link className='link8' to={`/findsp/${catData.category}`}>
       <div className='cat-card'>
         <img src={catData.image} className='cat-img' alt={catData.title} />
-        <h1 className='title-text'>{catData.title}</h1>
+        <h1 className='title-text'>{catData.title.length > 21 ? catData.title.slice(0, 21) + '...' : catData.title}</h1>
+
         <p className='smallest-text-gray'>{catData.desc}</p>
       </div>
     </Link>

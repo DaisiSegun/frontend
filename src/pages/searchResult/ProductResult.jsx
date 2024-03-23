@@ -70,7 +70,21 @@ function ProductResult() {
 
       <div className='pro-card'>
 
-      {data.map((service) => (
+       {/* Display services with matching titles first */}
+    {data
+      .filter((service) =>
+        service.title.toLowerCase().includes(search.toLowerCase())
+      )
+      .map((service) => (
+        <ProductCard key={service._id} item={service} />
+      ))}
+    
+    {/* Display remaining services */}
+    {data
+      .filter((service) =>
+        !service.title.toLowerCase().includes(search.toLowerCase())
+      )
+      .map((service) => (
         <ProductCard key={service._id} item={service} />
       ))}
 

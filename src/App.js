@@ -12,7 +12,7 @@ import Register from "./pages/register/Register"
 
 
 
-import {HashRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {
   QueryClient,
   QueryClientProvider,
@@ -47,6 +47,11 @@ import SellerDashboard from "./pages/sellerDashboad/SellerDashboard";
 import Admin from "./pages/admin/Admin"
 import AllUsers from "./pages/admin/AllUsers";
 import AllProducts from "./pages/allProducts/AllProducts";
+import AllCategories from "./pages/AllCategories/AllCategories";
+import SelectCategory from "./pages/AllCategories/SelectCategory";
+import AllCategories1 from "./pages/AllCategories/AllCategories1";
+import AllCategories2 from "./pages/AllCategories/AllCategories2";
+import AllCategories3 from "./pages/AllCategories/AllCategories3";
 
 
 function App() {
@@ -99,6 +104,11 @@ function App() {
             <Route path="/admin" element={<Admin/>} title="Admin" />
             <Route path="/allusers" element={<AllUsers/>} title="allusers" />
             <Route path="/all-products" element={<AllProducts/>} title="All Products" />
+            <Route path="/all-categories" element={<AllCategories/>} title="All Categories" />
+            <Route path="/select-category/:id" element={<SelectCategory/>} title="Select Categories" />
+            <Route path="/all-freelance-service" element={<AllCategories1/>} title="All Freelance services" />
+            <Route path="/all-handmade" element={<AllCategories2/>} title="All Handmade items" />
+            <Route path="/all-local" element={<AllCategories3/>} title="All Local services" />
             
           </Routes>
         </Router>

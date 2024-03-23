@@ -20,7 +20,7 @@ function EditService() {
     const fetchService = async () => {
       try {
         const response = await newRequest.get(`/services/single/${serviceId}`);
-        setPreviousService(response.data);  
+        setPreviousService({ ...response.data }); 
       } catch (error) {
         console.error('Error fetching service:', error);
       }
@@ -28,7 +28,6 @@ function EditService() {
 
     fetchService();
   }, [serviceId]);
-
 
 
 
@@ -40,11 +39,18 @@ function EditService() {
   const [errorMessage, setErrorMessage] = useState(null);
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     dispatch({
       type: "CHANGE_INPUT",
-      payload: { name: e.target.name, value: e.target.value },
+      payload: { name, value },
     });
+    setPreviousService((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
+
+  
   const currentUser = getCurrentUser();
   const userId = currentUser?.user?._id || currentUser?.user?.id;
  
@@ -165,12 +171,14 @@ function EditService() {
 
           <div className="create-contianer">
               <p className='create-title'>Edit Name of your Service</p>
-              <input 
-                  type="text"
-                  name="title"
-                  onChange={handleChange}
-                  placeholder={previousService.title || 'e.g iPhone technician, makeup artist'}
-                  className='create-input'/>
+              <input
+                type="text"
+                name="title"
+                value={previousService.title || ''} // Set the value prop
+                onChange={handleChange}
+                placeholder="e.g iPhone technician, makeup artist"
+                className="create-input"
+              />
                 
           </div>
 
@@ -230,10 +238,12 @@ function EditService() {
               <textarea
                 type="text"
                 name="desc"
-                style={{ height: '200px' }} 
+                value={previousService.desc || ''} // Set the value prop
+                style={{ height: '200px' }}
                 onChange={handleChange}
-                placeholder={previousService.desc || 'Please share a detailed description with all the relevant details.'}
-              className='create-input2'/>
+                placeholder="Please share a detailed description with all the relevant details."
+                className="create-input2"
+              />
 
           </div>
 
@@ -244,8 +254,11 @@ function EditService() {
               <input
                 type="text"
                 name="shortDesc"
+                value={previousService.shortDesc || ''} // Set the value prop
                 onChange={handleChange}
-                placeholder={previousService.shortDesc || 'e.g Ikeja, Lagos'} className='create-input'/>
+                placeholder="e.g Ikeja, Lagos"
+                className="create-input"
+              />
 
           </div>
 
@@ -254,8 +267,11 @@ function EditService() {
               <input
                 type="text"
                 name="price"
+                value={previousService.price || ''} // Set the value prop
                 onChange={handleChange}
-                placeholder={previousService.price || 'minimum fee for your service or type negotiable'} className='create-input'/>
+                placeholder="minimum fee for your service or type negotiable"
+                className="create-input"
+              />
 
           </div>
           
@@ -281,23 +297,28 @@ function EditService() {
           
           <div className="create-contianer">
               <p className='create-title'>Edit Number of employees (Use "Solo Entrepreneur" if solo) </p>
-              <input 
-              type="text"
-              name="certification"
-              onChange={handleChange}
-              placeholder={previousService.certification || 'If 1 please use (Solo Entrepreneur)'} className='create-input'/>
+              <input
+                type="text"
+                name="certification"
+                value={previousService.certification || ''} // Set the value prop
+                onChange={handleChange}
+                placeholder="If 1 please use (Solo Entrepreneur)"
+                className="create-input"
+              />
 
           </div>
 
           <div className="create-contianer">
               <p className='create-title'>Edit Years of expereince </p>
 
-              <input 
-              type="text"
-              name="yearsOfExperience"
-              onChange={handleChange}
-              placeholder={previousService.yearsOfExperience || 'e.g 5 years'}
-              className='create-input'/>
+              <input
+                type="text"
+                name="yearsOfExperience"
+                value={previousService.yearsOfExperience || ''} // Set the value prop
+                onChange={handleChange}
+                placeholder="e.g 5 years"
+                className="create-input"
+              />
 
           </div>
 

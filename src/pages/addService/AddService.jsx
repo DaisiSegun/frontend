@@ -62,6 +62,10 @@ function AddService() {
     navigate(`/edit-service/${serviceId}`);
   };
 
+  const handleOpen2 = (serviceId) => {
+    navigate(`/view-profile/${serviceId}`);
+  };
+
   return (
     <div className="add-service">
       <Header showSearch={false} />
@@ -99,14 +103,16 @@ function AddService() {
               {services.map((service) => (
                 
                  
-                <tr onClick={() => handleOpen(service._id)} key={service._id} style={{ marginBottom: '1rem' }}>
-                  <td>
+                <tr  style={{ marginBottom: '1rem' }}>
+                  
+                  <td onClick={() => handleOpen2(service._id)} key={service._id}>
                     <img className="img" src={service.images[0]} alt="" />
                   </td>
-                  <td>{service.title}</td>
-                  <td>{service.price}</td>
-                  <td>{reviewsData[service._id]?.length || 0}</td>
-                  <td style={{ width: 'max-content', textAlign: 'center', verticalAlign: 'middle' }}>
+                  <td onClick={() => handleOpen2(service._id)} key={service._id}>{service.title}</td>
+                  <td onClick={() => handleOpen2(service._id)} key={service._id}>{service.price}</td>
+                  <td onClick={() => handleOpen2(service._id)} key={service._id}>{reviewsData[service._id]?.length || 0}</td>
+
+                  <td onClick={() => handleOpen(service._id)} key={service._id} style={{ width: 'max-content', textAlign: 'center', verticalAlign: 'middle' }}>
                     <EditIcon />
                   </td>
                   {/* <td>

@@ -54,9 +54,15 @@ const staticCatData = [
     desc: "Boost Your Brand"
   },
  
-
   {
     id: "8",
+    category: "Video Editing",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710768972/envbflgb3uu9gveqpltu.png",
+    title: "Video Editing",
+    desc: "Edit. Enhance. Engage"
+  },
+  {
+    id: "9",
     category: "Session guitarist",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708707010/lhdeaqgs8ippxjppvmxn.png",
     title: "Session guitarist",
@@ -64,7 +70,7 @@ const staticCatData = [
   },
 
   {
-    id: "9",
+    id: "10",
     category: "Project reseach assistant",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705843/vm6i3ggqx6olniyohlss.png",
     title: "Project reseach assistant",
@@ -73,7 +79,7 @@ const staticCatData = [
  
   
   {
-    id: "10",
+    id: "11",
     category: "Content creator",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705607/d8bhrkrzew3zmvwychde.png",
     title: "Content creator",

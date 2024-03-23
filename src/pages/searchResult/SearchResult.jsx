@@ -59,20 +59,33 @@ function SearchResult() {
 
   return (
     <div className='sps'>
-      <Header showSearch={true} />
-      <h1 className='header-24px'>Search Result</h1>
-      <p className='subtitle-text'>Find African Product</p>
+    <Header showSearch={true} />
+    <h1 className='header-24px'>Search Result</h1>
+    <p className='subtitle-text'>Find African services</p>
 
-      {data.length === 0 &&  <Sorry />} 
+    {data.length === 0 && <Sorry />}
 
-      {data.map((service) => (
+    {/* Display services with matching titles first */}
+    {data
+      .filter((service) =>
+        service.title.toLowerCase().includes(search.toLowerCase())
+      )
+      .map((service) => (
+        <SpCard key={service._id} item={service} />
+      ))}
+    
+    {/* Display remaining services */}
+    {data
+      .filter((service) =>
+        !service.title.toLowerCase().includes(search.toLowerCase())
+      )
+      .map((service) => (
         <SpCard key={service._id} item={service} />
       ))}
 
-
-      <div className='space25'></div>
-     <NavBar/>
-    </div>
+    <div className='space25'></div>
+    <NavBar />
+  </div>
   );
 }
 

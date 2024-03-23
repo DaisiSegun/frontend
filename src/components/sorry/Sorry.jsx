@@ -17,10 +17,10 @@ function Sorry() {
 
   return (
     <div className='sorry-container1'>
-      <h1 className='sorry-header'>We are sorry this service is not available yet</h1>
-      <p className='sorry-text'>Regardless, please feel free to contact us, and we'll go the extra mile to find this service from our network of sellers for you</p>
+      <h1 className='sorry-header'>This service is Coming Soon!!!</h1>
+      <p className='sorry-text'>Feel free to contact us, and we'll do our best to find the service for you as soon as possible from our network of sellers</p>
       <button onClick={openWhatsApp} className='sorry-button'>Contact us</button>
-      <img className='sryyImg' src={sorrtImg} alt='' />3
+      <img className='sryyImg' src={sorrtImg} alt='' />
 
     </div>
   );

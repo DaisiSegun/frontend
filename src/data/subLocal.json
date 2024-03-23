@@ -1,0 +1,131 @@
+[
+
+   {
+    "category": "Food, Dough & Delights",
+    "title": "Chef"
+  },
+  {
+    "category": "Food, Dough & Delights",
+    "title": "Yogurt, Cake & pastry"
+  },
+  {
+    "category": "Home improvement & repair",
+    "title": "Interior Decoration"
+  },
+  {
+    "category": "Events",
+    "title": "Event Decor & Planning"
+  },
+  {
+    "category": "Beauty",
+    "title": "Makeup & Gele Artist"
+  },
+  {
+    "category": "Music & Entertainment",
+    "title": "DJs & Sound Engineers"
+  },
+ 
+  {
+    "category": "Electronics Repair & Services",
+    "title": "Phone, Tablet & Laptop Repair"
+  },
+  {
+    "category": "Logistics & Hauling",
+    "title": "Logistics"
+  },
+  {
+    "category": "Home improvement & repair",
+    "title": "Plumber"
+  },
+  {
+    "category": "Home improvement & repair",
+    "title": "Electrician"
+  },
+  {
+    "category": "Photography & Videography",
+    "title": "Photography & Videography"
+  },
+  {
+    "category": "Music & Entertainment",
+    "title": "Instrumentalists"
+  },
+  {
+    "category": "Home improvement & repair",
+    "title": "Cleaning Services"
+  },
+  {
+    "category": "Fashion",
+    "title": "Women's tailor"
+  },
+  {
+    "category": "Fashion",
+    "title": "Men's tailor"
+  },
+  {
+    "category": "Beauty",
+    "title": "Lash & Brow Experts"
+  },
+  {
+    "category": "Real Estate Agency",
+    "title": "Real Estate Agency"
+  },
+  {
+    "category": "Personal Shopping & Errands",
+    "title": "Personal Shopping & Errands"
+  },
+  {
+    "category": "Home improvement & repair",
+    "title": "Carpentry"
+  },
+
+  {
+    "category": "Events",
+    "title": "Catering"
+  },
+ 
+  {
+    "category": "Beauty",
+    "title": "Hairdresser"
+  },
+  {
+    "category": "Events",
+    "title": "MC"
+  },
+  {
+    "category": "Home Repair & Maintenance",
+    "title": "Home Repair & Maintenance"
+  },
+  {
+    "category": "Beauty",
+    "title": "Personal Care & Beauty"
+  },
+ 
+  {
+    "category": "Home Tutor & Lessons",
+    "title": "Home Tutor & Lessons"
+  },
+  {
+    "category": "Education & Tutoring Services",
+    "title": "Music Lessons"
+  },
+  {
+    "category": "Education & Tutoring Services",
+    "title": "Tech Lessons"
+  },
+  {
+    "category": "Home improvement & repair",
+    "title": "Fumigation & Pest Control"
+  },
+
+
+  {
+    "category": "Events",
+    "title": "Music Band"
+  },
+
+  {
+    "category": "Transportation & Driver Services",
+    "title": "Driver & Transportation"
+  }
+ 
+]

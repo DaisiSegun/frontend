@@ -1,0 +1,30 @@
+.all-cat{
+display: flex;
+flex-direction: column;
+
+.sub-header {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+}
+
+
+
+@media screen and (max-width: 850px) { 
+
+  .all-cat{
+    display: flex;
+    flex-direction: column;
+    
+    .sub-header {
+      margin-left: 1rem;
+      margin-top: 1rem;
+      font-size: 1rem;
+     
+    }
+    
+    }
+    
+
+}

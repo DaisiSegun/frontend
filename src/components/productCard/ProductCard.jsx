@@ -23,7 +23,7 @@ function ProductCard({ item, index }) {
   });
 
   const openProfile = () => {
-    window.open(`#/view-product/${item._id}`, '_blank');
+    window.open(`/view-product/${item._id}`, '_blank');
   };
 
   console.log(item);

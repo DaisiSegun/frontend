@@ -25,6 +25,15 @@ const UserCard = ({ user, index }) => {
     }
   };
 
+  const joinedDate = new Date(user.createdAt);
+
+  // Format the date in a more human-readable way
+  const formattedJoinedDate = joinedDate.toLocaleDateString('en-US', {
+    month: 'long',
+    year: 'numeric',
+    day: 'numeric',
+  });
+
   return (
     <div className="user9">
       <div className="user-info">
@@ -34,6 +43,8 @@ const UserCard = ({ user, index }) => {
         <p><strong>Email:</strong> {user.email}</p>
         <p><strong>Phone:</strong> {user.phone}</p>
         <p><strong>ID:</strong> {user._id}</p>
+        <p><strong>Joined:</strong> {formattedJoinedDate}</p>
+        
         {isDeleted && <p style={{ color: 'green' }}>User deleted successfully</p>}
         <button onClick={handleDelete} style={{
           backgroundColor: 'gray', // Darker red color

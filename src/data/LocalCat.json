@@ -1,0 +1,83 @@
+[
+ 
+  {
+    "category": "Food, Dough & Delights",
+    "title": "Food, Dough & Delights",
+    "desc": "Resturants, Chefs, Cakes"
+  },
+  {
+    "category": "Events",
+    "title": "Events",
+    "desc": "Event decoration, Caterer, Event Mc"
+  },
+  {
+    "category": "Photography & Videography",
+    "title": "Photography & Videography",
+    "desc": "Wedding photography, Event videography, Portrait photography"
+  },
+  {
+    "category": "Beauty",
+    "title": "Beauty",
+    "desc": "Makeup artist, Hair styling"
+  },
+  {
+    "category": "Fashion",
+    "title": "Fashion",
+    "desc": "Fashion design, styling"
+  },
+  {
+    "category": "Electronics Repair & Services",
+    "title": "Electronics Repair & Services",
+    "desc": "Phone repairs, Laptop repairs, Electronics maintenance"
+  },
+  
+  {
+    "category": "Home improvement & repair",
+    "title": "Home improvement & repair",
+    "desc": "Interior decoration, Appliance repair, Moving"
+  },
+
+  {
+    "category": "Education & Tutoring Services",
+    "title": "Education & Tutoring Services",
+    "desc": "Home tutoring, Academic lessons, Skill development"
+  },
+  
+  {
+    "category": "Logistics & Hauling",
+    "title": "Logistics & Hauling",
+    "desc": "Courier services, Moving & delivery, Heavy equipment hauling"
+  },
+  {
+    "category": "Transportation & Driver Services",
+    "title": "Transportation & Driver Services",
+    "desc": "Driver hire, Personal transportation, Delivery services"
+  },
+  
+  {
+    "category": "Health & Wellness",
+    "title": "Health & Wellness",
+    "desc": "Massage therapy, Personal training, Therapist"
+  },
+  {
+    "category": "Music & Entertainment",
+    "title": "Music & Entertainment",
+    "desc": "DJ services, Music lessons, Event planning"
+  },
+
+  {
+    "category": "Fitness",
+    "title": "Fitness",
+    "desc": "Personal training"
+  },
+  {
+    "category": "Home Care",
+    "title": "Home Care",
+    "desc": "Elderly care, Child care, Disability care"
+  },
+  {
+    "category": "Legal Services",
+    "title": "Legal Services",
+    "desc": "Lawyer, Legal consulting, Document preparation"
+  }
+]

@@ -25,24 +25,24 @@ const staticCatData3 = [
 
   {
     id: "4",
-    category: "Men's clothing",
+    category: "Men's Clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709833/hvabnxdzznzdkfjjjip8.png",
-    title: "Men's clothen",
+    title: "Men's clothing",
     desc: "Confidence Defined"
   },
 
   {
     id: "5",
-    category: "Women's clothing",
+    category: "Women's Clothing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/l7rhpnk2geahdmvrc5r7.png",
-    title: "Women's clothen",
+    title: "Women's clothing",
     desc: "Dress Your Story"
   },
 
   {
     id: "6",
     category: "Women's Footwear",
-    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709910/okbxett9r4ijqbnd9qyw.png",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708877941/kyk40xyvdeo9uczithj1.png",
     title: "Women's Footwear",
     desc: "Footwears for Every Vibe"
   },

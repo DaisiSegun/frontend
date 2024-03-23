@@ -18,6 +18,7 @@ import staticCatData2 from './StaticData2';
 import staticCatData3 from './StaticData3';
 import MetaDecorator from '../../utils/MetaDecorator';
 import metaImage from '../../images/meta5.png'
+import AllCategory from '../../components/allCategory/AllCategory';
 const root = require("../../data/root.json");
 
 
@@ -77,7 +78,9 @@ function Home() {
           <div>
             <div className='see-all-con'>
               <h1 className='header-new'>Freelance services</h1>
-              {/* <button className='see-all'>See all</button> */}
+              <Link className='link' to='all-freelance-service'>
+              <button className='see-all'>See all</button>
+              </Link>
             </div>
             <Slider className='custom-slider' {...sliderSettings}>
               {staticCatData.map((cat) => (
@@ -89,7 +92,9 @@ function Home() {
           <div>
             <div className='see-all-con'>
               <h1 className='header-new'>Handmade items</h1>
-              {/* <button className='see-all'>See all</button> */}
+              <Link className='link' to='all-handmade'>
+              <button className='see-all'>See all</button>
+              </Link>
             </div>
             <Slider className='custom-slider' {...sliderSettings}>
               {staticCatData2.map((cat) => (
@@ -101,7 +106,7 @@ function Home() {
           <div>
             <div className='see-all-con'>
               <h1 className='header-new'>Local services</h1>
-              <Link className='link' to='more-service'>
+              <Link className='link' to='all-local'>
                 <button className='see-all'>See all</button>
               </Link>
             </div>
@@ -129,7 +134,11 @@ function Home() {
           />
         </div>
 
-        <div style={{ marginBottom: '3rem' }}></div>
+        <h1 className='all-header-28px'>Browse all categories</h1>
+
+        <AllCategory/>
+
+        <div style={{ marginBottom: '5rem' }}></div>
 
         <NavBar />
       </div>

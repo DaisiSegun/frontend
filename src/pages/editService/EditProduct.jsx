@@ -20,7 +20,7 @@ function EditProduct() {
     const fetchProduct= async () => {
       try {
         const response = await newRequest.get(`/products/single/${productId}`);
-        setPreviousProduct(response.data);  
+        setPreviousProduct({ ...response.data });   
       } catch (error) {
         console.error('Error fetching service:', error);
       }
@@ -40,11 +40,18 @@ function EditProduct() {
   const [errorMessage, setErrorMessage] = useState(null);
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     dispatch({
       type: "CHANGE_INPUT",
-      payload: { name: e.target.name, value: e.target.value },
+      payload: { name, value },
     });
+    setPreviousProduct((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
+
+
   const currentUser = getCurrentUser();
   const userId = currentUser?.user?._id || currentUser?.user?.id;
  
@@ -165,12 +172,14 @@ function EditProduct() {
 
           <div className="create-contianer">
               <p className='create-title'>Edit Name of your Product</p>
-              <input 
-                  type="text"
-                  name="title"
-                  onChange={handleChange}
-                  placeholder={previousProduct.title || 'e.g Handbags, shoes'}
-                  className='create-input'/>
+              <input
+                type="text"
+                name="title"
+                value={previousProduct.title || ''} // Set the value prop
+                onChange={handleChange}
+                placeholder="e.g Handbags, shoes"
+                className="create-input"
+              />
 
                   
                 
@@ -200,10 +209,12 @@ function EditProduct() {
               <textarea
                 type="text"
                 name="desc"
-                style={{ height: '200px' }} 
+                value={previousProduct.desc || ''} // Set the value prop
+                style={{ height: '200px' }}
                 onChange={handleChange}
-                placeholder={previousProduct.desc || 'Please share a detailed description with all the relevant details.'}
-              className='create-input2'/>
+                placeholder="Please share a detailed description with all the relevant details."
+                className="create-input2"
+              />
 
           </div>
 
@@ -212,11 +223,14 @@ function EditProduct() {
 
           <div className="create-contianer">
               <p className='create-title'>Edit price</p>
-              <input
-                type="text"
-                name="price"
-                onChange={handleChange}
-                placeholder={previousProduct.price || '20,000'} className='create-input'/>
+                <input
+                  type="text"
+                  name="price"
+                  value={previousProduct.price || ''} // Set the value prop
+                  onChange={handleChange}
+                  placeholder="20,000"
+                  className="create-input"
+                />
 
           </div>
           

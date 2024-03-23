@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../components/header/Header';
 import ProductCatCard from '../../components/CatCard/ProductCatCard';
+import { Link } from 'react-router-dom';
 import './MoreService.scss';
 import load from '../../images/load.gif';
 import staticCatData3  from './StaticData3'; // Import your static data
@@ -34,7 +35,13 @@ function MoreFreelance() {
   return (
     <div className='more'>
       <Header showSearch={true} />
-      <h1 className='header-24px'>Handmade items</h1>
+      <div className='more-prod-con'>
+      <h1 className='header-24px'>Handmade items</h1> 
+      <Link className='link' to='/all-handmade'>
+          <button className='see-all'>See all</button>
+          </Link>
+      </div>
+    
       <div className='root-services-section'>
         <div className='cat-container'>
           {loading ? (
@@ -62,7 +69,7 @@ function MoreFreelance() {
           </button>
         </div>
       </div>
-      <div style={{ marginBottom: '1rem' }}></div>
+      <div style={{ marginBottom: '6rem' }}></div>
       <NavBar/>
     </div>
   );

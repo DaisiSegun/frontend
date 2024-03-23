@@ -1,0 +1,52 @@
+[
+  {
+    "category": "Art & Collectibles",
+    "title": "Art & Collectibles",
+    "desc": "Original art, Vintage collectibles"
+  },
+  {
+    "category": "Bags & Purses",
+    "title": "Bags & Purses",
+    "desc": "Handmade bags, Custom purses"
+  },
+  {
+    "category": "Clothing",
+    "title": "Clothing",
+    "desc": "Custom-made clothing, Hand-knitted items"
+  },
+  {
+    "category": "Footwears",
+    "title": "Footwears",
+    "desc": "Men & Women's Shoes, Sandals"
+  },
+  {
+    "category": "Jewelry",
+    "title": "Jewelry",
+    "desc": "Handmade jewelry, Women's bead, Men's bead"
+  },
+  {
+    "category": "Home & Living",
+    "title": "Home & Living",
+    "desc": "Handmade home decor, Custom furniture"
+  },
+  {
+    "category": "Weddings",
+    "title": "Weddings",
+    "desc": "Handmade wedding decorations, Custom wedding attire"
+  },
+  {
+    "category": "Baby & Child",
+    "title": "Baby & Child",
+    "desc": "Handmade baby clothes, Custom kids' toys"
+  },
+  {
+    "category": "Digital Prints",
+    "title": "Digital Prints",
+    "desc": "Printable art, Custom digital designs"
+  },
+  {
+    "category": "Kitchenware",
+    "title": "Kitchenware",
+    "desc": "Handmade kitchen utensils, Custom cookware"
+  }
+]

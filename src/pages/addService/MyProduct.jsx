@@ -56,6 +56,9 @@ function MyProduct() {
   const handleOpen = (productId) => {
     navigate(`/edit-product/${productId}`);
   };
+  const handleOpen2 = (productId) => {
+    navigate(`/view-product/${productId}`);
+  };
 
   return (
     <div className="add-service">
@@ -94,14 +97,14 @@ function MyProduct() {
               {products.map((product) => (
                 
                  
-                <tr onClick={() => handleOpen(product._id)} key={product._id} style={{ marginBottom: '1rem' }}>
-                  <td>
+                <tr  style={{ marginBottom: '1rem' }}>
+                  <td onClick={() => handleOpen2(product._id)} key={product._id}>
                     <img className="img" src={product.images[0]} alt="" />
                   </td>
-                  <td>{product.title}</td>
-                  <td>{product.price}</td>
-                  <td>{reviewsData[product._id]?.length || 0}</td>
-                  <td style={{ width: 'max-content', textAlign: 'center', verticalAlign: 'middle' }}>
+                  <td onClick={() => handleOpen2(product._id)} key={product._id}>{product.title}</td>
+                  <td onClick={() => handleOpen2(product._id)} key={product._id}>{product.price}</td>
+                  <td onClick={() => handleOpen2(product._id)} key={product._id}>{reviewsData[product._id]?.length || 0}</td>
+                  <td onClick={() => handleOpen(product._id)} key={product._id} style={{ width: 'max-content', textAlign: 'center', verticalAlign: 'middle' }}>
                     <EditIcon />
                   </td>
                

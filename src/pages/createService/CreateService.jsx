@@ -127,7 +127,7 @@
         setUploading(false);
         dispatch({ type: 'ADD_IMAGES', payload: { images } });
         setSuccessMessage(
-          'Service Created! Please click on the Logo to go home'
+          'Service Created! Go back to view service'
         );
         setErrorMessage(null);
       } catch (err) {
@@ -172,6 +172,8 @@
             
                 <option value="">Select a category</option>
                 <option value="Graphic & Logo Design">Graphic & Logo Design</option>
+                <option value="Photo Editing">Photo Editing</option>
+                <option value="Video Editing">Video Editing</option>
                 <option value="Resume & Cv Writing">Resume & Cv Writing</option>
                 <option value="Writing">Writing</option>
                 <option value="Copy Writing">Copy Writing</option>
@@ -204,8 +206,7 @@
                 <option value="MC">MC</option>
                 <option value="Home Repair & Maintenance">Home Repair & Maintenance</option>
                 <option value="Personal Care & Beauty">Personal Care & Beauty</option>
-                <option value="Tshirt design">Tshirt design</option>
-                
+                <option value="Tshirt design">Tshirt design</option>   
                 <option value="Home Tutor & Lessons">Home Tutor & Lessons</option>
                 <option value="Music Lessons">Music Lessons</option>
                 <option value="Tech Lessons">Tech Lessons</option>

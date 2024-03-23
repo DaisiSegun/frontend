@@ -1,0 +1,103 @@
+[
+  {
+    "category": "Graphic Design",
+    "title": "Graphic Design",
+    "desc": "Logo design, Branding, Illustrations"
+  },
+  {
+    "category": "Web Development",
+    "title": "Web Development",
+    "desc": "Frontend, Backend, Full-stack"
+  },
+
+  {
+    "category": "Digital Marketing",
+    "title": "Digital Marketing",
+    "desc": "SEO, Social Media, Content Marketing"
+  },
+  {
+    "category": "SEO",
+    "title": "SEO",
+    "desc": "Keyword Research, On-page Optimization, Link Building"
+  },
+  {
+    "category": "Content Writing",
+    "title": "Content Writing",
+    "desc": "Articles, Blogs, Copywriting"
+  },
+  {
+    "category": "Video Editing",
+    "title": "Video Editing",
+    "desc": "Short films, Ads, YouTube videos"
+  },
+  {
+    "category": "Animation",
+    "title": "Animation",
+    "desc": "2D, 3D, Motion Graphics"
+  },
+  {
+    "category": "Mobile App Development",
+    "title": "Mobile App Development",
+    "desc": "iOS, Android, Cross-platform"
+  },
+  {
+    "category": "UI UX Design",
+    "title": "UI UX Design",
+    "desc": "Prototyping, User Testing, Wireframing"
+  },
+  {
+    "category": "Photography",
+    "title": "Photography",
+    "desc": "Portrait, Product, Event"
+  },
+  {
+    "category": "Voiceover",
+    "title": "Voiceover",
+    "desc": "Narration, Audio Books, Podcasts"
+  },
+  {
+    "category": "Translation",
+    "title": "Translation",
+    "desc": "Languages, Documents, Subtitles"
+  },
+  {
+    "category": "Virtual Assistant",
+    "title": "Virtual Assistant",
+    "desc": "Administrative, Customer Support, Data Entry"
+  },
+  {
+    "category": "Illustration",
+    "title": "Illustration",
+    "desc": "Digital, Hand-drawn, Children's Books"
+  },
+  {
+    "category": "Transcription",
+    "title": "Transcription",
+    "desc": "Audio, Video, Interviews"
+  },
+  {
+    "category": "Social Media Management",
+    "title": "Social Media Management",
+    "desc": "Strategy, Posting, Engagement"
+  },
+  {
+    "category": "E-commerce Development",
+    "title": "E-commerce Development",
+    "desc": "Shopify, WooCommerce, Magento"
+  },
+  {
+    "category": "Game Development",
+    "title": "Game Development",
+    "desc": "Mobile, PC, Console"
+  },
+  {
+    "category": "Data Entry",
+    "title": "Data Entry",
+    "desc": "Typing, Spreadsheet, Data Management"
+  },
+  {
+    "category": "Programming",
+    "title": "Programming",
+    "desc": "Python, JavaScript, Java"
+  }
+]

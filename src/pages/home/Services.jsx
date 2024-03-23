@@ -72,7 +72,7 @@ responsive: [
       <div className='see-all-con'>
           <h1 className='header-new'>Freelance services</h1>
 
-          <Link className='link' to='/all-freelance'>
+          <Link className='link' to='/all-freelance-service'>
           <button className='see-all'>See all</button>
           </Link>
 
@@ -91,7 +91,7 @@ responsive: [
         <div className='see-all-con'>
           <h1 className='header-new'>Local services</h1>
 
-          <Link className='link' to='/more-service'>
+          <Link className='link' to='/all-local'>
           <button className='see-all'>See all</button>
           </Link>
       </div>
