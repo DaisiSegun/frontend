@@ -13,7 +13,7 @@ function ThankYou() {
 
     if (intendedAction === 'requestQuote' && spId) {
       // Redirect to the SP profile page with the SP ID
-      window.open(`/#/view-profile/${spId}`, '_blank');
+      window.open(`/view-profile/${spId}`, '_blank');
     }
 
     localStorage.removeItem('intendedAction');

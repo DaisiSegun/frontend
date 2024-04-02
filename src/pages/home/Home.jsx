@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import { HelmetProvider } from 'react-helmet-async'; // Use HelmetProvider
 import 'slick-carousel/slick/slick.css';
@@ -78,9 +77,9 @@ function Home() {
           <div>
             <div className='see-all-con'>
               <h1 className='header-new'>Freelance services</h1>
-              <Link className='link' to='all-freelance-service'>
+              <a className='link' href='https://roothq.africa/all-freelance-service'>
               <button className='see-all'>See all</button>
-              </Link>
+              </a>
             </div>
             <Slider className='custom-slider' {...sliderSettings}>
               {staticCatData.map((cat) => (
@@ -92,9 +91,9 @@ function Home() {
           <div>
             <div className='see-all-con'>
               <h1 className='header-new'>Handmade items</h1>
-              <Link className='link' to='all-handmade'>
+              <a className='link' href='https://roothq.africa/all-handmade'>
               <button className='see-all'>See all</button>
-              </Link>
+              </a>
             </div>
             <Slider className='custom-slider' {...sliderSettings}>
               {staticCatData2.map((cat) => (
@@ -106,9 +105,9 @@ function Home() {
           <div>
             <div className='see-all-con'>
               <h1 className='header-new'>Local services</h1>
-              <Link className='link' to='all-local'>
+              <a className='link'href='https://roothq.africa/all-local'>
                 <button className='see-all'>See all</button>
-              </Link>
+              </a>
             </div>
             <Slider className='custom-slider' {...sliderSettings}>
               {staticCatData3.map((cat) => (

@@ -10,6 +10,7 @@
   import { CircleLoader} from "react-spinners";
   import Resizer from 'react-image-file-resizer';
   import getCurrentUser from "../../utils/getCurrentUser.js";
+import NavBar from "../../components/navBar/NavBar.jsx";
 
   function CreateService() {
     useEffect(() => {
@@ -172,11 +173,16 @@
             
                 <option value="">Select a category</option>
                 <option value="Graphic & Logo Design">Graphic & Logo Design</option>
+                <option value="Animation">Animation</option>
                 <option value="Photo Editing">Photo Editing</option>
                 <option value="Video Editing">Video Editing</option>
+                <option value="Illustration">Illustration</option>
+                <option value="Accountant">Accountant</option>
                 <option value="Resume & Cv Writing">Resume & Cv Writing</option>
                 <option value="Writing">Writing</option>
                 <option value="Copy Writing">Copy Writing</option>
+                <option value="Legal service">Legal service</option>
+                <option value="Model">Model</option>
                 <option value="Content creator">Content creator</option>
                 <option value="SEO Optimization">SEO Optimization</option>
                 <option value="Chef">Chef</option>
@@ -198,6 +204,7 @@
                 <option value="Lash & Brow Experts">Lash & Brow Experts</option>
                 <option value="Real Estate Agency">Real Estate Agency</option>
                 <option value="Personal Shopping & Errands">Personal Shopping & Errands</option>
+                <option value="Business consultant">Business consultant</option>
                 <option value="Carpentry">Carpentry</option>
                 <option value="Project reseach assistant">Research Project Assistant</option>
                 <option value="Catering">Catering</option>
@@ -294,6 +301,20 @@
 
             </div>
 
+                    <div className="create-contianer">
+            <p className='create-title'>
+              Portfolio link. (Click <a href="https://www.google.com/intl/en_ng/drive/" target="_blank" rel="noopener noreferrer">here</a> to create with Google drive)
+            </p>
+            <input 
+                type="text"
+                name="portfolio"
+                onChange={handleChange}
+                placeholder='Add your portfolio link (Optional)'
+                className='create-input'
+            />
+        </div>
+
+
 
 
 
@@ -342,6 +363,8 @@
         </div>
       
         <div className='space'></div>
+        <div style={{ marginBottom: '5rem' }}></div>
+        <NavBar/>
       </div>
     )
   }

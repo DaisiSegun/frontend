@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+
+.blog-post-con {
+
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+  color: black;
+
+  cursor: pointer;
+
+  .blog-img {
+    width: 22rem;
+    height: 14rem;
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 8px; /* Border radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin-bottom: 0.5rem;
+    
+  }
+  
+.blog-title { 
+  font-size: 1rem;
+  font-weight: 700;
+  max-width: 17rem;
+}
+
+}

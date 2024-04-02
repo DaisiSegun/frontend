@@ -12,7 +12,7 @@ const TermsAndConditionsPage = () => {
     <div className="terms-page">
       <h1>Root Marketplace Terms and Conditions</h1>
       <p style={{ fontSize: '14px', marginBottom: '0.5rem' }}>
-      The following terms and conditions apply to any request, use and or usage of our platform. In these terms “we”, “us” or “our” refers to Root Marketplace and its successors, agents and assigns, while “you”, “yours” refers to a customer or service provider who intends to use or has used our platform. and “service providers” refers to manufacturing industries, music and entertainment industries, self-service shops, shop windows, supermarkets and malls, sporting industries, tourism providers, arts and exhibitions, professionals, technicians, artisans  and so on except Root Marketplace.
+      The following terms and conditions apply to any request, use and or usage of our platform. In these terms “we”, “us” or “our” refers to Root Marketplace and its successors, agents and assigns, while “you”, “yours” refers to a customer or service provider who intends to use or has used our platform. and “sellers” refers to manufacturing industries, music and entertainment industries, self-service shops, shop windows, supermarkets and malls, sporting industries, tourism providers, arts and exhibitions, professionals, technicians, artisans  and so on except Root Marketplace.
 
         </p>
 
@@ -28,9 +28,9 @@ const TermsAndConditionsPage = () => {
 
       {/* Section 2: Service Overview */}
       <section>
-        <h2>2. Service Overview</h2>
+        <h2>2. Marketplace Overview</h2>
         <p>
-        Root is a service marketplace that connects service providers with customers. We facilitate this connection by offering a platform for users to list, discover, and book for services of their choice. Root does not provide any services directly other than the provision of platform to connect customers with other service providers.
+        Root is an online marketplace that connects sellers of services & african made products with customers. We facilitate this connection by offering a platform for users to list, discover, and book for services/products of their choice. Root does not provide any service/product directly other than the provision of platform to connect customers with other sellers.
         </p>
       </section>
 
@@ -39,27 +39,26 @@ const TermsAndConditionsPage = () => {
         <h2>3. Liability and Risk</h2>
 
         <p>
-          <strong>3.1. Customer and Service Provider Responsibility:</strong>
+          <strong>3.1. Customer and Seller Responsibility:</strong>
           <br />
-          All users (service providers and customers) acknowledge that they are solely responsible for the services they offer or receive through the Root platform.
+          All users (sellers and customers) acknowledge that they are solely responsible for the services they offer or receive through the Root platform.
           <br />
-          Users understand and agree that all rights, interests, profits, benefits, risks, detriments, forbearances, loss, or responsibilities associated with the services of these other service providers are assumed by the parties thereto and not us.
+          Users understand and agree that all rights, interests, profits, benefits, risks, detriments, forbearances, loss, or responsibilities associated with the services of these other sellers are assumed by the parties thereto and not us.
         </p>
 
         <p>
           <strong>3.2. Damages and Risks:</strong>
           <br />
-          In the event of damages or risks arising from a service, the service
-          provider is solely responsible for addressing and resolving the
+          In the event of damages or risks arising from a service, the seller is solely responsible for addressing and resolving the
           issue.
           <br />
-          Root is not liable for any damages, losses, or disputes that may occur between users and service providers
+          Root is not liable for any damages, losses, or disputes that may occur between users and sellers
         </p>
 
         <p>
-          <strong>3.3. Service Provider Removal:</strong>
+          <strong>3.3. Seller Removal:</strong>
           <br />
-          If a service provider receives consecutive 1-star to 2-star reviews two times (back-to-back), Root reserves the right to remove them from the platform.
+          If a seller receives consecutive 1-star to 2-star reviews two times (back-to-back), Root reserves the right to remove them from the platform.
           <br />
           (Note: A bad review is considered to be a rating between 1 and 2 stars, inclusive).
         </p>
@@ -70,13 +69,11 @@ const TermsAndConditionsPage = () => {
         <h2>4. Fee Structure</h2>
 
         <p>
-          <strong>4.1. Transaction Fee:</strong>
-          <br />
-          Root charges service providers a flat fee of 1,000 - 3,000 Naira depending on the job done for
-          successfully connecting them with customers through the platform.
-          <br />
-          This fee is deducted from the service provider's earnings.
-        </p>
+  <strong>4.1. Transaction Fee:</strong>
+  <br />
+  Root is pleased to announce that our services are currently free of charge. We are committed to helping you connect with customers without any fees at this time. Please note that we may introduce a transaction fee in the future once we have finalized our monetization strategy for the marketplace. Any fees will be deducted from the seller's earnings, and we will provide advance notice before implementing any changes.
+</p>
+
 
         <p>
           <strong>4.2. Payment Processing:</strong>
@@ -90,7 +87,7 @@ const TermsAndConditionsPage = () => {
       <section>
         <h2>5. Value in Connection</h2>
         <p>
-        Both service providers and customers acknowledge the value Root provides in connecting them. Root does not endorse or guarantee the quality of services provided by the service providers but aims to facilitate connections between customers and the service providers through our platform.
+        Both sellers and customers acknowledge the value Root provides in connecting them. Root does not endorse or guarantee the quality of services/proucts provided by the sellers but aims to facilitate connections between customers and the sellers through our platform.
         </p>
       </section>
 

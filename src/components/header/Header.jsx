@@ -47,12 +47,14 @@ function Header({ showSearch }) {
     // Open a new browser window for the My Service page
     window.open('/seller-dashboard', '_blank');
   };
-  const openWhatsApp = () => {
-    const message = "I want to join Root as a seller";
-    const phoneNumber = "+2349019971557"; // Update with your WhatsApp number
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, '_blank');
-  };
+
+   
+    const becomeSeller = () => {
+      const sellerLink = `https://roothq.africa/signup-seller`;
+      window.location.href = sellerLink;
+    };
+    
+
 
 
   return (
@@ -106,7 +108,7 @@ function Header({ showSearch }) {
          
 
           <div className='dropdown'>
-          <button className='button-1' onClick={openWhatsApp}>
+          <button className='button-1' onClick={becomeSeller}>
             Become a Seller
           </button>
            

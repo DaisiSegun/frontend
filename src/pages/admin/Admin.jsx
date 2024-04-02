@@ -47,8 +47,8 @@ function Admin() {
 
         
 
-          <Link to='/create-servicecat' className="menu-nav">
-          Upload Service Category
+          <Link to='/createblog' className="menu-nav">
+          Upload Blog Post
           <ArrowForwardIosIcon/>
           </Link>
 

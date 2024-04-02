@@ -8,6 +8,7 @@ import getCurrentUser from '../../utils/getCurrentUser';
 import { Link, useNavigate } from 'react-router-dom';
 import newRequest from '../../utils/newRequest';
 import EditIcon from '@mui/icons-material/Edit';
+import NavBar from '../../components/navBar/NavBar';
 function AddService() {
   useEffect(() => {
     document.title = 'My Service';
@@ -133,6 +134,8 @@ function AddService() {
           </table>
         )}
       </div>
+      <div style={{ marginBottom: '5rem' }}></div>
+      <NavBar/>
     </div>
   );
 }

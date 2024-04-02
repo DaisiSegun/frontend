@@ -6,10 +6,22 @@
   font-family: 'Open Sans';
 }
 
+.loading-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loading-wrapper span {
+  margin-left: 8px;
+}
+
+
 .product-price1 {
   font-weight: 700;
-  font-size: 1.3rem;
-  margin-left: 2rem;
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
 }
 
 .load-page2 {
@@ -268,6 +280,18 @@
          
         }
 
+        .a-service1 {
+          margin-top: 2rem;
+          margin-left: 2rem;
+          color: #000;
+          font-family: Open Sans;
+         font-size: 1rem;
+       font-style: normal;
+       font-weight: 600;
+       line-height: 1.5rem; /* 120% */
+          
+         }
+
         .service-des {
           color: var(--dark-gray, #343434);
           font-family: Open Sans;
@@ -417,8 +441,9 @@
 
 .product-price1 {
   font-weight: 700;
-  font-size: 1.15rem;
-  margin-left: 1rem;
+  font-size: 0.85rem;
+  margin-left: 0rem;
+  margin-top: 3.5rem;
 }
 
 .load-page2 {
@@ -688,6 +713,17 @@
       line-height: 1.5rem; /* 120% */
          
         }
+        .a-service1 {
+          margin-top: 2rem;
+          margin-left: 1rem;
+          color: #000;
+          font-family: Open Sans;
+         font-size: 1rem;
+       font-style: normal;
+       font-weight: 600;
+       line-height: 1.5rem; /* 120% */
+          
+         }
 
         .service-des {
           color: var(--dark-gray, #343434);

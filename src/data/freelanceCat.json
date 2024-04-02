@@ -51,6 +51,21 @@
     "desc": "Portrait, Product, Event"
   },
   {
+    "category": "Legal Service",
+    "title": "Legal Service",
+    "desc": "Legal advice, documentation, contracts"
+  },
+  {
+    "category": "Accountant",
+    "title": "Accountant",
+    "desc": "Financial accounting, bookkeeping, & tax preparation "
+  },
+  {
+    "category": "Business Consultant",
+    "title": "Business Consultant",
+    "desc": "Strategic business planning,"
+  },
+  {
     "category": "Voiceover",
     "title": "Voiceover",
     "desc": "Narration, Audio Books, Podcasts"
@@ -91,9 +106,9 @@
     "desc": "Mobile, PC, Console"
   },
   {
-    "category": "Data Entry",
-    "title": "Data Entry",
-    "desc": "Typing, Spreadsheet, Data Management"
+    "category": "Data Analysis",
+    "title": "Data Analysis",
+    "desc": "Data Analyst, Spreadsheet, Project research"
   },
   {
     "category": "Programming",

@@ -11,29 +11,29 @@ function NavBar() {
     <div className='nav'>
 
       
-    <Link className='link' to="/">
+    <a className='link' href='https://roothq.africa/'>
       <div className='icon-container'>
         <img className='nav-icon' src={homeIcon} alt=''  />
         <p className='nav-text'>Home</p>
       </div>
-      </Link>
+      </a>
 
-      <Link className='link' to="/services">
+      <a className='link'  href='https://roothq.africa/services'>
       
       <div className='icon-container'>
         <img className='nav-icon' src={serviceIcon} alt=''  />
         <p className='nav-text'>Services</p>
       </div>
 
-      </Link>
+      </a>
 
-      <Link className='link' to="/all-product">
+      <a className='link'href='https://roothq.africa/all-product'>
       
       <div className='icon-container'>
         <img className='nav-icon' src={productIcon} alt=''  />
         <p className='nav-text'>African products</p>
       </div>
-      </Link>
+      </a>
 
       <Link className='link' to="/menu">
       <div className='icon-container'>

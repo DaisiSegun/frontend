@@ -1,0 +1,160 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.podcast-link1 {
+  color: black;
+  text-decoration: none;
+  padding: 0;
+}
+
+.podcast-link1:hover {
+  text-decoration: underline;
+}
+.podcast-text1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  width: 48%;
+
+}
+
+.paragraph {
+  margin-bottom: 1rem; /* Adjust the margin as needed */
+  line-height: 2; /* Set the line height for better readability */
+}
+.loading-blog{
+  display: flex;
+  flex-direction: column;
+height: 50vh;
+  
+  justify-content: center;
+  
+}
+
+.loading-text {
+  align-self: center;
+  justify-self: center;
+}
+.blog-page {
+
+
+  .blog-page-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+
+      .blog-page-header{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .author {
+        margin-bottom: 0.5rem;
+      }
+      .blog-date {
+        margin-bottom: 0.5rem;
+        font-size: 0.98rem;
+      }
+      .blog-page-img {
+        width: 40rem;
+        
+      }
+      .content {
+        font-size: 1rem;
+        line-height: 2.5;
+        font-weight: 400;
+        
+        margin-top: 1rem;
+        width: 48%;
+       
+
+      }
+  }
+}
+
+
+
+@media screen and (max-width: 950px) {
+
+  .podcast-link1 {
+    color: black;
+    text-decoration: none;
+    padding: 0;
+  }
+  
+  .podcast-link1:hover {
+    text-decoration: underline;
+  }
+  .podcast-text1 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    width: 85%;
+  
+  }
+  
+  .paragraph {
+    margin-bottom: 1rem; /* Adjust the margin as needed */
+    line-height: 2; /* Set the line height for better readability */
+  }
+  .loading-blog{
+    display: flex;
+    flex-direction: column;
+  height: 50vh;
+    
+    justify-content: center;
+    
+  }
+  
+  .loading-text {
+    align-self: center;
+    justify-self: center;
+  }
+  .blog-page {
+  
+  
+    .blog-page-con{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-self: center;
+  
+        .blog-page-header{
+          font-size: 1.2rem;
+          margin-top: 1.5rem;
+          margin-bottom: 0.5rem;
+          width: 95%;
+          text-align: center;
+        }
+  
+        .author {
+          margin-bottom: 0.5rem;
+        }
+        .blog-date {
+          margin-bottom: 0.5rem;
+          font-size: 0.98rem;
+        }
+        .blog-page-img {
+          width: 23rem;
+          
+        }
+        .content {
+          font-size: 1rem;
+          line-height: 2.5;
+          font-weight: 400;
+          
+          margin-top: 1rem;
+          width: 85%;
+         
+  
+        }
+    }
+  }
+}

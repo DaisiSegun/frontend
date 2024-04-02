@@ -102,7 +102,7 @@ function SignUpSp() {
       localStorage.setItem("currentUser", JSON.stringify(response.data));
   
       // Handle success, e.g., show a success message to the user
-      navigate('/welcomeSp');
+      navigate('/term1');
     } catch (error) {
       console.error('Registration failed:', error);
   
@@ -128,8 +128,8 @@ function SignUpSp() {
       <img src={logo} className='logo-1' alt='logo' />
       </Link>
       <div className='sign-in-containr'>
-        <div className='sign-in-header'>Sign up</div>
-        <p className='sign-up-now'>Sign up as a seller</p>
+        <div className='sign-in-header'>Sell Your African Craft</div>
+        <p className='sign-up-now'>Get Started Selling Africa's Finest. Grow Your income</p>
 
           
 
@@ -157,7 +157,7 @@ function SignUpSp() {
         </div>
 
         <div className='sign-in-box'>
-          <label className='sign-in-text'>Phone Number</label>
+          <label className='sign-in-text'>Phone Number (Whatsapp No)</label>
           <input
             className='sign-in-input'
             placeholder='Phone Number'

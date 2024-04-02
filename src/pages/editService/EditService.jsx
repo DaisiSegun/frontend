@@ -322,7 +322,19 @@ function EditService() {
 
           </div>
 
-
+          <div className="create-contianer">
+            <p className='create-title'>
+              Portfolio link. (Click <a href="https://www.google.com/intl/en_ng/drive" target="_blank" rel="noopener noreferrer">here</a> to create with Google Drive,)
+            </p>
+            <input 
+                type="text"
+                name="portfolio"
+                value={previousService.portfolio || ''} 
+                onChange={handleChange}
+                placeholder='Add your portfolio (Optional)'
+                className='create-input'
+            />
+        </div>
 
 
 

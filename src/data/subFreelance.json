@@ -16,6 +16,10 @@
     "title": "Resume & Cv Writing"
   },
   {
+    "category": "Accountant",
+    "title": "Acountant"
+  },
+  {
     "category": "Content Writing",
     "title": "Writing"
   },
@@ -39,13 +43,15 @@
  
   {
     "category": "Digital Marketing",
-    "title": "Makerting & Social Media"
+    "title": "Digital marketing"
   },
+
+ 
  
  
  
   {
-    "category": "Research Project Assistant",
+    "category": "Data Analysis",
     "title": "Research Project Assistant"
   },
   
@@ -53,8 +59,8 @@
  
 
   {
-    "category": "Coding",
-    "title": "Coding"
+    "category": "Data Analysis",
+    "title": "Data Analyst"
   },
   {
     "category": "Web Development",
@@ -64,7 +70,18 @@
   {
     "category": "Animation",
     "title": "Animation"
+  },
+
+  {
+    "category": "Illustration",
+    "title": "Illustration"
+  },
+
+  {
+    "category": "Legal service",
+    "title": "Legal service"
   }
+  
   
   
 ]

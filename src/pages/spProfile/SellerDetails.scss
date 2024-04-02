@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.seller-con {
+  display: flex;
+  align-items: center;
+ 
+  justify-content: center;
+}
+@mixin small-screen {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media (min-width: 577px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+.seller-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  align-self: center;
+  justify-self: center;
+margin-top: 2rem;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 2rem;
+  width: 90%;
+  .seller-header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    width: 70%;
+    text-align: center;
+    font-weight: 600;
+
+    @include small-screen {
+      font-size: 1rem;
+      width: 90%;
+    }
+
+    @include medium-screen {
+      font-size: 1.2rem;
+      width: 90%;
+    }
+
+    @include large-screen {
+      font-size: 1.1rem;
+     
+    }
+  }
+
+  .phone-call,
+  .whatsapp-message {
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-style: none;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @include small-screen {
+      width: 100%;
+    }
+
+    @include medium-screen {
+      width: 60%;
+    }
+
+    @include large-screen {
+      width: 40%;
+    }
+  }
+
+  .phone-call {
+    background-color:#0F253B;
+    color: #fff;
+  }
+
+  .whatsapp-message {
+    background-color:  rgb(75, 118, 46);
+    color: #fff;
+
+  }
+
+  .phone-num {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #555;
+  }
+}

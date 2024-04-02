@@ -9,6 +9,7 @@ import CreateService from "./pages/createService/CreateService"
 import SignIn from "./pages/signIn/SignIn"
 import SignUpSp from "./pages/signUpSp/SignUpSp"
 import Register from "./pages/register/Register"
+import { HelmetProvider } from 'react-helmet-async';
 
 
 
@@ -52,14 +53,23 @@ import SelectCategory from "./pages/AllCategories/SelectCategory";
 import AllCategories1 from "./pages/AllCategories/AllCategories1";
 import AllCategories2 from "./pages/AllCategories/AllCategories2";
 import AllCategories3 from "./pages/AllCategories/AllCategories3";
+import Blog from "./pages/blog/Blog";
+import Podcast from "./pages/blog/Podcast";
+import BlogPage from "./pages/blog/BlogPage";
+import CreateBlog from "./pages/blog/CreateBlog";
+import Term1 from "./pages/signUpSp/Term1";
+import Term2 from "./pages/signUpSp/Term2";
+import SellerDetails from "./pages/spProfile/SellerDetails";
 
 
 function App() {
   const queryClient = new QueryClient();
+  const helmetContext = {};
 
   return (
     <>
       <QueryClientProvider client={queryClient}>
+      <HelmetProvider context={helmetContext}>
         <Router>
           <Routes>
             <Route
@@ -76,7 +86,7 @@ function App() {
             <Route path="/view-product/:id" element={<ViewProduct/>} title="View Product" />
             <Route path="/myservice" element={<AddService />} title="My Service" /> 
             <Route path="/createservice" element={<CreateService />} title="Create Service" />
-            <Route path="/signup-sp" element={<SignUpSp />} title="Sign Up Service Provider" />
+            <Route path="/signup-seller" element={<SignUpSp />} title="Sign Up Service Provider" />
             <Route path="/create-servicecat" element={<AdminUpload />} title="Create Admin" />
             <Route path="/more-service" element={<MoreService />} title="More Service" />
             <Route path="/welcome" element={<ThankYou />} title="Welcome" />
@@ -109,9 +119,17 @@ function App() {
             <Route path="/all-freelance-service" element={<AllCategories1/>} title="All Freelance services" />
             <Route path="/all-handmade" element={<AllCategories2/>} title="All Handmade items" />
             <Route path="/all-local" element={<AllCategories3/>} title="All Local services" />
+            <Route path="/blog" element={<Blog/>} title="Root Blog" />
+            <Route path="/podcast" element={<Podcast/>} title="Root Talks" />
+            <Route path="/blog-page/:title" element={<BlogPage/>} title="Blog page" />
+            <Route path="/createblog" element={<CreateBlog/>} title="Create Blog" />
+            <Route path="/term1" element={<Term1/>} title="Term1" />
+            <Route path="/term2" element={<Term2/>} title="Term1" />
+            <Route path="/seller-details" element={<SellerDetails/>} title="Seller Details" />
             
           </Routes>
         </Router>
+        </HelmetProvider>
       </QueryClientProvider>
     </>
   );

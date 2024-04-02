@@ -5,17 +5,19 @@ import Header from '../../components/header/Header';
 import './SpProfile.scss';
 import ratingIcon from '../../images/rating.svg';
 import Reviews from '../../components/reviews/Reviews';
-import golf from '../../images/golf.svg';
+
 import { useQuery } from '@tanstack/react-query';
 import newRequest from '../../utils/newRequest';
 import { useParams, useNavigate } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
-import { Helmet } from 'react-helmet';
+import { CircleLoader } from "react-spinners";
+
 
 // import load from '../../images/load.gif'
 // import NavBar from '../../components/navBar/NavBar.jsx';
 import ReactMarkdown from 'react-markdown';
+import SEO from '../../utils/Seo.jsx';
 
 
 
@@ -29,6 +31,7 @@ function SpProfile() {
   }, []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setIsLoading] = useState(false);
 
   const { id } = useParams();
 
@@ -60,31 +63,7 @@ function SpProfile() {
       }),
   });
 
-  useEffect(() => {
-    if (dataUser && data) {
-      document.title = `${dataUser.username}'s Profile`;
 
-      const metaTags = [
-        { name: 'og:title', content: `${dataUser.username}'s Profile` },
-        { name: 'og:description', content: data.desc || '' },
-        { name: 'og:image', content: data.images && data.images.length > 0 ? data.images[0] : '' },
-        { name: 'og:url', content: window.location.href },
-      ];
-
-      metaTags.forEach((tag) => {
-        const existingTag = document.head.querySelector(`meta[property="${tag.name}"]`);
-        if (existingTag) {
-          existingTag.content = tag.content;
-        } else {
-          const newTag = document.createElement('meta');
-          newTag.setAttribute('property', tag.name);
-          newTag.content = tag.content;
-          document.head.appendChild(newTag);
-        }
-      });
-    }
-  }, [dataUser, data]);
-  
 
   if (isLoading || isLoadingUser) {
     return (
@@ -117,7 +96,45 @@ function SpProfile() {
     day: 'numeric',
   });
 
-  const openWhatsApp = () => {
+
+  const openSellerDetails = async () => {
+    setIsLoading(true); // Set isLoading state to true
+  
+    const orderData = {
+      title: data.title,
+      seller: {
+        name: dataUser.username,
+        email: dataUser.email,
+        phone: dataUser.phone,
+      },
+      client: {
+        name: currentUser.user.username,
+        email: currentUser.user.email,
+        phone: currentUser.user.phone,
+      },
+    };
+  
+    try {
+      const response = await newRequest.post('/orders', orderData);
+      console.log('Order created:', response.data);
+      
+      navigate('/seller-details', {
+        state: {
+          sellerName: dataUser.username,
+          serviceName: data.title,
+          phoneNumber: dataUser.phone,
+        },
+      });
+    } catch (error) {
+      console.error('Error creating order:', error);
+    } finally {
+      setIsLoading(false); // Set isLoading state to false after API request completes
+    }
+  };
+  
+  
+
+  const openSeller = () => {
     
     if (!currentUser) {
       // If no user is logged in, redirect to the signup page
@@ -125,31 +142,25 @@ function SpProfile() {
       localStorage.setItem('spId', id);
       navigate('/register');
     } else {
-      const message = `I want to hire ${dataUser.username} (${data.title})`;
-      const phoneNumber = '+2349019971557'; // Replace with the actual phone number
-      // Construct the WhatsApp link
-      const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-      // Open the link in a new tab
-      window.open(whatsappLink, '_blank');
+    
+      openSellerDetails(); 
+     
     }
   };
 
   const currentUser = getCurrentUser();
 
-  console.log(dataUser);
 
   return (
   
     <div className='sp-profile'>
     
-    <Helmet>
-        {/* Add meta tags for social media sharing within Helmet */}
-        <meta property="og:title" content={`${dataUser.username}'s Profile`} />
-        <meta property="og:description" content={data.desc || ''} />
-        <meta property="og:image" content={data.images && data.images.length > 0 ? data.images[0] : ''} />
-        <meta property="og:url" content={window.location.href} />
-      </Helmet>
+    <SEO
+        title={`${dataUser.username}'s Profile`}
+        description={data.desc || ''}
+        name={dataUser.username}
+        type="profile"
+      />
 
       <Header showSearch={true} />
 
@@ -184,24 +195,51 @@ function SpProfile() {
                 <div key={index} data-src={image} />
               ))}
             </AwesomeSlider>
-
+            <p className='product-price1'>
+              Min fee (₦):
+              <span> {data.price}</span>
+            </p>
             {data.images.length > 1 && (
-            <div className='swipe'>
-              <p className='swipe-text'>Swipe image</p>
-              <img className='swipe-img' src={swipeImg} alt='Swipe Icon' />
+            <div className='swipe4'>
+              <p className='swipe-text4'>Swipe image</p>
+              <img className='swipe-img4' src={swipeImg} alt='Swipe Icon' />
             </div>
           )}
 
 
           </div>
 
-          <div onClick={openWhatsApp} className='button1'>
-            Request a Quote
-            <img src={golf} alt='Golf Icon' className='golf' />
+          <div className='button1' onClick={openSeller}>
+            {loading ? (
+              <div className="loading-wrapper">
+                <CircleLoader color={"#36D7B7"} size={20} />
+                <span>Loading..</span>
+              </div>
+            ) : (
+              'Book Service'
+            )}
           </div>
+
+
+          
           <h2 className='a-service'>About my service</h2>
           <ReactMarkdown className='service-des' children={data.desc} />
+                    {data.portfolio && (
+            <>
+              <h2 className='a-service1'>My Portfolio</h2>
+              <a
+                href={data.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className='service-des'
+              >
+                {data.portfolio}
+              </a>
+            </>
+          )}
         </div>
+
+       
 
         <div className='section-2'>
              
@@ -245,7 +283,7 @@ function SpProfile() {
                  <p className='dark-des'>{data.yearsOfExperience}</p>
                </div>  
                <div className='sp-des'>
-                 <p className='light-des'>Member since</p>
+                 <p className='light-des'>Joined</p>
                  <p className='dark-des'>{formattedJoinedDate}</p>
                </div>
              </div>

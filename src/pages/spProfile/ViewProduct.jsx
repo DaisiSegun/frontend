@@ -5,12 +5,13 @@ import Header from '../../components/header/Header';
 import './SpProfile.scss';
 import ratingIcon from '../../images/rating.svg';
 import Reviews from '../../components/reviews/Reviews';
-import golf from '../../images/golf.svg';
+
 import { useQuery } from '@tanstack/react-query';
 import newRequest from '../../utils/newRequest';
 import { useParams, useNavigate } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser.js';
 import swipeImg from '../../images/swipe.svg';
+import { CircleLoader } from "react-spinners";
 
 import { Helmet } from 'react-helmet';
 
@@ -29,6 +30,7 @@ function ViewProduct() {
   }, []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setIsLoading] = useState(false);
 
   const { id } = useParams();
 
@@ -90,15 +92,17 @@ function ViewProduct() {
 
   if (isLoading || isLoadingUser) {
     return (
-      <div className='loader'>
-          <Header showSearch={true} />
-        <div className='load-page'>
-        <p className='load-text'>Loading  please kindly wait..</p>
-       
-        
-        </div>
-     {/* <NavBar/> */}
-      </div>
+      <div className='loader2'>
+      <Header showSearch={true} />
+    <div className='load-page2'>
+    <p className='load-text'>Loading. please kindly wait..</p>
+   
+    
+    </div>
+
+    {/* <NavBar/> */}
+ 
+  </div>
     );
   }
 
@@ -118,7 +122,42 @@ function ViewProduct() {
     day: 'numeric',
   });
 
-  const openWhatsApp = () => {
+  const openSellerDetails = async () => {
+    setIsLoading(true); // Set isLoading state to true
+  
+    const orderData = {
+      title: data.title,
+      seller: {
+        name: dataUser.username,
+        email: dataUser.email,
+        phone: dataUser.phone,
+      },
+      client: {
+        name: currentUser.user.username,
+        email: currentUser.user.email,
+        phone: currentUser.user.phone,
+      },
+    };
+  
+    try {
+      const response = await newRequest.post('/orders', orderData);
+      console.log('Order created:', response.data);
+      
+      navigate('/seller-details', {
+        state: {
+          sellerName: dataUser.username,
+          serviceName: data.title,
+          phoneNumber: dataUser.phone,
+        },
+      });
+    } catch (error) {
+      console.error('Error creating order:', error);
+    } finally {
+      setIsLoading(false); // Set isLoading state to false after API request completes
+    }
+  };
+
+  const openSeller = () => {
     
     if (!currentUser) {
       // If no user is logged in, redirect to the signup page
@@ -126,13 +165,9 @@ function ViewProduct() {
       localStorage.setItem('spId', id);
       navigate('/register');
     } else {
-      const message = `I want to order ${dataUser.username}'s (${data.title})`;
-      const phoneNumber = '+2349019971557'; // Replace with the actual phone number
-      // Construct the WhatsApp link
-      const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-      // Open the link in a new tab
-      window.open(whatsappLink, '_blank');
+    
+      openSellerDetails(); 
+     
     }
   };
 
@@ -200,10 +235,17 @@ function ViewProduct() {
 
         
 
-          <div onClick={openWhatsApp} className='button1'>
-            Order Product
-            <img src={golf} alt='Golf Icon' className='golf' />
+          <div className='button1' onClick={openSeller}>
+            {loading ? (
+              <div className="loading-wrapper">
+                <CircleLoader color={"#36D7B7"} size={20} />
+                <span>Loading..</span>
+              </div>
+            ) : (
+              'Order Product'
+            )}
           </div>
+
           <h2 className='a-service'>About product</h2>
           <p className='service-des'> {data.desc}</p>
         </div>
@@ -241,7 +283,7 @@ function ViewProduct() {
               
                 
                <div className='sp-des'>
-                 <p className='light-des'>Member since</p>
+                 <p className='light-des'>Joined</p>
                  <p className='dark-des'>{formattedJoinedDate}</p>
                </div>
              </div>
@@ -249,9 +291,7 @@ function ViewProduct() {
           <div className='sp-profile'>
             <img className='sp-profile-img' src={dataUser.profilePicture} alt={`${dataUser.username}'s Profile`} />
             <p className='profile-name'>{dataUser.username}</p>
-            <button onClick={openWhatsApp} className='button2'>
-              Contact me
-            </button>
+          
           </div>
         </div>
       </div>

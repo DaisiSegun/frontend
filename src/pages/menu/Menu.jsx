@@ -26,6 +26,12 @@ function Menu() {
           <ArrowForwardIosIcon/>
           </Link>
 
+          
+        <Link to='/seller-dashboard' className="menu-nav">
+          Seller's Dashboard
+          <ArrowForwardIosIcon/>
+          </Link>
+
 
           <Link to='/terms&conditions' className="menu-nav">
           Terms & Conditions
