@@ -4,7 +4,16 @@
   box-sizing: border-box;
   font-family: 'Open Sans';
 }
-
+.email-sent {
+  width: 10rem;
+  height: 10rem;
+  border-style: solid;
+  border-width: 1px;
+  align-self: center;
+  border-color: #0F253B;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10rem;
+}
 .link {
   text-decoration: none;
 }

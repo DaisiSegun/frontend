@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser';
-import welcome from '../../images/welcome.gif';
+import go from '../../images/letsgo.gif';
+
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import './ThankYou.scss';
 
@@ -31,7 +32,7 @@ function ThankYou() {
             <p>{currentUser.user.username}</p> <FavoriteIcon className='love' />
           </div>
         </div>
-        <img className='sryImg' src={welcome} alt='Welcome GIF' />
+        <img className='email-sent' src={go} alt='Email Sent' />
         <Link className='link' to='/' onClick={handleContinue}>
           <button className='sorry-button'>Continue</button>
         </Link>
