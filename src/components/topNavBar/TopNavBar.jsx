@@ -14,13 +14,13 @@ function TopNavBar() {
           <img alt='root-categories' src={blogIcon} className='t-cat-img'/>
 
 
-        <Link to='/blog' className='link10'>
+        <a href='/blog'  className='link10'>
 
           <p className='t-text'>
             Root blog
           </p>
 
-       </Link>
+       </a>
           
 
 

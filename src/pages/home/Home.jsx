@@ -68,7 +68,7 @@ function Home() {
       <div className='home'>
         <Header showSearch={false} />
         {/* <img className='home-img' src={homeImg} alt='Home' /> */}
-        <h1 className='header-32px'>Services & handmade items in Lagos</h1>
+        <h1 className='header-32px'>African products & services in Lagos</h1>
         <div className='search6'>
           <Search2 />
         </div>

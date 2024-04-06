@@ -11,10 +11,15 @@ function ThankYou() {
     // Check for intended action and SP ID in local storage
     const intendedAction = localStorage.getItem('intendedAction');
     const spId = localStorage.getItem('spId');
+    const productId = localStorage.getItem('productId');
 
     if (intendedAction === 'requestQuote' && spId) {
       // Redirect to the SP profile page with the SP ID
       window.open(`/view-profile/${spId}`, '_blank');
+    }
+    if (intendedAction === 'requestQuote' && productId) {
+      // Redirect to the SP profile page with the SP ID
+      window.open(`/view-product/${productId}`, '_blank');
     }
 
     localStorage.removeItem('intendedAction');

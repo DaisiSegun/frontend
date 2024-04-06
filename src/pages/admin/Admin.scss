@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: 'Open Sans';
 }
-
+.section-users {
+  width: 100%;
+}
 .link {
   text-decoration: none;
   color: black;
@@ -78,6 +80,10 @@
   box-sizing: border-box;
   font-family: 'Open Sans';
 }
+.section-users {
+  width: 90%;
+}
+
 .user-list  {
   display: flex;
   flex-direction: column;
@@ -86,6 +92,8 @@
   justify-self: center;
 
   align-items: center;
+
+  width: 100%;
   
 }
 .menu {
@@ -101,7 +109,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: #FFF;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1rem;
   margin: 2rem;
   width: 90%;
   align-items: center;

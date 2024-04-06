@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import newRequest from "../../utils/newRequest.js";
 import { CircleLoader } from "react-spinners";
+import Select from 'react-select';
 
 
 
@@ -23,6 +24,24 @@ function SignUpSp() {
     profilePicture: null,
     userType: 'seller', // Added userType with default value 'user'
   });
+
+  const [selectedLanguages, setSelectedLanguages] = useState([]);
+  const allLanguages = [
+    { value: 'English', label: 'English' },
+    { value: 'Igbo', label: 'Igbo' },
+    { value: 'Yoruba', label: 'Yoruba' },
+    { value: 'French', label: 'French' },
+    { value: 'Chinese', label: 'Chinese' },
+  ];
+
+  const handleLanguageChange = (selectedOptions) => {
+    setSelectedLanguages(selectedOptions);
+    setFormData((prevData) => ({
+      ...prevData,
+      businessLocation: selectedOptions.map(option => option.value).join(', '),
+    }));
+  };
+
 
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -191,16 +210,18 @@ function SignUpSp() {
           />
         </div>
 
-        <div className='sign-in-box'>
-          <label className='sign-in-text'>Languages</label>
-          <input
-            className='sign-in-input'
-            placeholder='e.g English, Igbo & Yoruba'
-            name='businessLocation'
-            onChange={handleChange}
-            onKeyPress={handleKeyPress}
+        <div className='language-select-container'>
+          <label className='language-select-label'>Languages(You can multi-select)</label>
+          <Select
+            options={allLanguages}
+            isMulti
+            onChange={handleLanguageChange}
+            value={selectedLanguages}
           />
         </div>
+
+
+
 
         <div className='sign-in-box'>
           <label className='sign-in-text'>Interests</label>

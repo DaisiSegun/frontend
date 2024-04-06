@@ -6,6 +6,7 @@ import { css } from "@emotion/react";
 import { CircleLoader } from "react-spinners";
 import newRequest from "../../utils/newRequest.js";
 import getCurrentUser from '../../utils/getCurrentUser.js';
+import upload from "../../utils/upload";
 
 const override = css`
   display: block;
@@ -23,6 +24,7 @@ function EditProfile() {
     email: '',
     phone: '',
     newPassword: '',
+    profilePicture: null,
     // confirmPassword: '',
     currentPassword: '', // Added currentPassword field
   });
@@ -41,7 +43,16 @@ function EditProfile() {
     }));
   };
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
 
+    if (file) {
+      setFormData((prevData) => ({
+        ...prevData,
+        profilePicture: file,
+      }));
+    }
+  };
 
   const handleUpdateProfile = async () => {
     try {
@@ -61,13 +72,15 @@ function EditProfile() {
       const userId = currentUser?.user?._id || currentUser?.user?.id;
 
      
-    
+      const url = await upload(formData.profilePicture);
+      console.log('Cloudinary URL:', url);
       
   
       // Add the user ID to the formData
       const updatedFormData = {
         ...formData,
         userId,
+        profilePictureUrl: url,
        // Assuming your backend expects the user ID in this format
       };
   
@@ -91,7 +104,11 @@ function EditProfile() {
     }
   };
 
-
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleUpdateProfile();
+    }
+  };
   return (
     <div className='sign-in'>
       <Link className='home-logo' to='/'>
@@ -109,6 +126,7 @@ function EditProfile() {
             placeholder='Username'
             name='username'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -120,6 +138,7 @@ function EditProfile() {
             placeholder='Email'
             name='email'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -131,6 +150,7 @@ function EditProfile() {
             placeholder='Phone number'
             name='phone'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -142,6 +162,7 @@ function EditProfile() {
             placeholder='Current Password'
             name='currentPassword'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 
@@ -153,6 +174,20 @@ function EditProfile() {
             placeholder='Password'
             name='newPassword'
             onChange={handleChange}
+            onKeyPress={handleKeyPress}
+          />
+        </div>
+
+        <div className='create-contianer3'>
+          <p className='create-title3'>Edit Profile Picture</p>
+          <p className='create-title6'>Use high-quality pictures or logos to attract quality customers.</p>
+          <input
+            type='file'
+            accept='image/*'
+            className='sign-in-input'
+            name='profilePicture'
+            onChange={handleImageChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
 

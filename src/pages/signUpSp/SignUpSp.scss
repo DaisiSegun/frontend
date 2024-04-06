@@ -4,7 +4,47 @@
   box-sizing: border-box;
   font-family: 'Open Sans';
 }
+.s-l {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.language-select-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 
+  .language-select-label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: rgba(0, 0, 0, 0.7);
+
+  }
+
+  .language-select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    appearance: none; // Remove default select appearance
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); // Add custom arrow icon
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1.5rem;
+    padding-right: 2.5rem; // Add space for the arrow icon
+
+    &:focus {
+      outline: none;
+      border-color: #6c63ff;
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.3);
+    }
+    option:checked {
+      font-weight: bold;
+      color: #6c63ff;
+    }
+  }
+}
 .term1 {
   background-color: #f4f4f4;
   border-radius: 10px;
@@ -162,9 +202,9 @@
           font-size: 1.2rem;
           font-style: normal;
           font-weight: 400;
-          line-height: 3rem; /* 133.333% */
-          margin-bottom: 0.25rem;
+          margin-bottom: 0.2rem;
           text-align: center;
+          line-height: 2rem;
               
         }
         .sign-up-now {
@@ -317,8 +357,9 @@
           font-style: normal;
           font-weight: 400;
           line-height: 3rem; /* 133.333% */
-          margin-bottom: 0.25rem;
+          margin-bottom: 0.2rem;
           text-align: center;
+          line-height: 2rem;
               
         }
 
@@ -328,7 +369,7 @@
           font-size: 0.875rem;
           font-style: normal;
           font-weight: 400;
-          line-height: 1.5rem; /* 171.429% */
+          line-height: 1rem; /* 171.429% */
           margin-bottom: 1rem;
           text-align: center;
         }

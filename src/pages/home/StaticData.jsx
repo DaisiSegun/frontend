@@ -21,14 +21,14 @@ const staticCatData = [
     desc: "Crafting Career Stories"
   },
 
-
   {
     id: "4",
-    category: "Photo Editing",
-    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705607/xetjulth6i3gyurokgrn.png",
-    title: "Photo Editing",
-    desc: "Transform Your Photos"
+    category: "Model",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1712145343/botei6tmsfl2y5iwqbek.png",
+    title: "Model",
+    desc: "Beyond Beauty. Tell Stories"
   },
+
 
   {
     id: "5",
@@ -37,6 +37,8 @@ const staticCatData = [
     title: "Writing",
     desc: "Words that Sell"
   },
+
+
 
   {
     id: "6",
@@ -48,6 +50,14 @@ const staticCatData = [
 
   {
     id: "7",
+    category: "Photo Editing",
+    image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705607/xetjulth6i3gyurokgrn.png",
+    title: "Photo Editing",
+    desc: "Transform Your Photos"
+  },
+
+  {
+    id: "8",
     category: "Digital marketing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705607/uklkosh96iehslz6tgc4.png",
     title: "Digital marketing",
@@ -55,14 +65,14 @@ const staticCatData = [
   },
  
   {
-    id: "8",
+    id: "9",
     category: "Video Editing",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1710768972/envbflgb3uu9gveqpltu.png",
     title: "Video Editing",
     desc: "Edit. Enhance. Engage"
   },
   {
-    id: "9",
+    id: "10",
     category: "Session guitarist",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708707010/lhdeaqgs8ippxjppvmxn.png",
     title: "Session guitarist",
@@ -70,7 +80,7 @@ const staticCatData = [
   },
 
   {
-    id: "10",
+    id: "11",
     category: "Project reseach assistant",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705843/vm6i3ggqx6olniyohlss.png",
     title: "Project reseach assistant",
@@ -79,7 +89,7 @@ const staticCatData = [
  
   
   {
-    id: "11",
+    id: "12",
     category: "Content creator",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708705607/d8bhrkrzew3zmvwychde.png",
     title: "Content creator",

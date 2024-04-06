@@ -10,7 +10,7 @@ import getCurrentUser from '../../utils/getCurrentUser.js';
 
 
 
-function Reviews({ serviceId, sellerId }) {
+function Reviews({ serviceId, sellerId, Sid, Uid }) {
   const queryClient = useQueryClient();
   const [errorMessage, setErrorMessage] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
@@ -47,7 +47,10 @@ function Reviews({ serviceId, sellerId }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
+    if (Sid === Uid) {
+      setErrorMessage("Oops, You can't review your own service/product.");
+      return;
+    }
     if (!currentUser) {
       setErrorMessage("Review after purchase only");
       return;

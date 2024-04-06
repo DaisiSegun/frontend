@@ -11,6 +11,7 @@
   import Resizer from 'react-image-file-resizer';
   import getCurrentUser from "../../utils/getCurrentUser.js";
 import NavBar from "../../components/navBar/NavBar.jsx";
+import Select from 'react-select';
 
   function CreateService() {
     useEffect(() => {
@@ -139,7 +140,69 @@ import NavBar from "../../components/navBar/NavBar.jsx";
       }
     };
 
- 
+    const categoryOptions = [
+      { value: "", label: "Select a category" },
+      { value: "Graphic & Logo Design", label: "Graphic & Logo Design" },
+      { value: "Animation", label: "Animation" },
+      { value: "Photo Editing", label: "Photo Editing" },
+      { value: "Video Editing", label: "Video Editing" },
+      { value: "Illustration", label: "Illustration" },
+      { value: "Fashion Illustration", label: "Fashion Illustration" },
+      { value: "UI UX Designn", label: "UI UX Designn" },
+      { value: "Mobile App Development", label: "Mobile App Development" },
+      { value: "Accountant", label: "Accountant" },
+      { value: "Resume & Cv Writing", label: "Resume & Cv Writing" },
+      { value: "Writing", label: "Writing" },
+      { value: "Copy Writing", label: "Copy Writing" },
+      { value: "Legal service", label: "Legal service" },
+      { value: "Model", label: "Model" },
+      { value: "Voiceover", label: "Voiceover" },
+      { value: "Content creator", label: "Content creator" },
+      { value: "SEO Optimization", label: "SEO Optimization" },
+      { value: "Web Development", label: "Web Development" },
+      { value: "Chef", label: "Chef" },
+      { value: "Yogurt, Cake & pastry", label: "Yogurt, Cake & pastry" },
+      { value: "Event Decor & Planning", label: "Event Decor & Planning" },
+      { value: "Makeup & Gele Artist", label: "Makeup & Gele Artist" },
+      { value: "DJs & Sound Engineers", label: "DJs & Sound Engineers" },
+      { value: "Makerting & Social Media", label: "Makerting & Social Media" },
+      { value: "Phone, Tablet & Laptop repair", label: "Phone, Tablet & Laptop Repair" },
+      { value: "Social Media Management", label: "Social Media Management" },
+      { value: "Game Development", label: "Game Development" },
+      { value: "Logistics", label: "Logistics" },
+      { value: "Plumber", label: "Plumber" },
+      { value: "Electrician", label: "Electrician" },
+      { value: "Photography & Videography", label: "Photography & Videography" },
+      { value: "Music Producer", label: "Music Producer" },
+      { value: "Mixing & Mastering Engineer", label: "Mixing & Mastering Engineer" },
+      { value: "Instrumentalists", label: "Instrumentalists" },
+      { value: "Cleaning Services", label: "Cleaning Services" },
+      { value: "Women's tailor", label: "Women's tailor" },
+      { value: "Men's tailor", label: "Men's tailor" },
+      { value: "Lash & Brow Experts", label: "Lash & Brow Experts" },
+      { value: "Real Estate Agency", label: "Real Estate Agency" },
+      { value: "Personal Shopping & Errands", label: "Personal Shopping & Errands" },
+      { value: "Business consultant", label: "Business consultant" },
+      { value: "Carpentry", label: "Carpentry" },
+      { value: "Project reseach assistant", label: "Project reseach assistant" },
+      { value: "Catering", label: "Catering" },
+      { value: "Interior Decoration", label: "Interior Decoration" },
+      { value: "Hairdresser", label: "Hairdresser" },
+      { value: "MC", label: "MC" },
+      { value: "Home Repair & Maintenance", label: "Home Repair & Maintenance" },
+      { value: "Personal Care & Beauty", label: "Personal Care & Beauty" },
+      { value: "Tshirt design", label: "Tshirt design" },
+      { value: "Home Tutor & Lessons", label: "Home Tutor & Lessons" },
+      { value: "Music Lessons", label: "Music Lessons" },
+      { value: "Tech Lessons", label: "Tech Lessons" },
+      { value: "Fumigation", label: "Fumigation & Pest Control" },
+      { value: "Music Band", label: "Music Band" },
+      { value: "Animation", label: "Animation" },
+      { value: "Driver & Transportation", label: "Driver & Transportation" },
+      { value: "Music", label: "Music" },
+      { value: "others", label: "others" },
+    ];
+    
 
     return (
 
@@ -161,72 +224,21 @@ import NavBar from "../../components/navBar/NavBar.jsx";
                     type="text"
                     name="title"
                     onChange={handleChange}
-                    placeholder='e.g iphone technicain, make up artist' className='create-input'/>
+                    placeholder='e.g Mobile developer, chef, writer' className='create-input'/>
 
             </div>
 
 
             <p htmlFor="" className='create-title2'>Category</p>
 
-            <select name="cat" id="cat" onChange={handleChange}  className="create-contianer">
+            <Select
+            options={categoryOptions}
+            onChange={(selectedOption) => dispatch({ type: "CHANGE_INPUT", payload: { name: 'cat', value: selectedOption.value } })}
+            className="create-contianer"
+          />
 
             
-                <option value="">Select a category</option>
-                <option value="Graphic & Logo Design">Graphic & Logo Design</option>
-                <option value="Animation">Animation</option>
-                <option value="Photo Editing">Photo Editing</option>
-                <option value="Video Editing">Video Editing</option>
-                <option value="Illustration">Illustration</option>
-                <option value="Accountant">Accountant</option>
-                <option value="Resume & Cv Writing">Resume & Cv Writing</option>
-                <option value="Writing">Writing</option>
-                <option value="Copy Writing">Copy Writing</option>
-                <option value="Legal service">Legal service</option>
-                <option value="Model">Model</option>
-                <option value="Content creator">Content creator</option>
-                <option value="SEO Optimization">SEO Optimization</option>
-                <option value="Chef">Chef</option>
-                <option value="Yogurt, Cake & pastry">Yogurt, Cake & pastry</option>
-                <option value="Event Decor & Planning">Event Decor & Planning</option>
-                <option value="Photo Editing">Photo Editing</option>
-                <option value="Makeup & Gele Artist">Makeup & Gele Artist</option>
-                <option value="DJs & Sound Engineers">DJs & Sound Engineers</option>
-                <option value="Makerting & Social Media">Makerting & Social Media</option>
-                <option value="Phone, Tablet & Laptop repair">Phone, Tablet & Laptop Repair</option>
-                <option value="Logistics">Logistics</option>
-                <option value="Plumber">Plumber</option>
-                <option value="Electrician">Electrician</option>
-                <option value="Photography & Videography">Photography & Videography</option>
-                <option value="Instrumentalists">Instrumentalists</option>
-                <option value="Cleaning Services">Cleaning Services</option>
-                <option value="Women's tailor">Women's tailor</option>
-                <option value="Men's tailor">Men's tailor</option>
-                <option value="Lash & Brow Experts">Lash & Brow Experts</option>
-                <option value="Real Estate Agency">Real Estate Agency</option>
-                <option value="Personal Shopping & Errands">Personal Shopping & Errands</option>
-                <option value="Business consultant">Business consultant</option>
-                <option value="Carpentry">Carpentry</option>
-                <option value="Project reseach assistant">Research Project Assistant</option>
-                <option value="Catering">Catering</option>
-                <option value="Interior Decoration">Interior Decoration</option>
-                <option value="Hairdresser">Hairdresser</option>
-                <option value="MC">MC</option>
-                <option value="Home Repair & Maintenance">Home Repair & Maintenance</option>
-                <option value="Personal Care & Beauty">Personal Care & Beauty</option>
-                <option value="Tshirt design">Tshirt design</option>   
-                <option value="Home Tutor & Lessons">Home Tutor & Lessons</option>
-                <option value="Music Lessons">Music Lessons</option>
-                <option value="Tech Lessons">Tech Lessons</option>
-                <option value="Fumigation">Fumigation & Pest Control</option>
-                <option value="Coding">Coding</option>
-                <option value="Web Development">Web Development</option>
-                <option value="Music Band">Music Band</option>
-                <option value="Animation">Animation</option>
-                <option value="Driver & Transportation">Driver & Transportation</option>
-                <option value="Music">Music</option>
-                <option value="others">others</option>
-
-            </select>
+                
 
             <div className="create-contianer">
                 <p className='create-title'> About your Company/Brand (Describe your service)</p>

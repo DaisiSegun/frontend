@@ -150,6 +150,11 @@ function SpProfile() {
 
   const currentUser = getCurrentUser();
 
+  const Sid = currentUser?.user?._id || '';
+  const Uid = dataUser?._id || '';
+  
+
+  
 
   return (
   
@@ -300,7 +305,9 @@ function SpProfile() {
         </div>
       </div>
 
-      <Reviews serviceId={id} sellerId={userId} />
+      <Reviews Sid= {Sid}  Uid={Uid} serviceId={id} sellerId={userId} />
+
+
 
       <div className='space1'></div>
     </div>

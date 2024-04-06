@@ -162,7 +162,7 @@ function ViewProduct() {
     if (!currentUser) {
       // If no user is logged in, redirect to the signup page
       localStorage.setItem('intendedAction', 'requestQuote');
-      localStorage.setItem('spId', id);
+      localStorage.setItem('productId', id);
       navigate('/register');
     } else {
     
@@ -172,6 +172,10 @@ function ViewProduct() {
   };
 
   const currentUser = getCurrentUser();
+  
+  const Sid = currentUser?.user?._id || '';
+  const Uid = dataUser?._id || '';
+  
 
   return (
 
@@ -296,7 +300,7 @@ function ViewProduct() {
         </div>
       </div>
 
-      <Reviews serviceId={id} sellerId={userId} />
+      <Reviews  Sid= {Sid}  Uid={Uid} serviceId={id} sellerId={userId} />
 
 
       <div className='space1'></div>

@@ -11,6 +11,8 @@ import { CircleLoader} from "react-spinners";
 import Resizer from 'react-image-file-resizer';
 import getCurrentUser from "../../utils/getCurrentUser.js";
 import NavBar from "../../components/navBar/NavBar.jsx";
+import Select from 'react-select';
+
 
 function CreateProduct() {
   useEffect(() => {
@@ -156,24 +158,24 @@ function CreateProduct() {
 
 
           <p htmlFor="" className='create-title2'>Category</p>
-
-          <select name="cat" id="cat" onChange={handleChange}  className="create-contianer">
-
-          
-              <option value="">Select a category</option>
-              < option value="Ladies' Handbag">Ladies' Handbag</option>
-                <option value="Crochet & knitting">Crochet & Knitting</option>
-                <option value="Artwork">Artwork</option>
-                <option value="Men's Clothing">Men's Clothing</option>
-                <option value="Women's Clothing">Women's Clothing</option>
-                <option value="Women's bead">Women's bead</option>
-                <option value="Women's Footwear">Women's Footwear</option>
-                <option value="Men's Bags">Men's Bags</option>
-                <option value="Men's Footwear">Men's Footwear</option>
-                <option value="Kitchenware">Kitchenware</option>
-                <option value="others">others</option>
-
-          </select>
+          <Select
+            options={[
+              { value: 'Ladies Handbag', label: 'Ladies Handbag' },
+              { value: 'Crochet & knitting', label: 'Crochet & knitting' },
+              { value: 'Artwork', label: 'Artwork' },
+              { value: 'Men\'s Clothing', label: 'Men\'s Clothing' },
+              { value: 'Women\'s Clothing', label: 'Women\'s Clothing' },
+              { value: 'Women\'s bead', label: 'Women\'s bead' },
+              { value: 'Women\'s Footwear', label: 'Women\'s Footwear' },
+              { value: 'Men\'s Bags', label: 'Men\'s Bags' },
+              { value: 'Men\'s Footwear', label: 'Men\'s Footwear' },
+              { value: 'Kitchenware', label: 'Kitchenware' },
+              { value: 'others', label: 'others' },
+            ]}
+            onChange={(selectedOption) => {
+              handleChange({ target: { name: 'cat', value: selectedOption.value } });
+            }}
+            />
 
           <div className="create-contianer">
               <p className='create-title'> Product description</p>
