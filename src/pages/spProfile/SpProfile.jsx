@@ -188,31 +188,32 @@ function SpProfile() {
 
       <div className='main-section'>
         <div className='section-1'>
-          <div className='img-container5'>
-            <AwesomeSlider
-              organicArrows={true}
-              bullets={true}
-              className='carousel'
-              selected={currentIndex}
-              onChange={setCurrentIndex}
-            >
-              {data.images.map((image, index) => (
-                <div key={index} data-src={image} />
-              ))}
-            </AwesomeSlider>
-            <p className='product-price1'>
-              Min fee (₦):
-              <span> {data.price}</span>
-            </p>
-            {data.images.length > 1 && (
-            <div className='swipe4'>
-              <p className='swipe-text4'>Swipe image</p>
-              <img className='swipe-img4' src={swipeImg} alt='Swipe Icon' />
-            </div>
-          )}
+        {data.images.length > 0 && (
+  <div className='img-container5'>
+    <AwesomeSlider
+      organicArrows={true}
+      bullets={true}
+      className='carousel'
+      selected={currentIndex}
+      onChange={setCurrentIndex}
+    >
+      {data.images.map((image, index) => (
+        <div key={index} data-src={image} />
+      ))}
+    </AwesomeSlider>
+    <p className='product-price1'>
+      Min fee (₦):
+      <span> {data.price}</span>
+    </p>
+    {data.images.length > 1 && (
+      <div className='swipe4'>
+        <p className='swipe-text4'>Swipe image</p>
+        <img className='swipe-img4' src={swipeImg} alt='Swipe Icon' />
+      </div>
+    )}
+  </div>
+)}
 
-
-          </div>
 
           <div className='button1' onClick={openSeller}>
             {loading ? (

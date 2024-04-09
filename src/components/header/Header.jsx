@@ -38,15 +38,11 @@ function Header({ showSearch }) {
   };
   const currentUser = getCurrentUser();
 
-  const openEditProfile = () => {
-    // Open a new browser window for the Edit Profile page
-    window.open('/edit-profile', '_blank');
-  };
+  // const openEditProfile = () => {
+  //   // Open a new browser window for the Edit Profile page
+  //   window.open('/edit-profile', '_blank');
+  // };
 
-  const openMyService = () => {
-    // Open a new browser window for the My Service page
-    window.open('/seller-dashboard', '_blank');
-  };
 
    
     const becomeSeller = () => {
@@ -86,12 +82,12 @@ function Header({ showSearch }) {
               {showDropdownContent && (
                 <div className='dropdown-content-log'>
                  <div className='dropdown-content2'>
-                 <Link className='drop-text' onClick={openEditProfile}  >
+                 <a href='/edit-profile' className='drop-text'  >
                   Edit Profile
-                  </Link>
-                <Link className='drop-text' onClick={openMyService} >
+                  </a>
+                <a href='/seller-dashboard' className='drop-text'  >
                  Seller Dashboard
-                </Link>
+                </a>
                 <Link className='drop-text' onClick={handleLogout}>
                   Log out
                 </Link>

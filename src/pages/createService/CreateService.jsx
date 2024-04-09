@@ -152,6 +152,7 @@ import Select from 'react-select';
       { value: "Mobile App Development", label: "Mobile App Development" },
       { value: "Accountant", label: "Accountant" },
       { value: "Resume & Cv Writing", label: "Resume & Cv Writing" },
+      { value: "Virtual Assistant", label: "Virtual Assistant" },
       { value: "Writing", label: "Writing" },
       { value: "Copy Writing", label: "Copy Writing" },
       { value: "Legal service", label: "Legal service" },
@@ -160,12 +161,15 @@ import Select from 'react-select';
       { value: "Content creator", label: "Content creator" },
       { value: "SEO Optimization", label: "SEO Optimization" },
       { value: "Web Development", label: "Web Development" },
+      { value: "Health & Wellness", label: "Health & Wellness" },
+      { value: "Manicure & Pedicure", label: "Manicure & Pedicure" },
       { value: "Chef", label: "Chef" },
       { value: "Yogurt, Cake & pastry", label: "Yogurt, Cake & pastry" },
       { value: "Event Decor & Planning", label: "Event Decor & Planning" },
       { value: "Makeup & Gele Artist", label: "Makeup & Gele Artist" },
       { value: "DJs & Sound Engineers", label: "DJs & Sound Engineers" },
       { value: "Makerting & Social Media", label: "Makerting & Social Media" },
+      { value: "Lash & Brow Expert", label: "Lash & Brow Expert" },
       { value: "Phone, Tablet & Laptop repair", label: "Phone, Tablet & Laptop Repair" },
       { value: "Social Media Management", label: "Social Media Management" },
       { value: "Game Development", label: "Game Development" },
@@ -179,7 +183,6 @@ import Select from 'react-select';
       { value: "Cleaning Services", label: "Cleaning Services" },
       { value: "Women's tailor", label: "Women's tailor" },
       { value: "Men's tailor", label: "Men's tailor" },
-      { value: "Lash & Brow Experts", label: "Lash & Brow Experts" },
       { value: "Real Estate Agency", label: "Real Estate Agency" },
       { value: "Personal Shopping & Errands", label: "Personal Shopping & Errands" },
       { value: "Business consultant", label: "Business consultant" },
@@ -229,7 +232,7 @@ import Select from 'react-select';
             </div>
 
 
-            <p htmlFor="" className='create-title2'>Category</p>
+            <p htmlFor="" className='create-title2'>Category - Search Category</p>
 
             <Select
             options={categoryOptions}
@@ -333,7 +336,7 @@ import Select from 'react-select';
 
 
             <div className="create-contianer2">
-                <label htmlFor="" className='create-title2'>Upload Images (Maximum of 7 Images) </label>
+                <label htmlFor="" className='create-title2'>Upload Images (Maximum of 10 Images) </label>
 
                 {/* <div className="create-img-container">
                   <img className='create-img' src={upload}/>

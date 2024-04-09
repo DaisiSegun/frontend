@@ -160,7 +160,7 @@ function CreateProduct() {
           <p htmlFor="" className='create-title2'>Category</p>
           <Select
             options={[
-              { value: 'Ladies Handbag', label: 'Ladies Handbag' },
+              { value: 'Women\'s Handbag', label: 'Women\'s Handbag' },
               { value: 'Crochet & knitting', label: 'Crochet & knitting' },
               { value: 'Artwork', label: 'Artwork' },
               { value: 'Men\'s Clothing', label: 'Men\'s Clothing' },
@@ -170,6 +170,7 @@ function CreateProduct() {
               { value: 'Men\'s Bags', label: 'Men\'s Bags' },
               { value: 'Men\'s Footwear', label: 'Men\'s Footwear' },
               { value: 'Kitchenware', label: 'Kitchenware' },
+              { value: 'Building Materials', label: 'Building Materials' },
               { value: 'others', label: 'others' },
             ]}
             onChange={(selectedOption) => {
