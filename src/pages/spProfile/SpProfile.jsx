@@ -222,7 +222,7 @@ function SpProfile() {
                 <span>Loading..</span>
               </div>
             ) : (
-              'Book Service'
+              'Contact Seller'
             )}
           </div>
 
@@ -237,7 +237,7 @@ function SpProfile() {
                 href={data.portfolio}
                 target="_blank"
                 rel="noopener noreferrer"
-                className='service-des'
+                className='service-des2'
               >
                 {data.portfolio}
               </a>

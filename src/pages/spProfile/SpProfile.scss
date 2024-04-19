@@ -290,6 +290,7 @@
        font-style: normal;
        font-weight: 600;
        line-height: 1.5rem; /* 120% */
+       max-width: 30rem;
           
          }
 
@@ -302,6 +303,18 @@
           line-height: 1.5rem; /* 150% */
           margin-top: 0.25rem;
           margin-left: 2rem;
+          max-width:41.0625rem;
+        }
+        .service-des2 {
+          color: var(--dark-gray, #343434);
+          font-family: Open Sans;
+          font-size: 0.85rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.5rem; /* 150% */
+          margin-top: 0.25rem;
+          margin-left: 1rem;
+          margin-right: 1rem;
           max-width:41.0625rem;
         }
     }
@@ -723,6 +736,8 @@
        font-style: normal;
        font-weight: 600;
        line-height: 1.5rem; /* 120% */
+       max-width: 70%;
+      
           
          }
 
@@ -737,6 +752,20 @@
           margin-left: 1rem;
           margin-right: 1rem;
           max-width:100%;
+        }
+        .service-des2 {
+          color: var(--dark-gray, #343434);
+          font-family: Open Sans;
+          font-size: 0.85rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.5rem; /* 150% */
+          margin-top: 0.25rem;
+          margin-left: 1rem;
+          margin-right: 1rem;
+           max-width: 20rem;
+         
+          word-wrap: break-word; 
         }
     }
     .section-2 {

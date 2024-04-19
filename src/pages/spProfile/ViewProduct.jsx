@@ -246,7 +246,7 @@ function ViewProduct() {
                 <span>Loading..</span>
               </div>
             ) : (
-              'Order Product'
+              'Contact Seller'
             )}
           </div>
 

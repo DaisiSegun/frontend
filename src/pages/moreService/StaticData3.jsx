@@ -1,9 +1,9 @@
 const staticCatData3 = [
   {
     id: "1",
-    category: "Ladies' Handbag",
+    category: "Women's Handbag",
     image: "https://res.cloudinary.com/dsddxqtss/image/upload/v1708709908/qhhbwa9mhdjf2fn8cmfs.png",
-    title: "Ladies' Handbags",
+    title: "Women's Handbag",
     desc: "Express You"
   },
   {
